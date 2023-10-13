@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/css/fontawesome.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">11ty-playground</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <div class="navbar-nav ms-auto">
+                
+                    <a class="nav-link fw-semibold" 
+                        href="/" 
+                        aria-label="11ty-playground - Home"
+                        >
+                        Home
+                    </a>
+                
+                    <a class="nav-link fw-semibold active" 
+                        href="/about/" 
+                        aria-label="11ty-playground - About"
+                        aria-current="page" data-state="active">
+                        About
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+<h3>About page</h3>
+
+    
+
+
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-2 mt-auto border-top" id="site-footer">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- copyright -->
+            <div class="col-lg-4 d-flex justify-content-center justify-content-lg-start">
+                <p class="pb-0 mb-0">
+                    <!-- shows just the current year if the year in sitedata matches -->
+                    <!-- otherwise shows sitedata.year - current year, like 2022 - 2023 -->
+                    &copy; 2022 - 2023 11ty-playground
+                </p>
+            </div>
+
+            <!-- social nav -->
+            <div class="col-lg-4 d-flex justify-content-center">
+                <div class="d-flex gap-3">
+                    
+                        <a class="link-secondary link-opacity-50-hover" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                    
+                        <a class="link-secondary link-opacity-50-hover" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    
+                        <a class="link-secondary link-opacity-50-hover" href="https://mastodon.social/explore" target="_blank"><i class="fab fa-mastodon"></i></a>
+                    
+                        <a class="link-secondary link-opacity-50-hover" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    
+                </div>
+            </div>
+
+            <!-- footer nav -->
+            <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end">
+                <div class="d-flex gap-3 footer-nav" aria-label="footer navigation">
+                    
+                        <a class="link-secondary link-underline-opacity-25 link-opacity-50-hover" 
+                            href="/privacy-policy/"
+                            aria-label="11ty-playground - Privacy Policy"
+                            >
+                            Privacy Policy
+                        </a>
+                    
+                        <a class="link-secondary link-underline-opacity-25 link-opacity-50-hover" 
+                            href="/legal-notice/"
+                            aria-label="11ty-playground - Legal Notice"
+                            >
+                            Legal Notice
+                        </a>
+                    
+                        <a class="link-secondary link-underline-opacity-25 link-opacity-50-hover" 
+                            href="/contact/"
+                            aria-label="11ty-playground - Contact"
+                            >
+                            Contact
+                        </a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- scripts -->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
