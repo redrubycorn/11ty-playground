@@ -5,14 +5,54 @@ const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = eleventyConfig => {
 
-    // add html base element
-    eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-
     // added yaml support
     eleventyConfig.addDataExtension("yaml, yml", contents => yaml.load(contents));
 
+    
+    // ---------------------------------
+    // FILTERS
+    // ---------------------------------
+    eleventyConfig.addFilter("readablePostDate", (dateObj) => {
+        return DateTime.fromJSDate(dateObj, {
+            zone: "Europe/Vienna",
+        }).setLocale('en').toLocaleString(DateTime.DATE_FULL);
+    });
+
+    // ---------------------------------
+    // PLUGINS
+    // ---------------------------------
     // reading time plugin
     eleventyConfig.addPlugin(readingTime);
+
+    // add html base element
+    eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+
+
+    // ---------------------------------
+    // COLLECTIONS
+    // ---------------------------------
+
+    // POSTS
+    eleventyConfig.addCollection('blog', collection => {
+        return [...collection.getFilteredByGlob('./src/content/posts/**/*.md')].reverse();
+    });
+
+    // TAGS
+    eleventyConfig.addCollection('tagList', collection => {
+        const tagsSet = {};
+        collection.getAll().forEach(item => {
+            if (!item.data.tags) return;
+            item.data.tags.filter(
+                tag => !['posts', 'all'].includes(tag)
+            ).forEach(
+                tag => {
+                    if (!tagsSet[tag]) { tagsSet[tag] = []; }
+                    tagsSet[tag].push(item)
+                }
+            );
+        });
+        return tagsSet;
+    });
 
 
     // ---------------------------------
@@ -23,6 +63,9 @@ module.exports = eleventyConfig => {
 
     // js folder
     eleventyConfig.addPassthroughCopy({ "src/assets/js": "js" })
+
+    // images
+    eleventyConfig.addPassthroughCopy({ "src/content/images": "images" })
 
 
     // ---------------------------------
