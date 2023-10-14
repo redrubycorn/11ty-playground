@@ -13,8 +13,10 @@
 <body>
     {% include "partials/mainNavigation.html" %}
 
-    {{ content | safe }}
-
+    {% block content %}
+        {{ content | safe }}
+    {% endblock %}
+    
     {% include "partials/siteFooter.html" %}
 
     <!-- scripts -->

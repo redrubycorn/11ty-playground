@@ -1,0 +1,28 @@
+{% extends "layouts/baseBlogLayout.html" %}
+
+<!-- set the list to the blog posts -->
+{% set postListItems = pagination.items %}
+
+<!-- if it is a tag, set the list to the posts with a certain tag -->
+{% if tag %}
+    {% set postListItems = collections[tag] %}
+    {% set bannerSubtitle = 'Blog posts filed under #' + tag %}
+{% endif %}
+
+
+<!-- CONTENT -->
+<!-- include page header -->
+{% block pageHeader %}
+    {% include "partials/banner.html" %}
+{% endblock %}
+
+{% block blogContent %}
+    {% include "partials/postList.html" %}
+
+    {% if not tag %}
+        {% include "partials/pagination.html" %}
+    {% endif %}
+
+    {{ content | safe }}
+
+{% endblock %}

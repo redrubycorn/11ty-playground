@@ -1,0 +1,9 @@
+{% extends "layouts/baseLayout.html" %}
+
+{% block content %}
+    {% include "partials/banner.html" %}
+
+    <div class="container mt-3 mb-4">
+        {{ content | safe }}
+    </div>
+{% endblock %}
