@@ -1,0 +1,11 @@
+---
+title: "Tag Archive"
+bannerTitle: "Tag Archive"
+layout: "layouts/blogLayout.html"
+pagination:
+    data: collections
+    size: 1
+    alias: tag
+    filter: ["all", "nav", "blog", "projects", "featuredProjects", "rss"]
+permalink: "/tag/{{ tag | slug }}/"
+---
