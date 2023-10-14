@@ -1,0 +1,17 @@
+---
+title: "About"
+banner: true
+bannerTitle: "About 11ty-playground"
+bannerSubtitle: "Who, why and how. The people behind the blog."
+layout: "/layouts/pageLayout.html"
+---
+
+Use this page as a space to introduce yourself or your blog/website. 
+
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, deleniti voluptatum totam asperiores numquam optio aut excepturi corrupti odio labore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum voluptate ut eligendi aspernatur doloribus quas veritatis, blanditiis at quibusdam corrupti pariatur autem animi magni minima aliquam exercitationem quo distinctio, illum quisquam iste incidunt id voluptatem.
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores fugiat repellat ut minima accusantium laudantium, quo unde ratione eligendi possimus eos obcaecati, fuga sint magnam corporis dolores nulla aut deleniti deserunt rerum pariatur molestias beatae, modi eius. Reprehenderit doloribus minus porro autem beatae debitis accusantium deleniti excepturi consequuntur, fugiat inventore mollitia, asperiores ipsam iure est ex quia natus ratione maiores sequi ad? A consequatur officiis pariatur esse animi optio consequuntur beatae? Recusandae architecto suscipit qui ipsam. Vitae at non facilis facere maiores, vero omnis adipisci? Sequi, corporis deleniti. Autem possimus minus, sunt consectetur nostrum numquam voluptatibus eos, architecto placeat quibusdam delectus iste. Nam fuga ullam aspernatur esse ex ducimus illum culpa? Neque rem repudiandae quod veniam repellendus, delectus itaque doloremque aliquam explicabo nam!
+
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, aut beatae quis voluptate fuga natus magnam veritatis sunt nostrum officiis odit quos quam necessitatibus inventore aliquam praesentium odio cum ad amet eveniet ab dicta accusamus dolore dolores! Molestias praesentium deserunt velit cumque maxime in voluptatum odio dignissimos minima libero. Exercitationem non optio tenetur fugiat? Id esse, alias quod amet pariatur sequi voluptas odio, perspiciatis dignissimos fuga necessitatibus consectetur, repellendus eaque quidem eius cupiditate quos adipisci. Iusto iure itaque quisquam quae ratione doloremque alias, omnis vel, tempore reiciendis consectetur reprehenderit. Reiciendis accusantium provident unde non quisquam ab excepturi tempora qui ratione? Ipsa cum, sit tenetur sint modi perspiciatis molestias omnis nulla deserunt suscipit doloremque perferendis consequatur fugit explicabo dicta, similique dolores iure sapiente non! Vero libero quisquam harum facere aut temporibus?
+
+Id esse, alias quod amet pariatur sequi voluptas odio, perspiciatis dignissimos fuga necessitatibus consectetur, repellendus eaque quidem eius cupiditate quos adipisci. Iusto iure itaque quisquam quae ratione doloremque alias, omnis vel, tempore reiciendis consectetur reprehenderit. 
