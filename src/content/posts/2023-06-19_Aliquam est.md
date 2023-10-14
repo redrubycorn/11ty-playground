@@ -1,9 +1,9 @@
 ---
 title: "Aliquam est"
-subTitle: "Duis non aliquam lorem, id laoreet orci."
+subtitle: "Duis non aliquam lorem, id laoreet orci."
 summary: "Duis a lobortis nunc, in mollis nisl. Proin fringilla vitae metus vitae iaculis. Aliquam aliquam suscipit odio, quis vestibulum lacus placerat eu. Nullam et fermentum massa."
 showImage: true
-image: "/images/640x427_placeholder_pic.jpg"
+image: "/images/1280x853_placeholder_pic.jpg"
 imageAlt: "Image Placeholder Pic"
 date: 2023-06-19
 tags: 

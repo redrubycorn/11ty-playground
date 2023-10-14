@@ -1,9 +1,9 @@
 ---
-title: "Nunc bibendum mattis ultrices"
-subTitle: "Donec porta volutpat dolor at egestas."
+title: "Quisque aliquam"
+subtitle: "Donec porta volutpat dolor at egestas."
 summary: "Quisque aliquam, ipsum id scelerisque porta, nisl arcu tempus tortor, ut sagittis risus ipsum id libero. Phasellus in sollicitudin est."
-showImage: true
-image: "/images/640x427_placeholder_pic.jpg"
+showImage: false
+image: "/images/1280x853_placeholder_pic.jpg"
 imageAlt: "Image Placeholder Pic"
 date: 2023-09-15
 tags: 

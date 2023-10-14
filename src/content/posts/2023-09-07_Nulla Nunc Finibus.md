@@ -1,9 +1,9 @@
 ---
 title: "Nulla Nunc Finibus"
-subTitle: "Nulla Nunc Finibus ipsum dolor sit elit."
+subtitle: "Nulla Nunc Finibus ipsum dolor sit elit."
 summary: "Suspendisse eget lacus risus. Nullam non ligula blandit, convallis nulla in, tincidunt urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 showImage: true
-image: "/images/640x427_placeholder_pic.jpg"
+image: "/images/1280x853_placeholder_pic.jpg"
 imageAlt: "Image Placeholder Pic"
 date: 2023-09-07
 tags: 

@@ -1,9 +1,9 @@
 ---
 title: "Dolor site amet"
-subTitle: "Duis non aliquam lorem, id laoreet orci. Fusce sit amet interdum sem."
+subtitle: "Duis non aliquam lorem, id laoreet orci. Fusce sit amet interdum sem."
 summary: "Sed interdum pulvinar mauris, a lobortis erat condimentum vitae. Quisque pretium, turpis sed lacinia fermentum, augue justo rhoncus risus, a semper lectus lorem eget odio."
-showImage: true
-image: "/images/640x427_placeholder_pic.jpg"
+showImage: false
+image: "/images/1280x853_placeholder_pic.jpg"
 imageAlt: "Image Placeholder Pic"
 date: 2023-08-21
 tags: 

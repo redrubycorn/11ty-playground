@@ -1,9 +1,9 @@
 ---
 title: "Donec porta"
-subTitle: "Non aliquam lorem, id laoreet orci. Fusce sit amet interdum sem."
+subtitle: "Non aliquam lorem, id laoreet orci. Fusce sit amet interdum sem."
 summary: "Proin tristique purus. Sed interdum pulvinar mauris, a lobortis erat condimentum vitae. Quisque pretium, turpis sed lacinia fermentum, augue justo rhoncus risus, a semper lectus lorem eget odio."
 showImage: true
-image: "/images/640x427_placeholder_pic.jpg"
+image: "/images/1280x853_placeholder_pic.jpg"
 imageAlt: "Image Placeholder Pic"
 date: 2023-03-21
 tags: 

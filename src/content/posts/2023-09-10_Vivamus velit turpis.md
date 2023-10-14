@@ -1,9 +1,9 @@
 ---
 title: "Vivamus velit turpis"
-subTitle: "Vivamus velit turpis, semper eget scelerisque non, finibus ac leo."
+subtitle: "Vivamus velit turpis, semper eget scelerisque non, finibus ac leo."
 summary: "Vivamus velit turpis, semper eget scelerisque non, finibus ac leo. Proin tristique purus ut blandit lobortis. Quisque luctus rutrum dolor, ac commodo enim congue vitae. Quisque aliquam, ipsum id scelerisque porta."
 showImage: true
-image: "/images/640x427_placeholder_pic.jpg"
+image: "/images/1280x853_placeholder_pic.jpg"
 imageAlt: "Image Placeholder Pic"
 date: 2023-09-10
 tags: 

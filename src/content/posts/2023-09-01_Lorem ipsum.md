@@ -1,9 +1,9 @@
 ---
 title: "Lorem ipsum dolor"
-subTitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget lacus risus. Nullam non ligula blandit, convallis nulla in, tincidunt urna. Integer nec mauris nulla."
 showImage: true
-image: "/images/640x427_placeholder_pic.jpg"
+image: "/images/1280x853_placeholder_pic.jpg"
 imageAlt: "Image Placeholder Pic"
 date: 2023-09-01
 tags: 

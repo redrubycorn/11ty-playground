@@ -1,9 +1,9 @@
 ---
 title: "Nunc bibendum"
-subTitle: "Nunc bibendum mattis ultrices."
+subtitle: "Nunc bibendum mattis ultrices."
 summary: "Nunc bibendum mattis ultrices. Vivamus velit turpis, semper eget scelerisque non, finibus ac leo. Proin tristique purus ut blandit lobortis."
 showImage: true
-image: "/images/640x427_placeholder_pic.jpg"
+image: "/images/1280x853_placeholder_pic.jpg"
 imageAlt: "Image Placeholder Pic"
 date: 2023-03-11
 tags: 
