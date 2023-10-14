@@ -1,0 +1,67 @@
+{% extends "layouts/baseLayout.html" %}
+
+
+{% block content %}
+    <!-- include page header -->
+    {% include "partials/postHeader.html" %}
+    
+    <div class="container mt-3 mb-4">
+        <div class="row d-flex flex-sm-row my-3">
+
+            <!-- POST CONTENT -->
+            <div class="col-lg-8 offset-lg-2 order-1 order-lg-0">
+                <!-- reading time and publishing date -->
+                <div class="row">
+                    <div class="col-6">
+                        <p class="text-uppercase text-muted my-0 py-0">Published</p>
+                        <p class="my-0 py-0 text-muted"><time datetime="{{ item.data.date }}">{{ date | readablePostDate }}</time></p>
+                    </div>
+                    <div class="col-6 d-flex flex-column">
+                        <p class="text-uppercase text-muted my-0 py-0">Reading Time</p>
+                        <p class="my-0 py-0">{{ content | readingTime }}</p>
+                    </div>
+                </div>
+
+                <!-- post image -->
+                <div class="post-image">
+                    {% if showImage %}
+                        <img class="img-fluid" src="{{ image }}" alt="{{ imageAlt }}">
+                    {% endif %}
+                </div>
+
+                <!-- post content -->
+                <div class="post-content mt-3">
+                    {{ content | safe }}
+                </div>
+
+                <!-- post navigation -->
+                <div class="post-navigation">
+                    {% if collections.blog %}
+                        {% set nextPost = collections.blog | getNextCollectionItem(page) %}
+                        {% set previousPost = collections.blog | getPreviousCollectionItem(page) %}
+
+                        {% if nextPost or previousPost %}
+                            {% if previousPost %}
+                                <div class="col-6">
+                                    Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>
+                                </div>
+                            {% endif %}
+                            
+                            {% if nextPost %}
+                                <div class="col-6">
+                                    Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- SIDEBAR -->
+            <div class="col-lg-2 order-0 order-lg-1 custom-sticky-top">
+                {% include "partials/blogSidebar.html" %}
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

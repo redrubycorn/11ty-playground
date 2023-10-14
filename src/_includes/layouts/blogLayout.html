@@ -1,4 +1,4 @@
-{% extends "layouts/baseBlogLayout.html" %}
+{% extends "layouts/baseLayout.html" %}
 
 <!-- set the list to the blog posts -->
 {% set postListItems = pagination.items %}
@@ -6,22 +6,33 @@
 <!-- if it is a tag, set the list to the posts with a certain tag -->
 {% if tag %}
     {% set postListItems = collections[tag] %}
-    {% set bannerSubtitle = 'Blog posts filed under #' + tag %}
+    {% set headerSubtitle = 'Blog posts filed under #' + tag %}
 {% endif %}
 
 
-<!-- CONTENT -->
-<!-- include page header -->
-{% block pageHeader %}
-    {% include "partials/banner.html" %}
-{% endblock %}
+{% block content %}
+    <!-- include page header -->
+    {% include "partials/pageHeader.html" %}
+    
+    <div class="container mt-3 mb-4">
+        <div class="row d-flex flex-sm-row my-3">
 
-{% block blogContent %}
-    {% include "partials/postList.html" %}
+            <!-- POSTLIST -->
+            <div class="col-lg-10 order-1 order-lg-0">
+                {% include "partials/postList.html" %}
 
-    {% if not tag %}
-        {% include "partials/pagination.html" %}
-    {% endif %}
+                {% if not tag %}
+                    {% include "partials/pagination.html" %}
+                {% endif %}
+            </div>
+
+            <!-- SIDEBAR -->
+            <div class="col-lg-2 order-0 order-lg-1 custom-sticky-top">
+                {% include "partials/blogSidebar.html" %}
+            </div>
+
+        </div>
+    </div>
 
     {{ content | safe }}
 
