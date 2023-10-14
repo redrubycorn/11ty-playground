@@ -1,8 +1,8 @@
 ---
 title: "About"
-banner: true
-bannerTitle: "About 11ty-playground"
-bannerSubtitle: "Who, why and how. The people behind the blog."
+header: true
+headerTitle: "About 11ty-playground"
+headerSubtitle: "Who, why and how. The people behind the blog."
 layout: "/layouts/pageLayout.html"
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "Legal Notice"
-banner: true
-bannerTitle: "Legal Notice"
-bannerSubtitle: "Read our Legal Notice."
+header: true
+headerTitle: "Legal Notice"
+headerSubtitle: "Read our Legal Notice."
 layout: "/layouts/pageLayout.html"
 ---
 

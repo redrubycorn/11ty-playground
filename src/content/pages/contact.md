@@ -1,8 +1,8 @@
 ---
 title: "Contact"
-banner: true
-bannerTitle: "Contact"
-bannerSubtitle: "Get in touch. How to contact us."
+header: true
+headerTitle: "Contact"
+headerSubtitle: "Get in touch. How to contact us."
 layout: "/layouts/pageLayout.html"
 ---
 

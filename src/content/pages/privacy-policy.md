@@ -1,8 +1,8 @@
 ---
 title: "Privacy Policy"
-banner: true
-bannerTitle: "Privacy Policy"
-bannerSubtitle: "Read up our privacy policy."
+header: true
+headerTitle: "Privacy Policy"
+headerSubtitle: "Read up our privacy policy."
 layout: "/layouts/pageLayout.html"
 ---
 

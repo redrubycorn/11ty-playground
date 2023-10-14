@@ -1,7 +1,8 @@
 ---
 title: "Blog"
-bannerTitle: "11ty-playground Blog"
-bannerSubtitle: "News, Tips, and Commentary about all things 11ty."
+header: true
+headerTitle: "11ty-playground Blog"
+headerSubtitle: "News, Tips, and Commentary about all things 11ty."
 layout: "/layouts/blogLayout.html"
 
 pagination:
