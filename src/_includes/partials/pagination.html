@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-12">
+        {% if pagination.href.next or pagination.href.previous %}
+            {% if pagination.href.previous %}
+                <a href="{{ pagination.href.previous }}{{ paginationAnchor}}">
+                    {{ paginationPrevText if paginationPrevText else 'Previous'}}
+                </a>
+            {% endif %}
+
+            {% if pagination.href.next %}
+                <a href="{{ pagination.href.next }}{{ paginationAnchor }}">
+                    {{ paginationNextText if paginationNextText else 'Next'}}
+                </a>
+            {% endif %}
+        {% endif %}
+
+        <ol>
+        {% for pageEntry in pagination.pages %}
+            <li>
+                <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a>
+            </li>
+        {% endfor %}
+        </ol>
+    </div>
+</div>
