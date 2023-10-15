@@ -1,5 +1,5 @@
 ---
-title: "Aliquam est"
+title: "Aliquam est duis non aliquam lorem"
 subtitle: "Duis non aliquam lorem, id laoreet orci."
 summary: "Duis a lobortis nunc, in mollis nisl. Proin fringilla vitae metus vitae iaculis. Aliquam aliquam suscipit odio, quis vestibulum lacus placerat eu. Nullam et fermentum massa."
 showImage: false

@@ -8,6 +8,7 @@ imageAlt: "Image Placeholder Pic"
 date: 2023-08-08
 tags: 
     - coding
+    - example
 ---
 
 Hello,

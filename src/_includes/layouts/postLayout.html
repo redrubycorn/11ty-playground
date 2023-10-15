@@ -36,24 +36,7 @@
 
                 <!-- post navigation -->
                 <div class="post-navigation">
-                    {% if collections.blog %}
-                        {% set nextPost = collections.blog | getNextCollectionItem(page) %}
-                        {% set previousPost = collections.blog | getPreviousCollectionItem(page) %}
-
-                        {% if nextPost or previousPost %}
-                            {% if previousPost %}
-                                <div class="col-6">
-                                    Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
-                                </div>
-                            {% endif %}
-                            
-                            {% if nextPost %}
-                                <div class="col-6">
-                                    Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
-                                </div>
-                            {% endif %}
-                        {% endif %}
-                    {% endif %}
+                    {% include "partials/postNavigation.html" %}
                 </div>
             </div>
 

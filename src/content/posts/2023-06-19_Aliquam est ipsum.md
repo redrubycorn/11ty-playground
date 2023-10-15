@@ -9,6 +9,7 @@ date: 2023-06-19
 tags: 
     - news
     - ipsum
+    - tag
 ---
 
 Mauris gravida velit ac nisl volutpat, sit amet convallis nulla venenatis. Nunc eu neque a lorem tincidunt bibendum. Donec aliquet sodales quam eu dapibus. Nullam volutpat justo a imperdiet tempor. Aenean quis accumsan diam. Curabitur et varius sem. Nullam aliquam est viverra lectus ullamcorper semper.

@@ -9,6 +9,8 @@ date: 2023-04-25
 tags: 
     - news
     - lorem
+    - tag
+    - example
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget lacus risus. Nullam non ligula blandit, convallis nulla in, tincidunt urna. Integer nec mauris nulla. Nunc bibendum mattis ultrices. Vivamus velit turpis, semper eget scelerisque non, finibus ac leo. Proin tristique purus ut blandit lobortis. Quisque luctus rutrum dolor, ac commodo enim congue vitae. Quisque aliquam, ipsum id scelerisque porta, nisl arcu tempus tortor, ut sagittis risus ipsum id libero. Morbi sodales vulputate orci, non lacinia augue dapibus quis. Donec eget leo sit amet turpis ullamcorper efficitur vel quis purus. Donec porta volutpat dolor at egestas. Phasellus in sollicitudin est.
