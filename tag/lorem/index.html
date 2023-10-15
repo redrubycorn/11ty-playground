@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/11ty-playground/css/bootstrap.css">
     <link rel="stylesheet" href="/11ty-playground/css/style.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg bg-white sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.html">11ty-playground</a>
@@ -39,7 +39,7 @@
     </div>
 </nav>
 
-    <main class="container-wrapper">
+    <main>
         
     <!-- include page header -->
     
@@ -57,14 +57,15 @@
 
             <!-- POSTLIST -->
             <div class="col-lg-10 order-1 order-lg-0">
-                <ul class="list-group list-group-flush">
+                <div>
+                    <ul class="list-group list-group-flush">
     <!-- POST -->
     
         <li class="list-group-item">
             <div class="row blog-post d-flex">
                 <!-- info date and reading time -->
                 <div class="col-lg-2 order-2 order-lg-0">
-                    <a class="link-unstyled" href="/11ty-playground/posts/nunc-bibendum/">
+                    <a class="link-unstyled" href="/11ty-playground/posts/some-very-very-very-long-blog-title/">
                         <div class="d-flex flex-lg-column gap-2">
                             <p class="my-0 py-0 text-muted"><time datetime="Sat Mar 11 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">March 11, 2023</time></p>
                             <p class="d-lg-none my-0 py-0 text-muted">&bull;</p>
@@ -75,8 +76,8 @@
         
                 <!-- post content -->
                 <div class="col-lg-6 order-1 order-lg-1">
-                    <a class="link-unstyled" href="/11ty-playground/posts/nunc-bibendum/">
-                        <h5 class="mt-2 mt-lg-0">Nunc bibendum</h5>
+                    <a class="link-unstyled" href="/11ty-playground/posts/some-very-very-very-long-blog-title/">
+                        <h5 class="mt-2 mt-lg-0">Some very, very, very long blog title</h5>
                         <h6 class="text-muted">Nunc bibendum mattis ultrices.</h6>
                     </a>
                     <div class="d-inline-flex flex-wrap gap-1 mt-1">
@@ -90,7 +91,7 @@
         
                 <!-- post image -->
                 <div class="col-lg-4 order-0 order-lg-2">
-                    <a class="link-unstyled" href="/11ty-playground/posts/nunc-bibendum/"><img class="img-fluid" src="/11ty-playground/images/1280x853_placeholder_pic.jpg" alt="Image Placeholder Pic"></a>
+                    <a class="link-unstyled" href="/11ty-playground/posts/some-very-very-very-long-blog-title/"><img class="img-fluid" src="/11ty-playground/images/1280x853_placeholder_pic.jpg" alt="Image Placeholder Pic"></a>
                 </div>
             </div>
         </li>
@@ -159,6 +160,12 @@
                         
                             
                             <a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/lorem/">#lorem</a>
+                        
+                            
+                            <a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/tag/">#tag</a>
+                        
+                            
+                            <a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/example/">#example</a>
                         
                     </div>
                     <p class="my-2 py-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget lacus risus. Nullam non ligula blandit, convallis nulla in, tincidunt urna. Integer nec mauris nulla.</p>
@@ -353,6 +360,9 @@
                             
                             <a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/lorem/">#lorem</a>
                         
+                            
+                            <a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/example/">#example</a>
+                        
                     </div>
                     <p class="my-2 py-0">Vivamus velit turpis, semper eget scelerisque non, finibus ac leo. Proin tristique purus ut blandit lobortis. Quisque luctus rutrum dolor, ac commodo enim congue vitae. Quisque aliquam, ipsum id scelerisque porta.</p>
                 </div>
@@ -366,30 +376,37 @@
     
 </ul>
 
-
+                </div>
+                
                 
             </div>
 
             <!-- SIDEBAR -->
             <div class="col-lg-2 order-0 order-lg-1 custom-sticky-top">
-                <div class="custom-sticky-top bg-white">
+                <div class="bg-white custom-sticky-top">
     <h5 class="text-center text-lg-start">Categories</h5>
-    <div class="categories gap-1 d-flex flex-lg-column overflow-auto pb-1 mb-2">
+    <div class="category-scrollbar gap-1 d-flex flex-lg-column overflow-auto pb-1 mb-2">
         
             
             <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/lorem/">#lorem</a></div>
-        
-            
-            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/news/">#news</a></div>
-        
-            
-            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/html/">#html</a></div>
         
             
             <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/coding/">#coding</a></div>
         
             
             <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/eleventy/">#eleventy</a></div>
+        
+            
+            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/news/">#news</a></div>
+        
+            
+            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/tag/">#tag</a></div>
+        
+            
+            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/example/">#example</a></div>
+        
+            
+            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/html/">#html</a></div>
         
             
             <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/ipsum/">#ipsum</a></div>

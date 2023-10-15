@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/11ty-playground/css/bootstrap.css">
     <link rel="stylesheet" href="/11ty-playground/css/style.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg bg-white sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.html">11ty-playground</a>
@@ -39,7 +39,7 @@
     </div>
 </nav>
 
-    <main class="container-wrapper">
+    <main>
         
     <!-- include page header -->
     
@@ -57,7 +57,8 @@
 
             <!-- POSTLIST -->
             <div class="col-lg-10 order-1 order-lg-0">
-                <ul class="list-group list-group-flush">
+                <div>
+                    <ul class="list-group list-group-flush">
     <!-- POST -->
     
         <li class="list-group-item">
@@ -127,6 +128,9 @@
                         
                             
                             <a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/lorem/">#lorem</a>
+                        
+                            
+                            <a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/example/">#example</a>
                         
                     </div>
                     <p class="my-2 py-0">Vivamus velit turpis, semper eget scelerisque non, finibus ac leo. Proin tristique purus ut blandit lobortis. Quisque luctus rutrum dolor, ac commodo enim congue vitae. Quisque aliquam, ipsum id scelerisque porta.</p>
@@ -215,104 +219,105 @@
             </div>
         </li>
     
-        <li class="list-group-item">
-            <div class="row blog-post d-flex">
-                <!-- info date and reading time -->
-                <div class="col-lg-2 order-2 order-lg-0">
-                    <a class="link-unstyled" href="/11ty-playground/posts/dolor-site/">
-                        <div class="d-flex flex-lg-column gap-2">
-                            <p class="my-0 py-0 text-muted"><time datetime="Mon Aug 21 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">August 21, 2023</time></p>
-                            <p class="d-lg-none my-0 py-0 text-muted">&bull;</p>
-                            <p class="text-uppercase my-0 py-0 text-muted">2 min</p>
-                        </div>
-                    </a>
-                </div>
-        
-                <!-- post content -->
-                <div class="col-lg-6 order-1 order-lg-1">
-                    <a class="link-unstyled" href="/11ty-playground/posts/dolor-site/">
-                        <h5 class="mt-2 mt-lg-0">Dolor site</h5>
-                        <h6 class="text-muted">Duis non aliquam lorem, id laoreet orci. Fusce sit amet interdum sem.</h6>
-                    </a>
-                    <div class="d-inline-flex flex-wrap gap-1 mt-1">
-                        
-                            
-                            <a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/coding/">#coding</a>
-                        
-                            
-                            <a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/lorem/">#lorem</a>
-                        
-                    </div>
-                    <p class="my-2 py-0">Sed interdum pulvinar mauris, a lobortis erat condimentum vitae. Quisque pretium, turpis sed lacinia fermentum, augue justo rhoncus risus, a semper lectus lorem eget odio.</p>
-                </div>
-        
-                <!-- post image -->
-                <div class="col-lg-4 order-0 order-lg-2">
-                    <a class="link-unstyled" href="/11ty-playground/posts/dolor-site/"><img class="img-fluid" src="/11ty-playground/images/1280x853_placeholder_pic.jpg" alt="Image Placeholder Pic"></a>
-                </div>
-            </div>
-        </li>
-    
 </ul>
 
-
+                </div>
                 
-                    <div class="row">
-    <div class="col-12">
+                
+                    <div>
+                        
+
+
+
+
+
+
+
+
+
+<div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+    
+
+    <!-- FIRST & PREVIOUS -->
+    <div class="btn-group" role="group" aria-label="First group">
+        
+    </div>
+    
+    <!-- more pages indicator -->
+    <div class="btn-group" role="group" aria-label="Second group">
+        
+    </div>
+
+    <!-- MIDDLE PAGE NUMBERS -->
+    <div class="btn-group" role="group" aria-label="Third group">
         
             
-
-            
-                <a href="/11ty-playground/blog/page/1/">
-                    Next
+                <a href="/11ty-playground/blog/" class="btn btn-primary active" aria-current="page" aria-label="Goto page 1">
+                    1
                 </a>
             
         
-
-        <ol>
+            
+                <a href="/11ty-playground/blog/page/1/" class="btn btn-primary " aria-label="Goto page 2">
+                    2
+                </a>
+            
         
-            <li>
-                <a href="/11ty-playground/blog/" aria-current="page">Page 1</a>
-            </li>
+            
+                <a href="/11ty-playground/blog/page/2/" class="btn btn-primary " aria-label="Goto page 3">
+                    3
+                </a>
+            
         
-            <li>
-                <a href="/11ty-playground/blog/page/1/">Page 2</a>
-            </li>
+            
         
-            <li>
-                <a href="/11ty-playground/blog/page/2/">Page 3</a>
-            </li>
-        
-            <li>
-                <a href="/11ty-playground/blog/page/3/">Page 4</a>
-            </li>
-        
-        </ol>
     </div>
+
+    <!-- more pages indicator -->
+    <div class="btn-group" role="group" aria-label="Second group">
+        
+    </div>
+
+    <!-- LAST & NEXT -->
+    <div class="btn-group" role="group" aria-label="Second group">
+        
+            <a class="btn btn-primary" href="/11ty-playground/blog/page/1/"><i class="fa-solid fa-chevron-right"></i></a>
+            <a class="btn btn-primary" href="/11ty-playground/blog/page/3/"><i class="fa-solid fa-forward-step"></i></a>
+        
+    </div>
+
+    
 </div>
+                    </div>
                 
             </div>
 
             <!-- SIDEBAR -->
             <div class="col-lg-2 order-0 order-lg-1 custom-sticky-top">
-                <div class="custom-sticky-top bg-white">
+                <div class="bg-white custom-sticky-top">
     <h5 class="text-center text-lg-start">Categories</h5>
-    <div class="categories gap-1 d-flex flex-lg-column overflow-auto pb-1 mb-2">
+    <div class="category-scrollbar gap-1 d-flex flex-lg-column overflow-auto pb-1 mb-2">
         
             
             <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/lorem/">#lorem</a></div>
-        
-            
-            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/news/">#news</a></div>
-        
-            
-            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/html/">#html</a></div>
         
             
             <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/coding/">#coding</a></div>
         
             
             <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/eleventy/">#eleventy</a></div>
+        
+            
+            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/news/">#news</a></div>
+        
+            
+            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/tag/">#tag</a></div>
+        
+            
+            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/example/">#example</a></div>
+        
+            
+            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/html/">#html</a></div>
         
             
             <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/ipsum/">#ipsum</a></div>
