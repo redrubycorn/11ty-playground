@@ -7,7 +7,7 @@ layout: "/layouts/blogLayout.html"
 
 pagination:
     data: collections.blog
-    size: 5
+    size: 4
     paginationPrevText: 'Newer Posts'
     paginationNextText: 'Older Posts'
 ---

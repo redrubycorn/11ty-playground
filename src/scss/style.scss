@@ -1,8 +1,33 @@
-main.container-wrapper {
-    min-height: calc(100vh - 97px);
-}
+$navbar-height: 50px;
 
 .link-unstyled {
     color: inherit;
     text-decoration: none;
+}
+
+.custom-sticky-top {
+    position: sticky;
+    top: $navbar-height;
+}
+
+// SCROLLBAR
+// width
+.category-scrollbar::-webkit-scrollbar {
+    height: 6px;
+}
+
+// track
+.category-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+// handle
+.category-scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+// handle on hover
+.category-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

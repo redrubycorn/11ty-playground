@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     {% include "partials/mainNavigation.html" %}
 
-    <main class="container-wrapper">
+    <main>
         {% block content %}
             {{ content | safe }}
         {% endblock %}

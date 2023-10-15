@@ -19,10 +19,14 @@
 
             <!-- POSTLIST -->
             <div class="col-lg-10 order-1 order-lg-0">
-                {% include "partials/postList.html" %}
-
+                <div>
+                    {% include "partials/postList.html" %}
+                </div>
+                
                 {% if not tag %}
-                    {% include "partials/pagination.html" %}
+                    <div>
+                        {% include "partials/pagination.html" %}
+                    </div>
                 {% endif %}
             </div>
 

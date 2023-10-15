@@ -9,6 +9,7 @@ date: 2023-09-10
 tags: 
     - news
     - lorem
+    - example
 ---
 
 Just another post.

@@ -1,25 +1,63 @@
-<div class="row">
-    <div class="col-12">
-        {% if pagination.href.next or pagination.href.previous %}
-            {% if pagination.href.previous %}
-                <a href="{{ pagination.href.previous }}{{ paginationAnchor}}">
-                    {{ paginationPrevText if paginationPrevText else 'Previous'}}
-                </a>
-            {% endif %}
 
-            {% if pagination.href.next %}
-                <a href="{{ pagination.href.next }}{{ paginationAnchor }}">
-                    {{ paginationNextText if paginationNextText else 'Next'}}
-                </a>
+{% set totalPages = pagination.pages | length %}
+{% set current = pagination.pageNumber + 1 %}
+{% set adjacentLinks = 2 %}
+{% set maxLinks = (adjacentLinks * 2) + 1 %}
+
+{% set minPage = current - adjacentLinks %}
+{% set maxPage = current + adjacentLinks + 1 %}
+
+
+<div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+    {% if totalPages > 1 %}
+
+    <!-- FIRST & PREVIOUS -->
+    <div class="btn-group" role="group" aria-label="First group">
+        {% if pagination.href.previous %}
+            <a class="btn btn-primary" href="{{ pagination.href.first }}{{ paginationAnchor }}"><i class="fa-solid fa-backward-step"></i></a>
+            <a class="btn btn-primary" href="{{ pagination.href.previous }}{{ paginationAnchor }}"><i class="fa-solid fa-chevron-left"></i></a>
+        {% endif %}
+    </div>
+    
+    <!-- more pages indicator -->
+    <div class="btn-group" role="group" aria-label="Second group">
+        {% if (totalPages > maxLinks) %}
+            {% if (current - adjacentLinks > 1) %}
+                <a class="btn btn-primary">...</a>
             {% endif %}
         {% endif %}
-
-        <ol>
-        {% for pageEntry in pagination.pages %}
-            <li>
-                <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a>
-            </li>
-        {% endfor %}
-        </ol>
     </div>
+
+    <!-- MIDDLE PAGE NUMBERS -->
+    <div class="btn-group" role="group" aria-label="Third group">
+        {% for pageEntry in pagination.pages %}
+            {% if loop.index in range(minPage,maxPage) %}
+                <a href="{{ pagination.hrefs[ loop.index0 ] }}"
+                    class="btn btn-primary {% if (loop.index == current) %}active{% endif %}"
+                    {% if (loop.index == current) %}aria-current="page"{% endif %}
+                    aria-label="Goto page {{ loop.index0 + 1 }}">
+                    {{ loop.index }}
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <!-- more pages indicator -->
+    <div class="btn-group" role="group" aria-label="Second group">
+        {% if (totalPages > maxLinks) %}
+            {% if (current + adjacentLinks < totalPages) %}
+                <a class="btn btn-primary">...</a>
+            {% endif %}
+        {% endif %}
+    </div>
+
+    <!-- LAST & NEXT -->
+    <div class="btn-group" role="group" aria-label="Second group">
+        {% if pagination.href.next %}
+            <a class="btn btn-primary" href="{{ pagination.href.next }}{{ paginationAnchor }}"><i class="fa-solid fa-chevron-right"></i></a>
+            <a class="btn btn-primary" href="{{ pagination.href.last }}{{ paginationAnchor }}"><i class="fa-solid fa-forward-step"></i></a>
+        {% endif %}
+    </div>
+
+    {% endif %}
 </div>
