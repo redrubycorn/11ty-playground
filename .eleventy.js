@@ -18,6 +18,7 @@ module.exports = eleventyConfig => {
         }).setLocale('en').toLocaleString(DateTime.DATE_FULL);
     });
 
+    
     // ---------------------------------
     // PLUGINS
     // ---------------------------------
