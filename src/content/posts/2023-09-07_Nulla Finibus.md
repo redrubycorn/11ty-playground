@@ -1,5 +1,5 @@
 ---
-title: "Nulla Nunc Finibus"
+title: "Nulla Finibus"
 subtitle: "Nulla Nunc Finibus ipsum dolor sit elit."
 summary: "Suspendisse eget lacus risus. Nullam non ligula blandit, convallis nulla in, tincidunt urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 showImage: true

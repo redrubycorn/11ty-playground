@@ -1,1 +1,2 @@
 layout: "/layouts/postLayout.html"
+permalink: "/posts/{{ title | slug}}/"
