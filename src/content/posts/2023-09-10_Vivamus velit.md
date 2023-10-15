@@ -1,15 +1,19 @@
 ---
-title: "Aliquam est"
-subtitle: "Duis non aliquam lorem, id laoreet orci."
-summary: "Duis a lobortis nunc, in mollis nisl. Proin fringilla vitae metus vitae iaculis. Aliquam aliquam suscipit odio, quis vestibulum lacus placerat eu. Nullam et fermentum massa."
+title: "Vivamus velit"
+subtitle: "Vivamus velit turpis, semper eget scelerisque non, finibus ac leo."
+summary: "Vivamus velit turpis, semper eget scelerisque non, finibus ac leo. Proin tristique purus ut blandit lobortis. Quisque luctus rutrum dolor, ac commodo enim congue vitae. Quisque aliquam, ipsum id scelerisque porta."
 showImage: true
 image: "/images/1280x853_placeholder_pic.jpg"
 imageAlt: "Image Placeholder Pic"
-date: 2023-06-19
+date: 2023-09-10
 tags: 
     - news
-    - ipsum
+    - lorem
 ---
+
+Just another post.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget lacus risus. Nullam non ligula blandit, convallis nulla in, tincidunt urna. Integer nec mauris nulla. Nunc bibendum mattis ultrices. Vivamus velit turpis, semper eget scelerisque non, finibus ac leo. Proin tristique purus ut blandit lobortis. Quisque luctus rutrum dolor, ac commodo enim congue vitae. Quisque aliquam, ipsum id scelerisque porta, nisl arcu tempus tortor, ut sagittis risus ipsum id libero. Morbi sodales vulputate orci, non lacinia augue dapibus quis. Donec eget leo sit amet turpis ullamcorper efficitur vel quis purus. Donec porta volutpat dolor at egestas. Phasellus in sollicitudin est.
 
 Mauris gravida velit ac nisl volutpat, sit amet convallis nulla venenatis. Nunc eu neque a lorem tincidunt bibendum. Donec aliquet sodales quam eu dapibus. Nullam volutpat justo a imperdiet tempor. Aenean quis accumsan diam. Curabitur et varius sem. Nullam aliquam est viverra lectus ullamcorper semper.
 
