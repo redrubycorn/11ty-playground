@@ -12,7 +12,7 @@
 
 {% block content %}
     <!-- include page header -->
-    {% include "partials/pageHeader.html" %}
+    {% include "partials/header.html" %}
     
     <div class="container mt-3 mb-4">
         <div class="row d-flex flex-sm-row my-3">
@@ -20,7 +20,7 @@
             <!-- POSTLIST -->
             <div class="col-lg-10 order-1 order-lg-0">
                 <div>
-                    {% include "partials/postList.html" %}
+                    {% include "partials/postList-minimal.html" %}
                 </div>
                 
                 {% if not tag %}

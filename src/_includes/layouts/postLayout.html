@@ -1,24 +1,49 @@
 {% extends "layouts/baseLayout.html" %}
 
+{% set isPost = true %}
+{% set headerTitle = title %}
+{% set headerSubtitle = subtitle %}
 
 {% block content %}
-    <!-- include page header -->
-    {% include "partials/postHeader.html" %}
-    
     <div class="container mt-3 mb-4">
-        <div class="row d-flex flex-sm-row my-3">
+        <div class="row d-flex flex-sm-row my-4">
 
             <!-- POST CONTENT -->
-            <div class="col-lg-8 offset-lg-2 order-1 order-lg-0">
-                <!-- reading time and publishing date -->
-                <div class="row">
-                    <div class="col-6">
-                        <p class="text-uppercase text-muted my-0 py-0">Published</p>
-                        <p class="my-0 py-0 text-muted"><time datetime="{{ item.data.date }}">{{ date | readablePostDate }}</time></p>
+            <div class="col-lg-8 offset-lg-2 order-1 order-lg-0 post-content">
+                <!-- title and subtitle -->
+                <div class="mt-5 pt-2 pb-1 mb-1">
+                    <h1 class="text-center">{{ title }}</h1>
+                    <h2 class="text-center">{{ subtitle }}</h2>
+                </div>
+
+                <!-- tags -->
+                <div class="text-center pb-1 mb-3">
+                    {% if tags %}
+                        {% for tag in tags %}
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/tag/{{ tag | slug }}">#{{ tag }}</a>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                <!-- post summary -->
+                <div class="post-summary">
+                    <p class="lead">{{ summary }}</p>
+                </div>
+
+                <!-- actions bar -->
+                <div class="d-flex flex-row justify-content-between border-top border-bottom my-3">
+                    <div class="small text-center text-muted my-auto">
+                        <time datetime="{{ item.data.date }}">{{ date | readablePostDate }}</time> &bull; {{ content | readingTime }} read
                     </div>
-                    <div class="col-6 d-flex flex-column">
-                        <p class="text-uppercase text-muted my-0 py-0">Reading Time</p>
-                        <p class="my-0 py-0">{{ content | readingTime }}</p>
+                    <div class="dropdown">
+                        <button class="btn-share btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-arrow-up-from-bracket fa-lg py-4 px-2">
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item link-darkgray-primary" href="#">Share on <i class="fa-brands fa-twitter fa-lg py-2"></i></a></li>
+                            <li><a class="dropdown-item link-darkgray-primary" href="#">Share on <i class="fa-brands fa-linkedin fa-lg py-2"></i></a></li>
+                            <li><a class="dropdown-item link-darkgray-primary" href="#">Share on <i class="fa-brands fa-mastodon fa-lg py-2"></i></a></li>
+                        </ul>
                     </div>
                 </div>
 
@@ -30,8 +55,20 @@
                 </div>
 
                 <!-- post content -->
-                <div class="post-content mt-3">
+                <div class="post-content my-4">
                     {{ content | safe }}
+                </div>
+
+                <!-- actions bar bottom-->
+                <div class="d-flex flex-row justify-content-center border-top border-bottom my-3">
+                    <div class="small text-center text-muted my-auto me-3">
+                        Share this post on:
+                    </div>
+                    <div class="d-flex flex-row gap-3">
+                        <a href=""><i class="fa-brands fa-twitter fa-lg link-gray-primary py-4"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin fa-lg link-gray-primary py-4"></i></a>
+                        <a href=""><i class="fa-brands fa-mastodon fa-lg link-gray-primary py-4"></i></a>
+                    </div>
                 </div>
 
                 <!-- post navigation -->
@@ -41,7 +78,7 @@
             </div>
 
             <!-- SIDEBAR -->
-            <div class="col-lg-2 d-none d-lg-block order-0 order-lg-1 custom-sticky-top">
+            <div class="col-lg-2 order-0 order-lg-1 custom-sticky-top">
                 {% include "partials/blogSidebar.html" %}
             </div>
 

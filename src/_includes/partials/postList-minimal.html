@@ -4,7 +4,7 @@
         <li class="list-group-item">
             <div class="row blog-post d-flex">
                 <!-- info date and reading time -->
-                <div class="col-lg-2 order-2 order-lg-0">
+                <div class="col-lg-2 order-2 order-lg-2">
                     <a class="link-unstyled" href="{{ item.url }}">
                         <div class="d-flex flex-lg-column gap-2">
                             <p class="my-0 py-0 text-muted"><time datetime="{{ item.data.date }}">{{ item.data.date | readablePostDate }}</time></p>
@@ -23,14 +23,14 @@
                     <div class="d-inline-flex flex-wrap gap-1 mt-1">
                         {% for tag in item.data.tags %}
                             {% set tagUrl %}/tag/{{ tag | slug }}/{% endset %}
-                            <a class="btn btn-sm btn-outline-secondary primary-subtle-hover text-muted" href="{{ tagUrl }}">#{{ tag }}</a>
+                            <a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="{{ tagUrl }}">#{{ tag }}</a>
                         {% endfor %}
                     </div>
                     <p class="my-2 py-0">{{ item.data.summary }}</p>
                 </div>
         
                 <!-- post image -->
-                <div class="col-lg-4 order-0 order-lg-2">
+                <div class="col-lg-4 order-0 order-lg-0">
                     <a class="link-unstyled" href="{{ item.url }}"><img class="img-fluid" src="{{ item.data.image }}" alt="{{ item.data.imageAlt }}"></a>
                 </div>
             </div>

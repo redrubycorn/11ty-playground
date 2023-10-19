@@ -1,9 +1,9 @@
 <div class="bg-white custom-sticky-top">
-    <h5 class="text-center text-lg-start">Categories</h5>
-    <div class="category-scrollbar gap-1 d-flex flex-lg-column overflow-auto pb-1 mb-2">
+    <h5 class="text-center text-lg-start pt-2">Categories</h5>
+    <div class="category-scrollbar gap-1 d-flex flex-lg-column justify-content-center overflow-auto pb-2">
         {% for tag, val in collections.tagList %}
             {% set tagUrl %}/tag/{{ tag | slug }}/{% endset %}
-            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="{{ tagUrl }}">#{{ tag }}</a></div>
+            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="{{ tagUrl }}">#{{ tag }}</a></div>
         {% endfor %}
     </div>
 </div>
