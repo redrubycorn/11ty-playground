@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/11ty-playground/css/style.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <nav class="navbar navbar-expand-lg bg-primary sticky-top" data-bs-theme="dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.html">11ty-playground</a>
 
@@ -22,15 +22,15 @@
         <div class="collapse navbar-collapse" id="mainNavbar">
             <div class="navbar-nav ms-auto">
                 
-                    <a class="nav-link fw-semibold" href="/11ty-playground/" aria-label="11ty-playground - Home">
+                    <a class="nav-link fw-semibold text-end" href="/11ty-playground/" aria-label="11ty-playground - Home">
                         Home
                     </a>
                 
-                    <a class="nav-link fw-semibold" href="/11ty-playground/blog/" aria-label="11ty-playground - Blog">
+                    <a class="nav-link fw-semibold text-end" href="/11ty-playground/blog/" aria-label="11ty-playground - Blog">
                         Blog
                     </a>
                 
-                    <a class="nav-link fw-semibold" href="/11ty-playground/about/" aria-label="11ty-playground - About">
+                    <a class="nav-link fw-semibold text-end" href="/11ty-playground/about/" aria-label="11ty-playground - About">
                         About
                     </a>
                 
@@ -41,42 +41,49 @@
 
     <main>
         
-    <!-- include page header -->
-    <div class="container-fluid bg-light">
-    <div class="container py-3">
-        <div class="row">
-            <div class="col-lg-8 offset-lg-2">
-                <h2 class="display-6 py-0 my-0">Nunc bibendum mattis ultrices</h2>
-                <p class="subtitle lead py-0 my-0">Donec porta volutpat dolor at egestas.</p>
-                <p class="">Quisque aliquam, ipsum id scelerisque porta, nisl arcu tempus tortor, ut sagittis risus ipsum id libero. Phasellus in sollicitudin est.</p>
-                
-                    
-                        <a class="btn btn-sm btn-outline-secondary" href="/11ty-playground/tag/eleventy">#eleventy</a>
-                    
-                        <a class="btn btn-sm btn-outline-secondary" href="/11ty-playground/tag/lorem">#lorem</a>
-                    
-                        <a class="btn btn-sm btn-outline-secondary" href="/11ty-playground/tag/ipsum">#ipsum</a>
-                    
-                
-            </div>
-        </div>
-    </div>
-</div>
-    
     <div class="container mt-3 mb-4">
-        <div class="row d-flex flex-sm-row my-3">
+        <div class="row d-flex flex-sm-row my-4">
 
             <!-- POST CONTENT -->
-            <div class="col-lg-8 offset-lg-2 order-1 order-lg-0">
-                <!-- reading time and publishing date -->
-                <div class="row">
-                    <div class="col-6">
-                        <p class="text-uppercase text-muted my-0 py-0">Published</p>
-                        <p class="my-0 py-0 text-muted"><time datetime="">May 15, 2023</time></p>
+            <div class="col-lg-8 offset-lg-2 order-1 order-lg-0 post-content">
+                <!-- title and subtitle -->
+                <div class="mt-5 pt-2 pb-1 mb-1">
+                    <h1 class="text-center">Nunc bibendum mattis ultrices</h1>
+                    <h2 class="text-center">Donec porta volutpat dolor at egestas.</h2>
+                </div>
+
+                <!-- tags -->
+                <div class="text-center pb-1 mb-3">
+                    
+                        
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/eleventy">#eleventy</a>
+                        
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/lorem">#lorem</a>
+                        
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/ipsum">#ipsum</a>
+                        
+                    
+                </div>
+
+                <!-- post summary -->
+                <div class="post-summary">
+                    <p class="lead">Quisque aliquam, ipsum id scelerisque porta, nisl arcu tempus tortor, ut sagittis risus ipsum id libero. Phasellus in sollicitudin est.</p>
+                </div>
+
+                <!-- actions bar -->
+                <div class="d-flex flex-row justify-content-between border-top border-bottom my-3">
+                    <div class="small text-center text-muted my-auto">
+                        <time datetime="">May 15, 2023</time> &bull; 2 min read
                     </div>
-                    <div class="col-6 d-flex flex-column">
-                        <p class="text-uppercase text-muted my-0 py-0">Reading Time</p>
-                        <p class="my-0 py-0">2 min</p>
+                    <div class="dropdown">
+                        <button class="btn-share btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-arrow-up-from-bracket fa-lg py-4 px-2">
+                        </i></button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item link-darkgray-primary" href="#">Share on <i class="fa-brands fa-twitter fa-lg py-2"></i></a></li>
+                            <li><a class="dropdown-item link-darkgray-primary" href="#">Share on <i class="fa-brands fa-linkedin fa-lg py-2"></i></a></li>
+                            <li><a class="dropdown-item link-darkgray-primary" href="#">Share on <i class="fa-brands fa-mastodon fa-lg py-2"></i></a></li>
+                        </ul>
                     </div>
                 </div>
 
@@ -86,13 +93,25 @@
                 </div>
 
                 <!-- post content -->
-                <div class="post-content mt-3">
+                <div class="post-content my-4">
                     <p>Suspendisse eget lacus risus. Nullam non ligula blandit, convallis nulla in, tincidunt urna. Integer nec mauris nulla. Nunc bibendum mattis ultrices. Vivamus velit turpis, semper eget scelerisque non, finibus ac leo. Proin tristique purus ut blandit lobortis. Quisque luctus rutrum dolor, ac commodo enim congue vitae. Quisque aliquam, ipsum id scelerisque porta, nisl arcu tempus tortor, ut sagittis risus ipsum id libero. Morbi sodales vulputate orci, non lacinia augue dapibus quis. Donec eget leo sit amet turpis ullamcorper efficitur vel quis purus. Donec porta volutpat dolor at egestas. Phasellus in sollicitudin est.</p>
 <p>Mauris gravida velit ac nisl volutpat, sit amet convallis nulla venenatis. Nunc eu neque a lorem tincidunt bibendum. Donec aliquet sodales quam eu dapibus. Nullam volutpat justo a imperdiet tempor. Aenean quis accumsan diam. Curabitur et varius sem. Nullam aliquam est viverra lectus ullamcorper semper.</p>
 <p>Vivamus ac cursus metus. Duis non aliquam lorem, id laoreet orci. Fusce sit amet interdum sem. Etiam consectetur arcu tristique, porttitor tortor quis, euismod nisl. Proin venenatis est quis accumsan consequat. Sed interdum pulvinar mauris, a lobortis erat condimentum vitae. Quisque pretium, turpis sed lacinia fermentum, augue justo rhoncus risus, a semper lectus lorem eget odio. Morbi varius massa et fermentum eleifend. Vestibulum quis nulla nisl. Aenean dignissim, eros eu pharetra molestie, augue neque accumsan ipsum, ac dapibus justo elit sed est. Ut in suscipit lectus, in feugiat metus.</p>
 <p>Mauris ut ipsum commodo, dapibus dui id, posuere libero. In hac habitasse platea dictumst. Aliquam erat volutpat. Donec commodo dui quis tortor facilisis sodales feugiat sed orci. Integer vulputate magna quis odio malesuada molestie. Quisque dictum nisi sed magna sollicitudin rutrum non laoreet odio. Phasellus ipsum lorem, pellentesque in massa ac, faucibus rhoncus tortor.</p>
 <p>Suspendisse nec nibh dapibus, hendrerit nibh in, pulvinar massa. Morbi quis mollis nunc, quis egestas ligula. Nunc quis pharetra libero. In interdum tortor justo, fermentum vulputate massa sodales non. Aliquam tristique enim magna, et sodales dolor molestie in. Duis a lobortis nunc, in mollis nisl. Proin fringilla vitae metus vitae iaculis. Aliquam aliquam suscipit odio, quis vestibulum lacus placerat eu. Nullam et fermentum massa. Suspendisse vel sem vitae orci vestibulum aliquam. Maecenas semper ex vitae porta efficitur. Aliquam lacinia tempus metus ac imperdiet. Sed imperdiet in justo sed imperdiet. Curabitur eleifend placerat urna sed euismod. Morbi sagittis ex ut orci sagittis, nec commodo mi pulvinar.</p>
 
+                </div>
+
+                <!-- actions bar bottom-->
+                <div class="d-flex flex-row justify-content-center border-top border-bottom my-3">
+                    <div class="small text-center text-muted my-auto me-3">
+                        Share this post on:
+                    </div>
+                    <div class="d-flex flex-row gap-3">
+                        <a href="."><i class="fa-brands fa-twitter fa-lg link-gray-primary py-4"></i></a>
+                        <a href="."><i class="fa-brands fa-linkedin fa-lg link-gray-primary py-4"></i></a>
+                        <a href="."><i class="fa-brands fa-mastodon fa-lg link-gray-primary py-4"></i></a>
+                    </div>
                 </div>
 
                 <!-- post navigation -->
@@ -108,8 +127,9 @@
             <div class="col-md-6 d-flex justify-content-start">
                 <div class="d-flex flex-column">
                     
-                        <a class="link-unstyled text-muted" href="/11ty-playground/posts/aliquam-est-ipsum/"><i class="fa-solid fa-chevron-left"></i> Previous post</a>
-                        <a class="link-unstyled" href="/11ty-playground/posts/aliquam-est-ipsum/">Aliquam est ipsum</a>
+                        <a class="link-unstyled link-darkgray-primary" href="/11ty-playground/posts/aliquam-est-ipsum/">
+                            <span><i class="fa-solid fa-chevron-left"></i> <span class="fw-semibold small text-primary">Previous post</span><br>Aliquam est ipsum
+                        </span></a>
                     
                 </div>
             </div>
@@ -117,8 +137,9 @@
             <div class="col-md-6 d-flex justify-content-end">
                 <div class="d-flex flex-column">
                     
-                        <a class="link-unstyled text-muted text-end" href="/11ty-playground/posts/nulla-nunc-finibus/">Next post <i class="fa-solid fa-chevron-right"></i></a>
-                        <a class="link-unstyled text-end" href="/11ty-playground/posts/nulla-nunc-finibus/">Nulla Nunc Finibus</a>
+                        <a class="link-unstyled link-darkgray-primary text-end" href="/11ty-playground/posts/nulla-nunc-finibus/">
+                            <span class="fw-semibold small text-primary">Next post</span> <i class="fa-solid fa-chevron-right"></i><br>Nulla Nunc Finibus
+                        </a>
                     
                 </div>
             </div>
@@ -131,34 +152,34 @@
             </div>
 
             <!-- SIDEBAR -->
-            <div class="col-lg-2 d-none d-lg-block order-0 order-lg-1 custom-sticky-top">
+            <div class="col-lg-2 order-0 order-lg-1 custom-sticky-top">
                 <div class="bg-white custom-sticky-top">
-    <h5 class="text-center text-lg-start">Categories</h5>
-    <div class="category-scrollbar gap-1 d-flex flex-lg-column overflow-auto pb-1 mb-2">
+    <h5 class="text-center text-lg-start pt-2">Categories</h5>
+    <div class="category-scrollbar gap-1 d-flex flex-lg-column justify-content-center overflow-auto pb-2">
         
             
-            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/lorem/">#lorem</a></div>
+            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/lorem/">#lorem</a></div>
         
             
-            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/news/">#news</a></div>
+            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/news/">#news</a></div>
         
             
-            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/html/">#html</a></div>
+            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/html/">#html</a></div>
         
             
-            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/coding/">#coding</a></div>
+            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/coding/">#coding</a></div>
         
             
-            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/eleventy/">#eleventy</a></div>
+            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/eleventy/">#eleventy</a></div>
         
             
-            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/tag/">#tag</a></div>
+            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/tag/">#tag</a></div>
         
             
-            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/example/">#example</a></div>
+            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/example/">#example</a></div>
         
             
-            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/ipsum/">#ipsum</a></div>
+            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/ipsum/">#ipsum</a></div>
         
     </div>
 </div>
@@ -172,51 +193,42 @@
     
 
 
-<footer class="d-flex flex-wrap justify-content-between align-items-center pt-2 pb-4 mt-auto border-top" id="site-footer">
-    <div class="container-fluid">
-        <div class="row">
-            <!-- copyright -->
-            <div class="col-lg-4 d-flex justify-content-center justify-content-lg-start">
-                <p class="pb-0 mb-0">
-                    <!-- shows just the current year if the year in sitedata matches -->
-                    <!-- otherwise shows sitedata.year - current year, like 2022 - 2023 -->
-                    &copy; 2022 - 2023 11ty-playground
-                </p>
-            </div>
+<footer class="border-top mt-auto pt-2 pb-4" id="site-footer">
+    <div class="container-fluid d-flex flex-column flex-lg-row justify-content-between">
 
-            <!-- social nav -->
-            <div class="col-lg-4 d-flex justify-content-center">
-                <div class="d-flex gap-3">
-                    
-                        <a class="link-secondary link-opacity-50-hover" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
-                    
-                        <a class="link-secondary link-opacity-50-hover" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    
-                        <a class="link-secondary link-opacity-50-hover" href="https://mastodon.social/explore" target="_blank"><i class="fab fa-mastodon"></i></a>
-                    
-                        <a class="link-secondary link-opacity-50-hover" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                    
-                </div>
-            </div>
+        <!-- Copyright -->
+        <span class="navbar-text footer-link-color text-center text-lg-start" id="copyright">
+            <!-- shows just the current year if the year in sitedata matches -->
+            <!-- otherwise shows sitedata.year - current year, like 2022 - 2023 -->
+            &copy; 2022 - 2023 11ty-playground
+        </span>
 
-            <!-- footer nav -->
-            <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end">
-                <div class="d-flex gap-3 footer-nav" aria-label="footer navigation">
-                    
-                        <a class="link-secondary link-underline-opacity-25 link-opacity-50-hover" href="/11ty-playground/privacy-policy/" aria-label="11ty-playground - Privacy Policy">
-                            Privacy Policy
-                        </a>
-                    
-                        <a class="link-secondary link-underline-opacity-25 link-opacity-50-hover" href="/11ty-playground/legal-notice/" aria-label="11ty-playground - Legal Notice">
-                            Legal Notice
-                        </a>
-                    
-                        <a class="link-secondary link-underline-opacity-25 link-opacity-50-hover" href="/11ty-playground/contact/" aria-label="11ty-playground - Contact">
-                            Contact
-                        </a>
-                    
-                </div>
-            </div>
+        <div class="nav justify-content-center" id="footer-social">
+            
+                <a class="nav-link link-primary-subtle" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+            
+                <a class="nav-link link-primary-subtle" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            
+                <a class="nav-link link-primary-subtle" href="https://mastodon.social/explore" target="_blank"><i class="fab fa-mastodon"></i></a>
+            
+                <a class="nav-link link-primary-subtle" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            
+        </div>
+
+        <div class="nav justify-content-center justify-content-lg-end" id="footer-nav">
+            
+                <a class="nav-link link-primary-subtle" href="/11ty-playground/privacy-policy/" aria-label="11ty-playground - Privacy Policy">
+                    Privacy Policy
+                </a>
+            
+                <a class="nav-link link-primary-subtle" href="/11ty-playground/legal-notice/" aria-label="11ty-playground - Legal Notice">
+                    Legal Notice
+                </a>
+            
+                <a class="nav-link link-primary-subtle" href="/11ty-playground/contact/" aria-label="11ty-playground - Contact">
+                    Contact
+                </a>
+            
         </div>
     </div>
 </footer>

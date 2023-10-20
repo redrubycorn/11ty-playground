@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/11ty-playground/css/style.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <nav class="navbar navbar-expand-lg bg-primary sticky-top" data-bs-theme="dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.html">11ty-playground</a>
 
@@ -22,15 +22,15 @@
         <div class="collapse navbar-collapse" id="mainNavbar">
             <div class="navbar-nav ms-auto">
                 
-                    <a class="nav-link fw-semibold" href="/11ty-playground/" aria-label="11ty-playground - Home">
+                    <a class="nav-link fw-semibold text-end" href="/11ty-playground/" aria-label="11ty-playground - Home">
                         Home
                     </a>
                 
-                    <a class="nav-link fw-semibold" href="/11ty-playground/blog/" aria-label="11ty-playground - Blog">
+                    <a class="nav-link fw-semibold text-end" href="/11ty-playground/blog/" aria-label="11ty-playground - Blog">
                         Blog
                     </a>
                 
-                    <a class="nav-link fw-semibold" href="/11ty-playground/about/" aria-label="11ty-playground - About">
+                    <a class="nav-link fw-semibold text-end" href="/11ty-playground/about/" aria-label="11ty-playground - About">
                         About
                     </a>
                 
@@ -43,11 +43,14 @@
         
     <!-- include page header -->
     
-    <div class="container-fluid bg-light">
-        <div class="container py-3">
-            <h2 class="display-6 py-0 my-0">Tag Archive</h2>
-            <p class="subtitle lead py-0 my-0">Blog posts filed under #tag</p>
-            
+    <div class="container-fluid bg-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 my-4">
+                    <h2 class="display-6">Tag Archive</h2>
+                    <h3 class="lead">Blog posts filed under #tag</h3>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -61,21 +64,21 @@
                     <ul class="list-group list-group-flush">
     <!-- POST -->
     
-        <li class="list-group-item">
+        <li class="list-group-item py-4">
             <div class="row blog-post d-flex">
                 <!-- info date and reading time -->
-                <div class="col-lg-2 order-2 order-lg-0">
+                <div class="col-lg-2 order-2 order-lg-2 pe-0">
                     <a class="link-unstyled" href="/11ty-playground/posts/lorem-ipsum-dolor/">
                         <div class="d-flex flex-lg-column gap-2">
                             <p class="my-0 py-0 text-muted"><time datetime="Tue Apr 25 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">April 25, 2023</time></p>
                             <p class="d-lg-none my-0 py-0 text-muted">&bull;</p>
-                            <p class="text-uppercase my-0 py-0 text-muted">2 min</p>
+                            <p class="my-0 py-0 text-muted">2 min read</p>
                         </div>
                     </a>
                 </div>
         
                 <!-- post content -->
-                <div class="col-lg-6 order-1 order-lg-1">
+                <div class="col-lg-6 order-1 order-lg-1 pe-0">
                     <a class="link-unstyled" href="/11ty-playground/posts/lorem-ipsum-dolor/">
                         <h5 class="mt-2 mt-lg-0">Lorem ipsum dolor</h5>
                         <h6 class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
@@ -83,43 +86,43 @@
                     <div class="d-inline-flex flex-wrap gap-1 mt-1">
                         
                             
-                            <a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/news/">#news</a>
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/news/">#news</a>
                         
                             
-                            <a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/lorem/">#lorem</a>
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/lorem/">#lorem</a>
                         
                             
-                            <a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/tag/">#tag</a>
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/tag/">#tag</a>
                         
                             
-                            <a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/example/">#example</a>
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/example/">#example</a>
                         
                     </div>
                     <p class="my-2 py-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget lacus risus. Nullam non ligula blandit, convallis nulla in, tincidunt urna. Integer nec mauris nulla.</p>
                 </div>
         
                 <!-- post image -->
-                <div class="col-lg-4 order-0 order-lg-2">
+                <div class="col-lg-4 order-0 order-lg-0 pe-0">
                     <a class="link-unstyled" href="/11ty-playground/posts/lorem-ipsum-dolor/"><img class="img-fluid" src="/11ty-playground/images/1280x853_placeholder_pic.jpg" alt="Image Placeholder Pic"></a>
                 </div>
             </div>
         </li>
     
-        <li class="list-group-item">
+        <li class="list-group-item py-4">
             <div class="row blog-post d-flex">
                 <!-- info date and reading time -->
-                <div class="col-lg-2 order-2 order-lg-0">
+                <div class="col-lg-2 order-2 order-lg-2 pe-0">
                     <a class="link-unstyled" href="/11ty-playground/posts/aliquam-est-ipsum/">
                         <div class="d-flex flex-lg-column gap-2">
                             <p class="my-0 py-0 text-muted"><time datetime="Mon Jun 19 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">June 19, 2023</time></p>
                             <p class="d-lg-none my-0 py-0 text-muted">&bull;</p>
-                            <p class="text-uppercase my-0 py-0 text-muted">1 min</p>
+                            <p class="my-0 py-0 text-muted">1 min read</p>
                         </div>
                     </a>
                 </div>
         
                 <!-- post content -->
-                <div class="col-lg-6 order-1 order-lg-1">
+                <div class="col-lg-6 order-1 order-lg-1 pe-0">
                     <a class="link-unstyled" href="/11ty-playground/posts/aliquam-est-ipsum/">
                         <h5 class="mt-2 mt-lg-0">Aliquam est ipsum</h5>
                         <h6 class="text-muted">Duis non aliquam lorem, id laoreet orci.</h6>
@@ -127,20 +130,20 @@
                     <div class="d-inline-flex flex-wrap gap-1 mt-1">
                         
                             
-                            <a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/news/">#news</a>
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/news/">#news</a>
                         
                             
-                            <a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/ipsum/">#ipsum</a>
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/ipsum/">#ipsum</a>
                         
                             
-                            <a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/tag/">#tag</a>
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/tag/">#tag</a>
                         
                     </div>
                     <p class="my-2 py-0">Duis a lobortis nunc, in mollis nisl. Proin fringilla vitae metus vitae iaculis. Aliquam aliquam suscipit odio, quis vestibulum lacus placerat eu. Nullam et fermentum massa.</p>
                 </div>
         
                 <!-- post image -->
-                <div class="col-lg-4 order-0 order-lg-2">
+                <div class="col-lg-4 order-0 order-lg-0 pe-0">
                     <a class="link-unstyled" href="/11ty-playground/posts/aliquam-est-ipsum/"><img class="img-fluid" src="/11ty-playground/images/1280x853_placeholder_pic.jpg" alt="Image Placeholder Pic"></a>
                 </div>
             </div>
@@ -156,32 +159,32 @@
             <!-- SIDEBAR -->
             <div class="col-lg-2 order-0 order-lg-1 custom-sticky-top">
                 <div class="bg-white custom-sticky-top">
-    <h5 class="text-center text-lg-start">Categories</h5>
-    <div class="category-scrollbar gap-1 d-flex flex-lg-column overflow-auto pb-1 mb-2">
+    <h5 class="text-center text-lg-start pt-2">Categories</h5>
+    <div class="category-scrollbar gap-1 d-flex flex-lg-column justify-content-center overflow-auto pb-2">
         
             
-            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/lorem/">#lorem</a></div>
+            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/lorem/">#lorem</a></div>
         
             
-            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/news/">#news</a></div>
+            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/news/">#news</a></div>
         
             
-            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/html/">#html</a></div>
+            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/html/">#html</a></div>
         
             
-            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/coding/">#coding</a></div>
+            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/coding/">#coding</a></div>
         
             
-            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/eleventy/">#eleventy</a></div>
+            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/eleventy/">#eleventy</a></div>
         
             
-            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/tag/">#tag</a></div>
+            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/tag/">#tag</a></div>
         
             
-            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/example/">#example</a></div>
+            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/example/">#example</a></div>
         
             
-            <div><a class="btn btn-sm btn-outline-secondary text-muted" href="/11ty-playground/tag/ipsum/">#ipsum</a></div>
+            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/ipsum/">#ipsum</a></div>
         
     </div>
 </div>
@@ -198,51 +201,42 @@
     
 
 
-<footer class="d-flex flex-wrap justify-content-between align-items-center pt-2 pb-4 mt-auto border-top" id="site-footer">
-    <div class="container-fluid">
-        <div class="row">
-            <!-- copyright -->
-            <div class="col-lg-4 d-flex justify-content-center justify-content-lg-start">
-                <p class="pb-0 mb-0">
-                    <!-- shows just the current year if the year in sitedata matches -->
-                    <!-- otherwise shows sitedata.year - current year, like 2022 - 2023 -->
-                    &copy; 2022 - 2023 11ty-playground
-                </p>
-            </div>
+<footer class="border-top mt-auto pt-2 pb-4" id="site-footer">
+    <div class="container-fluid d-flex flex-column flex-lg-row justify-content-between">
 
-            <!-- social nav -->
-            <div class="col-lg-4 d-flex justify-content-center">
-                <div class="d-flex gap-3">
-                    
-                        <a class="link-secondary link-opacity-50-hover" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
-                    
-                        <a class="link-secondary link-opacity-50-hover" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    
-                        <a class="link-secondary link-opacity-50-hover" href="https://mastodon.social/explore" target="_blank"><i class="fab fa-mastodon"></i></a>
-                    
-                        <a class="link-secondary link-opacity-50-hover" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                    
-                </div>
-            </div>
+        <!-- Copyright -->
+        <span class="navbar-text footer-link-color text-center text-lg-start" id="copyright">
+            <!-- shows just the current year if the year in sitedata matches -->
+            <!-- otherwise shows sitedata.year - current year, like 2022 - 2023 -->
+            &copy; 2022 - 2023 11ty-playground
+        </span>
 
-            <!-- footer nav -->
-            <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end">
-                <div class="d-flex gap-3 footer-nav" aria-label="footer navigation">
-                    
-                        <a class="link-secondary link-underline-opacity-25 link-opacity-50-hover" href="/11ty-playground/privacy-policy/" aria-label="11ty-playground - Privacy Policy">
-                            Privacy Policy
-                        </a>
-                    
-                        <a class="link-secondary link-underline-opacity-25 link-opacity-50-hover" href="/11ty-playground/legal-notice/" aria-label="11ty-playground - Legal Notice">
-                            Legal Notice
-                        </a>
-                    
-                        <a class="link-secondary link-underline-opacity-25 link-opacity-50-hover" href="/11ty-playground/contact/" aria-label="11ty-playground - Contact">
-                            Contact
-                        </a>
-                    
-                </div>
-            </div>
+        <div class="nav justify-content-center" id="footer-social">
+            
+                <a class="nav-link link-primary-subtle" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+            
+                <a class="nav-link link-primary-subtle" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            
+                <a class="nav-link link-primary-subtle" href="https://mastodon.social/explore" target="_blank"><i class="fab fa-mastodon"></i></a>
+            
+                <a class="nav-link link-primary-subtle" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            
+        </div>
+
+        <div class="nav justify-content-center justify-content-lg-end" id="footer-nav">
+            
+                <a class="nav-link link-primary-subtle" href="/11ty-playground/privacy-policy/" aria-label="11ty-playground - Privacy Policy">
+                    Privacy Policy
+                </a>
+            
+                <a class="nav-link link-primary-subtle" href="/11ty-playground/legal-notice/" aria-label="11ty-playground - Legal Notice">
+                    Legal Notice
+                </a>
+            
+                <a class="nav-link link-primary-subtle" href="/11ty-playground/contact/" aria-label="11ty-playground - Contact">
+                    Contact
+                </a>
+            
         </div>
     </div>
 </footer>
