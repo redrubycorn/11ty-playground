@@ -9,8 +9,9 @@
             <div class="col-md-6 d-flex justify-content-start">
                 <div class="d-flex flex-column">
                     {% if previousPost %}
-                        <a class="link-unstyled text-muted" href="{{ previousPost.url }}"><i class="fa-solid fa-chevron-left"></i> Previous post</a>
-                        <a class="link-unstyled" href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+                        <a class="link-unstyled link-darkgray-primary" href="{{ previousPost.url }}">
+                            <span><i class="fa-solid fa-chevron-left"></i> <span class="fw-semibold small text-primary">Previous post</span><br>{{ previousPost.data.title }}
+                        </a>
                     {% endif %}
                 </div>
             </div>
@@ -18,8 +19,9 @@
             <div class="col-md-6 d-flex justify-content-end">
                 <div class="d-flex flex-column">
                     {% if nextPost %}
-                        <a class="link-unstyled text-muted text-end" href="{{ nextPost.url }}">Next post <i class="fa-solid fa-chevron-right"></i></a>
-                        <a class="link-unstyled text-end" href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+                        <a class="link-unstyled link-darkgray-primary text-end" href="{{ nextPost.url }}">
+                            <span class="fw-semibold small text-primary">Next post</span> <i class="fa-solid fa-chevron-right"></i><br>{{ nextPost.data.title }}
+                        </a>
                     {% endif %}
                 </div>
             </div>

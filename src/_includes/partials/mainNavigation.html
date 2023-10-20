@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-white sticky-top">
+<nav class="navbar navbar-expand-lg bg-primary sticky-top" data-bs-theme="dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.html">{{ sitedata.name }}</a>
 
@@ -9,7 +9,7 @@
         <div class="collapse navbar-collapse" id="mainNavbar">
             <div class="navbar-nav ms-auto">
                 {% for item in navigation.mainNav %}
-                    <a class="nav-link fw-semibold{{helpers.addActiveState(item.url, page.url) | safe}}" 
+                    <a class="nav-link fw-semibold text-end{{helpers.addActiveState(item.url, page.url) | safe}}" 
                         href="{{ item.url }}" 
                         aria-label="{{ sitedata.name }} - {{ item.text }}"
                         {{helpers.addAriaCurrentState(item.url, page.url) | safe}}>
