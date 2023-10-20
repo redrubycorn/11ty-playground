@@ -2,7 +2,7 @@
 {% set totalPages = pagination.pages | length %}
 {% set current = pagination.pageNumber + 1 %}
 {% set adjacentLinks = 2 %}
-{% set maxLinks = (adjacentLinks * 2) + 1 %}
+{% set maxLinks = adjacentLinks * 2 %}
 
 {% set minPage = current - adjacentLinks %}
 {% set maxPage = current + adjacentLinks + 1 %}
@@ -13,15 +13,17 @@
 
     <!-- FIRST & PREVIOUS -->
     <div class="btn-group" role="group" aria-label="First group">
-        {% if pagination.href.previous %}
-            <a class="btn btn-primary" href="{{ pagination.href.first }}{{ paginationAnchor }}"><i class="fa-solid fa-backward-step"></i></a>
-            <a class="btn btn-primary" href="{{ pagination.href.previous }}{{ paginationAnchor }}"><i class="fa-solid fa-chevron-left"></i></a>
-        {% endif %}
+        <a class="btn btn-primary {% if not pagination.href.previous %}disabled{% endif %}" href="{{ pagination.href.first }}{{ paginationAnchor }}" {% if not pagination.href.previous %}aria-disabled="true"{% endif %}>
+            <i class="fa-solid fa-backward-step"></i>
+        </a>
+        <a class="btn btn-primary {% if not pagination.href.previous %}disabled{% endif %}" href="{{ pagination.href.previous }}{{ paginationAnchor }}" {% if not pagination.href.previous %}aria-disabled="true"{% endif %}>
+            <i class="fa-solid fa-chevron-left"></i>
+        </a>
     </div>
     
     <!-- more pages indicator -->
     <div class="btn-group" role="group" aria-label="Second group">
-        {% if (totalPages > maxLinks) %}
+        {% if (totalPages >= maxLinks) %}
             {% if (current - adjacentLinks > 1) %}
                 <a class="btn btn-primary">...</a>
             {% endif %}
@@ -44,8 +46,8 @@
 
     <!-- more pages indicator -->
     <div class="btn-group" role="group" aria-label="Second group">
-        {% if (totalPages > maxLinks) %}
-            {% if (current + adjacentLinks < totalPages) %}
+        {% if (totalPages >= maxLinks) %}
+            {% if ((current + adjacentLinks) <= (totalPages - 1)) %}
                 <a class="btn btn-primary">...</a>
             {% endif %}
         {% endif %}
@@ -53,10 +55,12 @@
 
     <!-- LAST & NEXT -->
     <div class="btn-group" role="group" aria-label="Second group">
-        {% if pagination.href.next %}
-            <a class="btn btn-primary" href="{{ pagination.href.next }}{{ paginationAnchor }}"><i class="fa-solid fa-chevron-right"></i></a>
-            <a class="btn btn-primary" href="{{ pagination.href.last }}{{ paginationAnchor }}"><i class="fa-solid fa-forward-step"></i></a>
-        {% endif %}
+        <a class="btn btn-primary {% if not pagination.href.next %}disabled{% endif %}" href="{{ pagination.href.next }}{{ paginationAnchor }}" {% if not pagination.href.next %}aria-disabled="true"{% endif %}>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a class="btn btn-primary {% if not pagination.href.next %}disabled{% endif %}" href="{{ pagination.href.last }}{{ paginationAnchor }}" {% if not pagination.href.next %}aria-disabled="true"{% endif %}>
+            <i class="fa-solid fa-forward-step"></i>
+        </a>
     </div>
 
     {% endif %}
