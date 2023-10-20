@@ -1,3 +1,2 @@
 layout: "/layouts/postLayout.html"
-header: true
 permalink: "/posts/{{ title | slug}}/"
