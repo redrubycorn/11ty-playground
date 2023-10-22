@@ -6,7 +6,7 @@ headerSubtitle: "News, Tips, and Commentary about all things 11ty."
 layout: "/layouts/blogLayout.html"
 
 pagination:
-    data: collections.blog
+    data: collections.posts
     size: 4
     paginationPrevText: 'Newer Posts'
     paginationNextText: 'Older Posts'

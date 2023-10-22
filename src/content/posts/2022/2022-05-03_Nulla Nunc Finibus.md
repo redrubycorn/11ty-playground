@@ -1,14 +1,14 @@
 ---
-title: "Dolor site amet"
-subtitle: "Duis non aliquam lorem, id laoreet orci. Fusce sit amet interdum sem."
-summary: "Sed interdum pulvinar mauris, a lobortis erat condimentum vitae. Quisque pretium, turpis sed lacinia fermentum, augue justo rhoncus risus, a semper lectus lorem eget odio."
-showImage: false
+title: "Nulla Nunc Finibus"
+subtitle: "Nulla Nunc Finibus ipsum dolor sit elit."
+summary: "Suspendisse eget lacus risus. Nullam non ligula blandit, convallis nulla in, tincidunt urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+showImage: true
 image: "/images/1280x853_placeholder_pic.jpg"
 imageAlt: "Image Placeholder Pic"
-date: 2023-04-16
+date: 2022-05-03
 tags: 
-    - news
     - lorem
+    - eleventy
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget lacus risus. Nullam non ligula blandit, convallis nulla in, tincidunt urna. Integer nec mauris nulla. Nunc bibendum mattis ultrices. Vivamus velit turpis, semper eget scelerisque non, finibus ac leo. Proin tristique purus ut blandit lobortis. Quisque luctus rutrum dolor, ac commodo enim congue vitae. Quisque aliquam, ipsum id scelerisque porta, nisl arcu tempus tortor, ut sagittis risus ipsum id libero. Morbi sodales vulputate orci, non lacinia augue dapibus quis. Donec eget leo sit amet turpis ullamcorper efficitur vel quis purus. Donec porta volutpat dolor at egestas. Phasellus in sollicitudin est.

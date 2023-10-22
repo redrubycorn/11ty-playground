@@ -1,6 +1,6 @@
 <ul class="list-group list-group-flush">
     <!-- POST -->
-    {% for item in postListItems %}
+    {% for item in feedItems %}
         <li class="list-group-item py-4">
             <div class="row blog-post d-flex">
                 <!-- info date and reading time -->
@@ -22,7 +22,7 @@
                     </a>
                     <div class="d-inline-flex flex-wrap gap-1 mt-1">
                         {% for tag in item.data.tags %}
-                            {% set tagUrl %}/tag/{{ tag | slug }}/{% endset %}
+                            {% set tagUrl %}/posts/tags/{{ tag | slug }}/{% endset %}
                             <a class="btn btn-sm btn-outline outline-ps-p" href="{{ tagUrl }}">#{{ tag }}</a>
                         {% endfor %}
                     </div>

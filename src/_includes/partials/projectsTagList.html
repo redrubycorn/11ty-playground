@@ -1,0 +1,8 @@
+{% for tag in collections.projectTags %}
+    {% set tagUrl %}/projects/tags/{{ tag | slug }}/{% endset %}
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="{{ tagUrl }}">
+            #{{ tag }} ({{ collections.projectsTagged[tag] | length }})
+        </a>
+    </li>
+{% endfor %}
