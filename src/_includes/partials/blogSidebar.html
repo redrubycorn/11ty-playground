@@ -1,9 +1,18 @@
 <div class="bg-white custom-sticky-top">
-    <h5 class="text-center text-lg-start pt-2">Categories</h5>
-    <div class="category-scrollbar gap-1 d-flex flex-lg-column justify-content-center overflow-auto pb-2">
-        {% for tag, val in collections.tagList %}
-            {% set tagUrl %}/tag/{{ tag | slug }}/{% endset %}
-            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="{{ tagUrl }}">#{{ tag }}</a></div>
-        {% endfor %}
+    <div>
+        <h5 class="text-start pt-2">Filter by Tag</h5>
+        <ul class="list-unstyled d-flex flex-column gap-1 pb-2">
+            {% include "partials/postsTagList.html"%}
+        </ul>
+    </div>
+
+    <div class="mt-4">
+        <h5>Archive</h5>
+        <ul class="list-unstyled d-flex flex-column gap-1">
+            {% for year in collections.postYears %}
+            {% set tagUrl %}/posts/{{ year | slug }}/{% endset %}
+                <li><a href="{{ tagUrl }}" class="btn btn-sm btn-outline-primary">{{ year }}</a></li>
+            {% endfor %}
+        </ul>
     </div>
 </div>

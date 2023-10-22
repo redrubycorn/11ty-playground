@@ -1,0 +1,11 @@
+---
+layout: layouts/blogLayout.html
+title: "Tag Archive"
+header: true
+headerTitle: "Tag Archive"
+pagination:
+  data: collections.postTags
+  size: 1
+  alias: tag
+permalink: /posts/tags/{{ tag | slug }}/
+---
