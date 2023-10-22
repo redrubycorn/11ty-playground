@@ -30,6 +30,10 @@
                         Blog
                     </a>
                 
+                    <a class="nav-link fw-semibold text-end" href="/11ty-playground/projects/" aria-label="11ty-playground - Projects">
+                        Projects
+                    </a>
+                
                     <a class="nav-link fw-semibold text-end" href="/11ty-playground/about/" aria-label="11ty-playground - About">
                         About
                     </a>
@@ -48,7 +52,7 @@
             <div class="row">
                 <div class="col-12 my-4">
                     <h2 class="display-6">Tag Archive</h2>
-                    <h3 class="lead">Blog posts filed under #example</h3>
+                    <h3 class="lead">Blog posts tagged #example</h3>
                 </div>
             </div>
         </div>
@@ -56,10 +60,76 @@
 
     
     <div class="container mt-3 mb-4">
-        <div class="row d-flex flex-sm-row my-3">
 
+        <!-- tag bar only on small screens -->
+        <div class="row d-flex d-block d-lg-none bg-white custom-sticky-top zindex-2">
+            <div class="col-12">
+                <h5 class="text-center text-lg-start pt-2">Filter by Tag</h5>        
+                <ul class="list-unstyled category-scrollbar gap-1 d-flex flex-lg-column justify-content-center overflow-auto pb-2">
+                    
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/lorem/">
+            #lorem (8)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/news/">
+            #news (8)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/html/">
+            #html (4)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/coding/">
+            #coding (4)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/eleventy/">
+            #eleventy (4)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/ipsum/">
+            #ipsum (4)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/tag/">
+            #tag (2)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/example/">
+            #example (3)
+        </a>
+    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="row d-flex flex-sm-row my-3">
             <!-- POSTLIST -->
-            <div class="col-lg-10 order-1 order-lg-0">
+            <div class="col-lg-10 order-1 order-lg-0 zindex-1">
                 <div>
                     <ul class="list-group list-group-flush">
     <!-- POST -->
@@ -86,16 +156,16 @@
                     <div class="d-inline-flex flex-wrap gap-1 mt-1">
                         
                             
-                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/news/">#news</a>
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/posts/tags/news/">#news</a>
                         
                             
-                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/lorem/">#lorem</a>
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/posts/tags/lorem/">#lorem</a>
                         
                             
-                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/tag/">#tag</a>
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/posts/tags/tag/">#tag</a>
                         
                             
-                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/example/">#example</a>
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/posts/tags/example/">#example</a>
                         
                     </div>
                     <p class="my-2 py-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget lacus risus. Nullam non ligula blandit, convallis nulla in, tincidunt urna. Integer nec mauris nulla.</p>
@@ -130,10 +200,10 @@
                     <div class="d-inline-flex flex-wrap gap-1 mt-1">
                         
                             
-                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/coding/">#coding</a>
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/posts/tags/coding/">#coding</a>
                         
                             
-                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/example/">#example</a>
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/posts/tags/example/">#example</a>
                         
                     </div>
                     <p class="my-2 py-0">Proin tristique purus. Sed interdum pulvinar mauris, a lobortis erat condimentum vitae. Quisque pretium, turpis sed lacinia fermentum, augue justo rhoncus risus, a semper lectus lorem eget odio.</p>
@@ -168,13 +238,13 @@
                     <div class="d-inline-flex flex-wrap gap-1 mt-1">
                         
                             
-                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/news/">#news</a>
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/posts/tags/news/">#news</a>
                         
                             
-                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/lorem/">#lorem</a>
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/posts/tags/lorem/">#lorem</a>
                         
                             
-                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/example/">#example</a>
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/posts/tags/example/">#example</a>
                         
                     </div>
                     <p class="my-2 py-0">Vivamus velit turpis, semper eget scelerisque non, finibus ac leo. Proin tristique purus ut blandit lobortis. Quisque luctus rutrum dolor, ac commodo enim congue vitae. Quisque aliquam, ipsum id scelerisque porta.</p>
@@ -195,40 +265,88 @@
             </div>
 
             <!-- SIDEBAR -->
-            <div class="col-lg-2 order-0 order-lg-1 custom-sticky-top">
+            <div class="col-lg-2 order-0 order-lg-1 d-none d-lg-block">
                 <div class="bg-white custom-sticky-top">
-    <h5 class="text-center text-lg-start pt-2">Categories</h5>
-    <div class="category-scrollbar gap-1 d-flex flex-lg-column justify-content-center overflow-auto pb-2">
-        
+    <div>
+        <h5 class="text-start pt-2">Filter by Tag</h5>
+        <ul class="list-unstyled d-flex flex-column gap-1 pb-2">
             
-            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/lorem/">#lorem</a></div>
-        
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/lorem/">
+            #lorem (8)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/news/">
+            #news (8)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/html/">
+            #html (4)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/coding/">
+            #coding (4)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/eleventy/">
+            #eleventy (4)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/ipsum/">
+            #ipsum (4)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/tag/">
+            #tag (2)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/example/">
+            #example (3)
+        </a>
+    </li>
+
+        </ul>
+    </div>
+
+    <div class="mt-4">
+        <h5>Archive</h5>
+        <ul class="list-unstyled d-flex flex-column gap-1">
             
-            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/news/">#news</a></div>
-        
             
-            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/html/">#html</a></div>
-        
+                <li><a href="/11ty-playground/posts/2022/" class="btn btn-sm btn-outline-primary">2022</a></li>
             
-            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/coding/">#coding</a></div>
-        
             
-            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/eleventy/">#eleventy</a></div>
-        
+                <li><a href="/11ty-playground/posts/2023/" class="btn btn-sm btn-outline-primary">2023</a></li>
             
-            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/tag/">#tag</a></div>
-        
-            
-            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/example/">#example</a></div>
-        
-            
-            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/ipsum/">#ipsum</a></div>
-        
+        </ul>
     </div>
 </div>
-            </div>
 
+            </div>
         </div>
+
     </div>
 
     

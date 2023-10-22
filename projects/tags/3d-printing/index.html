@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lorem to ipsum</title>
+    <title>Tag Archive</title>
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="/11ty-playground/css/fontawesome.css">
@@ -30,7 +30,7 @@
                         Blog
                     </a>
                 
-                    <a class="nav-link fw-semibold text-end" href="/11ty-playground/projects/" aria-label="11ty-playground - Projects">
+                    <a class="nav-link fw-semibold text-end active" href="/11ty-playground/projects/" aria-label="11ty-playground - Projects" data-state="active">
                         Projects
                     </a>
                 
@@ -45,85 +45,104 @@
 
     <main>
         
+    <!-- include page header -->
+    
+    <div class="container-fluid bg-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 my-4">
+                    <h2 class="display-6">Tag Archive</h2>
+                    <h3 class="lead">Blog posts tagged #3D-printing</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
     <div class="container mt-3 mb-4">
-        <div class="row d-flex flex-sm-row my-4">
 
-            <!-- POST CONTENT -->
-            <div class="col-lg-8 offset-lg-2 order-1 order-lg-0 post-content">
-                <!-- title and subtitle -->
-                <div class="mt-5 pt-2 pb-1 mb-1">
-                    <h1 class="text-center">Lorem to ipsum</h1>
-                    <h2 class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-                </div>
-
-                <!-- tags -->
-                <div class="text-center pb-1 mb-3">
+        <!-- tag bar only on small screens -->
+        <div class="row d-flex d-block d-lg-none bg-white custom-sticky-top zindex-2">
+            <div class="col-12">
+                <h5 class="text-center text-lg-start pt-2">Filter by Tag</h5>        
+                <ul class="list-unstyled category-scrollbar gap-1 d-flex flex-lg-column justify-content-center overflow-auto pb-2">
                     
-                        
-                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/news">#news</a>
-                        
-                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/lorem">#lorem</a>
-                        
-                    
-                </div>
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/lorem/">
+            #lorem (8)
+        </a>
+    </li>
 
-                <!-- post summary -->
-                <div class="post-summary">
-                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget lacus risus. Nullam non ligula blandit, convallis nulla in, tincidunt urna. Integer nec mauris nulla.</p>
-                </div>
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/news/">
+            #news (8)
+        </a>
+    </li>
 
-                <!-- actions bar -->
-                <div class="d-flex flex-row justify-content-between border-top border-bottom my-3">
-                    <div class="small text-center text-muted my-auto">
-                        <time datetime="">September 1, 2023</time> &bull; 1 min read
-                    </div>
-                    <div class="dropdown">
-                        <button class="btn-share btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa-solid fa-arrow-up-from-bracket fa-lg py-4 px-2">
-                        </i></button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item link-darkgray-primary" href="#">Share on <i class="fa-brands fa-twitter fa-lg py-2"></i></a></li>
-                            <li><a class="dropdown-item link-darkgray-primary" href="#">Share on <i class="fa-brands fa-linkedin fa-lg py-2"></i></a></li>
-                            <li><a class="dropdown-item link-darkgray-primary" href="#">Share on <i class="fa-brands fa-mastodon fa-lg py-2"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/html/">
+            #html (4)
+        </a>
+    </li>
 
-                <!-- post image -->
-                <div class="post-image">
-                    
-                        <img class="img-fluid" src="/11ty-playground/images/1280x853_placeholder_pic.jpg" alt="Image Placeholder Pic">
-                    
-                </div>
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/coding/">
+            #coding (4)
+        </a>
+    </li>
 
-                <!-- post content -->
-                <div class="post-content my-4">
-                    <p>Vivamus ac cursus metus. Duis non aliquam lorem, id laoreet orci. Fusce sit amet interdum sem. Etiam consectetur arcu tristique, porttitor tortor quis, euismod nisl. Proin venenatis est quis accumsan consequat. Sed interdum pulvinar mauris, a lobortis erat condimentum vitae. Quisque pretium, turpis sed lacinia fermentum, augue justo rhoncus risus, a semper lectus lorem eget odio. Morbi varius massa et fermentum eleifend. Vestibulum quis nulla nisl. Aenean dignissim, eros eu pharetra molestie, augue neque accumsan ipsum, ac dapibus justo elit sed est. Ut in suscipit lectus, in feugiat metus.</p>
-<p>Mauris ut ipsum commodo, dapibus dui id, posuere libero. In hac habitasse platea dictumst. Aliquam erat volutpat. Donec commodo dui quis tortor facilisis sodales feugiat sed orci. Integer vulputate magna quis odio malesuada molestie. Quisque dictum nisi sed magna sollicitudin rutrum non laoreet odio. Phasellus ipsum lorem, pellentesque in massa ac, faucibus rhoncus tortor.</p>
-<p>Suspendisse nec nibh dapibus, hendrerit nibh in, pulvinar massa. Morbi quis mollis nunc, quis egestas ligula. Nunc quis pharetra libero. In interdum tortor justo, fermentum vulputate massa sodales non. Aliquam tristique enim magna, et sodales dolor molestie in. Duis a lobortis nunc, in mollis nisl. Proin fringilla vitae metus vitae iaculis. Aliquam aliquam suscipit odio, quis vestibulum lacus placerat eu. Nullam et fermentum massa. Suspendisse vel sem vitae orci vestibulum aliquam. Maecenas semper ex vitae porta efficitur. Aliquam lacinia tempus metus ac imperdiet. Sed imperdiet in justo sed imperdiet. Curabitur eleifend placerat urna sed euismod. Morbi sagittis ex ut orci sagittis, nec commodo mi pulvinar.</p>
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/eleventy/">
+            #eleventy (4)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/ipsum/">
+            #ipsum (4)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/tag/">
+            #tag (2)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/posts/tags/example/">
+            #example (3)
+        </a>
+    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="row d-flex flex-sm-row my-3">
+            <!-- POSTLIST -->
+            <div class="col-lg-10 order-1 order-lg-0 zindex-1">
+                <div>
+                    <ul class="list-group list-group-flush">
+    <!-- POST -->
+    
+</ul>
 
                 </div>
-
-                <!-- actions bar bottom-->
-                <div class="d-flex flex-row justify-content-center border-top border-bottom my-3">
-                    <div class="small text-center text-muted my-auto me-3">
-                        Share this post on:
-                    </div>
-                    <div class="d-flex flex-row gap-3">
-                        <a href="."><i class="fa-brands fa-twitter fa-lg link-gray-primary py-4"></i></a>
-                        <a href="."><i class="fa-brands fa-linkedin fa-lg link-gray-primary py-4"></i></a>
-                        <a href="."><i class="fa-brands fa-mastodon fa-lg link-gray-primary py-4"></i></a>
-                    </div>
-                </div>
-
-                <!-- post navigation -->
-                <div class="post-navigation">
-                    
-                </div>
+                
+                
             </div>
 
             <!-- SIDEBAR -->
-            <div class="col-lg-2 order-0 order-lg-1 custom-sticky-top">
+            <div class="col-lg-2 order-0 order-lg-1 d-none d-lg-block">
                 <div class="bg-white custom-sticky-top">
     <div>
         <h5 class="text-start pt-2">Filter by Tag</h5>
@@ -203,9 +222,12 @@
 </div>
 
             </div>
-
         </div>
+
     </div>
+
+    
+
 
     </main>
 

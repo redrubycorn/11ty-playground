@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag Archive</title>
+    <title>Projects</title>
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="/11ty-playground/css/fontawesome.css">
@@ -30,6 +30,10 @@
                         Blog
                     </a>
                 
+                    <a class="nav-link fw-semibold text-end active" href="/11ty-playground/projects/" aria-label="11ty-playground - Projects" aria-current="page" data-state="active">
+                        Projects
+                    </a>
+                
                     <a class="nav-link fw-semibold text-end" href="/11ty-playground/about/" aria-label="11ty-playground - About">
                         About
                     </a>
@@ -47,8 +51,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 my-4">
-                    <h2 class="display-6">Tag Archive</h2>
-                    <h3 class="lead">Blog posts filed under #tag</h3>
+                    <h2 class="display-6">Projects</h2>
+                    <h3 class="lead">3D printed, electronics and other projects.</h3>
                 </div>
             </div>
         </div>
@@ -56,10 +60,41 @@
 
     
     <div class="container mt-3 mb-4">
-        <div class="row d-flex flex-sm-row my-3">
 
+        <!-- tag bar only on small screens -->
+        <div class="row d-flex d-block d-lg-none bg-white custom-sticky-top zindex-2">
+            <div class="col-12">
+                <h5 class="text-center text-lg-start pt-2">Filter by Tag</h5>        
+                <ul class="list-unstyled category-scrollbar gap-1 d-flex flex-lg-column justify-content-center overflow-auto pb-2">
+                    
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/projects/tags/3d-printing/">
+            #3D-printing (2)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/projects/tags/raspberry-pico/">
+            #raspberry-pico (1)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/projects/tags/circuitpython/">
+            #circuitpython (1)
+        </a>
+    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="row d-flex flex-sm-row my-3">
             <!-- POSTLIST -->
-            <div class="col-lg-10 order-1 order-lg-0">
+            <div class="col-lg-10 order-1 order-lg-0 zindex-1">
                 <div>
                     <ul class="list-group list-group-flush">
     <!-- POST -->
@@ -68,9 +103,9 @@
             <div class="row blog-post d-flex">
                 <!-- info date and reading time -->
                 <div class="col-lg-2 order-2 order-lg-2 pe-0">
-                    <a class="link-unstyled" href="/11ty-playground/posts/lorem-ipsum-dolor/">
+                    <a class="link-unstyled" href="/11ty-playground/projects/pumpkin-hexapod/">
                         <div class="d-flex flex-lg-column gap-2">
-                            <p class="my-0 py-0 text-muted"><time datetime="Tue Apr 25 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">April 25, 2023</time></p>
+                            <p class="my-0 py-0 text-muted"><time datetime="Tue Oct 03 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">October 3, 2023</time></p>
                             <p class="d-lg-none my-0 py-0 text-muted">&bull;</p>
                             <p class="my-0 py-0 text-muted">2 min read</p>
                         </div>
@@ -79,31 +114,28 @@
         
                 <!-- post content -->
                 <div class="col-lg-6 order-1 order-lg-1 pe-0">
-                    <a class="link-unstyled" href="/11ty-playground/posts/lorem-ipsum-dolor/">
-                        <h5 class="mt-2 mt-lg-0">Lorem ipsum dolor</h5>
-                        <h6 class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+                    <a class="link-unstyled" href="/11ty-playground/projects/pumpkin-hexapod/">
+                        <h5 class="mt-2 mt-lg-0">Pumpkin Hexapod</h5>
+                        <h6 class="text-muted">A 3D printed sleeve for the reusable coffee cup (from a very known American brand). Very easy to print, no supports needed.</h6>
                     </a>
                     <div class="d-inline-flex flex-wrap gap-1 mt-1">
                         
                             
-                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/news/">#news</a>
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/posts/tags/3d-printing/">#3D-printing</a>
                         
                             
-                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/lorem/">#lorem</a>
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/posts/tags/raspberry-pico/">#raspberry-pico</a>
                         
                             
-                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/tag/">#tag</a>
-                        
-                            
-                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/example/">#example</a>
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/posts/tags/circuitpython/">#circuitpython</a>
                         
                     </div>
-                    <p class="my-2 py-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget lacus risus. Nullam non ligula blandit, convallis nulla in, tincidunt urna. Integer nec mauris nulla.</p>
+                    <p class="my-2 py-0"></p>
                 </div>
         
                 <!-- post image -->
                 <div class="col-lg-4 order-0 order-lg-0 pe-0">
-                    <a class="link-unstyled" href="/11ty-playground/posts/lorem-ipsum-dolor/"><img class="img-fluid" src="/11ty-playground/images/1280x853_placeholder_pic.jpg" alt="Image Placeholder Pic"></a>
+                    <a class="link-unstyled" href="/11ty-playground/projects/pumpkin-hexapod/"><img class="img-fluid" src="/11ty-playground/images/1280x853_placeholder_pic.jpg" alt="Image Placeholder Pic"></a>
                 </div>
             </div>
         </li>
@@ -112,39 +144,33 @@
             <div class="row blog-post d-flex">
                 <!-- info date and reading time -->
                 <div class="col-lg-2 order-2 order-lg-2 pe-0">
-                    <a class="link-unstyled" href="/11ty-playground/posts/aliquam-est-ipsum/">
+                    <a class="link-unstyled" href="/11ty-playground/projects/reusable-coffee-cup-sleeve/">
                         <div class="d-flex flex-lg-column gap-2">
-                            <p class="my-0 py-0 text-muted"><time datetime="Mon Jun 19 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">June 19, 2023</time></p>
+                            <p class="my-0 py-0 text-muted"><time datetime="Tue Oct 03 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">October 3, 2023</time></p>
                             <p class="d-lg-none my-0 py-0 text-muted">&bull;</p>
-                            <p class="my-0 py-0 text-muted">1 min read</p>
+                            <p class="my-0 py-0 text-muted">2 min read</p>
                         </div>
                     </a>
                 </div>
         
                 <!-- post content -->
                 <div class="col-lg-6 order-1 order-lg-1 pe-0">
-                    <a class="link-unstyled" href="/11ty-playground/posts/aliquam-est-ipsum/">
-                        <h5 class="mt-2 mt-lg-0">Aliquam est ipsum</h5>
-                        <h6 class="text-muted">Duis non aliquam lorem, id laoreet orci.</h6>
+                    <a class="link-unstyled" href="/11ty-playground/projects/reusable-coffee-cup-sleeve/">
+                        <h5 class="mt-2 mt-lg-0">Reusable Coffee Cup Sleeve</h5>
+                        <h6 class="text-muted">A 3D printed sleeve for the reusable coffee cup (from a very known American brand). Very easy to print, no supports needed.</h6>
                     </a>
                     <div class="d-inline-flex flex-wrap gap-1 mt-1">
                         
                             
-                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/news/">#news</a>
-                        
-                            
-                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/ipsum/">#ipsum</a>
-                        
-                            
-                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/tag/tag/">#tag</a>
+                            <a class="btn btn-sm btn-outline outline-ps-p" href="/11ty-playground/posts/tags/3d-printing/">#3D-printing</a>
                         
                     </div>
-                    <p class="my-2 py-0">Duis a lobortis nunc, in mollis nisl. Proin fringilla vitae metus vitae iaculis. Aliquam aliquam suscipit odio, quis vestibulum lacus placerat eu. Nullam et fermentum massa.</p>
+                    <p class="my-2 py-0"></p>
                 </div>
         
                 <!-- post image -->
                 <div class="col-lg-4 order-0 order-lg-0 pe-0">
-                    <a class="link-unstyled" href="/11ty-playground/posts/aliquam-est-ipsum/"><img class="img-fluid" src="/11ty-playground/images/1280x853_placeholder_pic.jpg" alt="Image Placeholder Pic"></a>
+                    <a class="link-unstyled" href="/11ty-playground/projects/reusable-coffee-cup-sleeve/"><img class="img-fluid" src="/11ty-playground/images/1280x853_placeholder_pic.jpg" alt="Image Placeholder Pic"></a>
                 </div>
             </div>
         </li>
@@ -154,43 +180,58 @@
                 </div>
                 
                 
+                    <div>
+                        
+
+
+
+
+
+
+
+
+
+<div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+    
+</div>
+                    </div>
+                
             </div>
 
             <!-- SIDEBAR -->
-            <div class="col-lg-2 order-0 order-lg-1 custom-sticky-top">
+            <div class="col-lg-2 order-0 order-lg-1 d-none d-lg-block">
                 <div class="bg-white custom-sticky-top">
-    <h5 class="text-center text-lg-start pt-2">Categories</h5>
-    <div class="category-scrollbar gap-1 d-flex flex-lg-column justify-content-center overflow-auto pb-2">
-        
+    <div>
+        <h5 class="text-start pt-2">Filter by Tag</h5>
+        <ul class="list-unstyled d-flex flex-column gap-1 pb-2">
             
-            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/lorem/">#lorem</a></div>
-        
-            
-            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/news/">#news</a></div>
-        
-            
-            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/html/">#html</a></div>
-        
-            
-            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/coding/">#coding</a></div>
-        
-            
-            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/eleventy/">#eleventy</a></div>
-        
-            
-            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/tag/">#tag</a></div>
-        
-            
-            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/example/">#example</a></div>
-        
-            
-            <div><a class="btn btn-sm btn-outline-secondary primary-subtle-hover" href="/11ty-playground/tag/ipsum/">#ipsum</a></div>
-        
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/projects/tags/3d-printing/">
+            #3D-printing (2)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/projects/tags/raspberry-pico/">
+            #raspberry-pico (1)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/projects/tags/circuitpython/">
+            #circuitpython (1)
+        </a>
+    </li>
+
+        </ul>
     </div>
 </div>
             </div>
-
         </div>
+
     </div>
 
     

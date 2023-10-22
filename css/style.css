@@ -6,6 +6,7 @@
 .custom-sticky-top {
   position: sticky;
   top: 50px;
+  z-index: 100;
 }
 
 .footer-link-color {
@@ -52,30 +53,6 @@
   font-size: 1.25rem;
 }
 
-.btn-share {
-  color: var(--bs-gray-500);
-  padding: 0;
-  margin: 0;
-}
-
-.btn-share:hover {
-  color: var(--bs-primary);
-}
-
-.btn-share[aria-expanded=true] {
-  color: var(--bs-primary);
-  border-color: transparent;
-}
-
-.btn-share:not(:disabled):not(:disabled):active {
-  color: var(--bs-primary);
-  border-color: transparent;
-}
-
-.bs-primary-hover:hover {
-  color: var(--bs-primary);
-}
-
 .link-darkgray-primary:hover {
   color: var(--bs-primary);
 }
@@ -98,6 +75,26 @@
 
 .link-primary-subtle {
   color: var(--bs-primary);
+}
+
+.btn-share {
+  color: var(--bs-gray-500);
+  padding: 0;
+  margin: 0;
+}
+
+.btn-share:hover {
+  color: var(--bs-primary);
+}
+
+.btn-share[aria-expanded=true] {
+  color: var(--bs-primary);
+  border-color: transparent;
+}
+
+.btn-share:not(:disabled):not(:disabled):active {
+  color: var(--bs-primary);
+  border-color: transparent;
 }
 
 .outline-ps-p {
