@@ -92,7 +92,7 @@
                             <div class="col-md-6 d-flex justify-content-start">
                                 <div class="d-flex flex-column">
                                     {% if previousProject %}
-                                        <a class="link-unstyled link-darkgray-primary" href="{{ previousPost.url }}">
+                                        <a class="link-unstyled link-darkgray-primary" href="{{ previousProject.url }}">
                                             <span><i class="fa-solid fa-chevron-left"></i> <span class="fw-semibold small text-primary">Previous project</span><br>{{ previousProject.data.title }}
                                         </a>
                                     {% endif %}
@@ -102,7 +102,7 @@
                             <div class="col-md-6 d-flex justify-content-end">
                                 <div class="d-flex flex-column">
                                     {% if nextProject %}
-                                        <a class="link-unstyled link-darkgray-primary text-end" href="{{ nextPost.url }}">
+                                        <a class="link-unstyled link-darkgray-primary text-end" href="{{ nextProject.url }}">
                                             <span class="fw-semibold small text-primary">Next project</span> <i class="fa-solid fa-chevron-right"></i><br>{{ nextProject.data.title }}
                                         </a>
                                     {% endif %}
