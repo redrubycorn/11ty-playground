@@ -3,10 +3,23 @@
 
 {% block content %}
     <div class="container mt-3 mb-4">
+
+        <!-- tag bar only on small screens -->
+        <div class="row d-flex d-block d-lg-none bg-white custom-sticky-top zindex-2">
+            <div class="col-12">
+                <h5 class="text-center text-lg-start pt-2">Filter by Tag</h5>        
+                <ul class="list-unstyled category-scrollbar gap-1 d-flex flex-lg-column justify-content-center overflow-auto pb-2">
+                    {% include "partials/projectsTagList.html"%}
+                </ul>
+            </div>
+        </div>
+
+
         <div class="row d-flex flex-sm-row my-4">
 
-            <!-- POST CONTENT -->
+            <!-- PROJECT CONTENT -->
             <div class="col-lg-8 offset-lg-2 order-1 order-lg-0 post-content">
+
                 <!-- title and subtitle -->
                 <div class="mt-5 pt-2 pb-1 mb-1">
                     <h1 class="text-center">{{ title }}</h1>
@@ -68,14 +81,41 @@
                     </div>
                 </div>
 
-                <!-- post navigation -->
-                <div class="post-navigation">
-                    {% include "partials/postNavigation.html" %}
+                <!-- project navigation -->
+                <div class="project-navigation">
+                    {% set nextProject = collections.projects | getNextCollectionItem(page) %}
+                    {% set previousProject = collections.projects | getPreviousCollectionItem(page) %}
+                
+                    {% if nextProject or previousProject %}
+                
+                        <div class="row">
+                            <div class="col-md-6 d-flex justify-content-start">
+                                <div class="d-flex flex-column">
+                                    {% if previousProject %}
+                                        <a class="link-unstyled link-darkgray-primary" href="{{ previousPost.url }}">
+                                            <span><i class="fa-solid fa-chevron-left"></i> <span class="fw-semibold small text-primary">Previous project</span><br>{{ previousProject.data.title }}
+                                        </a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                
+                            <div class="col-md-6 d-flex justify-content-end">
+                                <div class="d-flex flex-column">
+                                    {% if nextProject %}
+                                        <a class="link-unstyled link-darkgray-primary text-end" href="{{ nextPost.url }}">
+                                            <span class="fw-semibold small text-primary">Next project</span> <i class="fa-solid fa-chevron-right"></i><br>{{ nextProject.data.title }}
+                                        </a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                
+                    {% endif %}
                 </div>
             </div>
 
             <!-- SIDEBAR -->
-            <div class="col-lg-2 order-0 order-lg-1 custom-sticky-top">
+            <div class="col-lg-2 order-0 order-lg-1 d-none d-lg-block">
                 {% include "partials/projectsSidebar.html" %}
             </div>
 
