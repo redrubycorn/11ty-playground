@@ -11,45 +11,81 @@
     <link rel="stylesheet" href="/11ty-playground/css/style.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
+    <!-- MAIN NAVIGATION -->
     <nav class="navbar navbar-expand-lg bg-primary sticky-top" data-bs-theme="dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">11ty-playground</a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="mainNavbar">
-            <div class="navbar-nav ms-auto">
-                
-                    <a class="nav-link fw-semibold text-end" href="/11ty-playground/" aria-label="11ty-playground - Home">
-                        Home
-                    </a>
-                
-                    <a class="nav-link fw-semibold text-end" href="/11ty-playground/blog/" aria-label="11ty-playground - Blog">
-                        Blog
-                    </a>
-                
-                    <a class="nav-link fw-semibold text-end active" href="/11ty-playground/projects/" aria-label="11ty-playground - Projects" data-state="active">
-                        Projects
-                    </a>
-                
-                    <a class="nav-link fw-semibold text-end" href="/11ty-playground/about/" aria-label="11ty-playground - About">
-                        About
-                    </a>
-                
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">11ty-playground</a>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <div class="navbar-nav ms-auto">
+                    
+                        <a class="nav-link fw-semibold text-end" href="/11ty-playground/" aria-label="11ty-playground - Home">
+                            Home
+                        </a>
+                    
+                        <a class="nav-link fw-semibold text-end" href="/11ty-playground/blog/" aria-label="11ty-playground - Blog">
+                            Blog
+                        </a>
+                    
+                        <a class="nav-link fw-semibold text-end active" href="/11ty-playground/projects/" aria-label="11ty-playground - Projects" data-state="active">
+                            Projects
+                        </a>
+                    
+                        <a class="nav-link fw-semibold text-end" href="/11ty-playground/about/" aria-label="11ty-playground - About">
+                            About
+                        </a>
+                    
+                </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
+    <!-- MAIN CONTENT -->
     <main>
         
     <div class="container mt-3 mb-4">
+
+        <!-- tag bar only on small screens -->
+        <div class="row d-flex d-block d-lg-none bg-white custom-sticky-top zindex-2">
+            <div class="col-12">
+                <h5 class="text-center text-lg-start pt-2">Filter by Tag</h5>        
+                <ul class="list-unstyled category-scrollbar gap-1 d-flex flex-lg-column justify-content-center overflow-auto pb-2">
+                    
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/projects/tags/3d-printing/">
+            #3D-printing (2)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/projects/tags/raspberry-pico/">
+            #raspberry-pico (1)
+        </a>
+    </li>
+
+    
+    <li>
+        <a class="btn btn-sm btn-outline-primary text-nowrap" href="/11ty-playground/projects/tags/circuitpython/">
+            #circuitpython (1)
+        </a>
+    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
         <div class="row d-flex flex-sm-row my-4">
 
-            <!-- POST CONTENT -->
+            <!-- PROJECT CONTENT -->
             <div class="col-lg-8 offset-lg-2 order-1 order-lg-0 post-content">
+
                 <!-- title and subtitle -->
                 <div class="mt-5 pt-2 pb-1 mb-1">
                     <h1 class="text-center">Pumpkin Hexapod</h1>
@@ -123,14 +159,37 @@
                     </div>
                 </div>
 
-                <!-- post navigation -->
-                <div class="post-navigation">
+                <!-- project navigation -->
+                <div class="project-navigation">
+                    
+                    
+                
+                    
+                
+                        <div class="row">
+                            <div class="col-md-6 d-flex justify-content-start">
+                                <div class="d-flex flex-column">
+                                    
+                                </div>
+                            </div>
+                
+                            <div class="col-md-6 d-flex justify-content-end">
+                                <div class="d-flex flex-column">
+                                    
+                                        <a class="link-unstyled link-darkgray-primary text-end" href=".">
+                                            <span class="fw-semibold small text-primary">Next project</span> <i class="fa-solid fa-chevron-right"></i><br>Reusable Coffee Cup Sleeve
+                                        </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                
                     
                 </div>
             </div>
 
             <!-- SIDEBAR -->
-            <div class="col-lg-2 order-0 order-lg-1 custom-sticky-top">
+            <div class="col-lg-2 order-0 order-lg-1 d-none d-lg-block">
                 <div class="bg-white custom-sticky-top">
     <div>
         <h5 class="text-start pt-2">Filter by Tag</h5>
@@ -167,48 +226,49 @@
 
     </main>
 
+    <!-- FOOTER -->
+    
     
 
+    <footer class="border-top mt-auto pt-2 pb-4" id="site-footer">
+        <div class="container-fluid d-flex flex-column flex-lg-row justify-content-between">
 
-<footer class="border-top mt-auto pt-2 pb-4" id="site-footer">
-    <div class="container-fluid d-flex flex-column flex-lg-row justify-content-between">
+            <!-- Copyright -->
+            <span class="navbar-text footer-link-color text-center text-lg-start" id="copyright">
+                <!-- shows just the current year if the year in sitedata matches -->
+                <!-- otherwise shows sitedata.year - current year, like 2022 - 2023 -->
+                &copy; 2022 - 2023 11ty-playground
+            </span>
 
-        <!-- Copyright -->
-        <span class="navbar-text footer-link-color text-center text-lg-start" id="copyright">
-            <!-- shows just the current year if the year in sitedata matches -->
-            <!-- otherwise shows sitedata.year - current year, like 2022 - 2023 -->
-            &copy; 2022 - 2023 11ty-playground
-        </span>
+            <div class="nav justify-content-center" id="footer-social">
+                
+                    <a class="nav-link link-primary-subtle" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                
+                    <a class="nav-link link-primary-subtle" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                
+                    <a class="nav-link link-primary-subtle" href="https://mastodon.social/explore" target="_blank"><i class="fab fa-mastodon"></i></a>
+                
+                    <a class="nav-link link-primary-subtle" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                
+            </div>
 
-        <div class="nav justify-content-center" id="footer-social">
-            
-                <a class="nav-link link-primary-subtle" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
-            
-                <a class="nav-link link-primary-subtle" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-            
-                <a class="nav-link link-primary-subtle" href="https://mastodon.social/explore" target="_blank"><i class="fab fa-mastodon"></i></a>
-            
-                <a class="nav-link link-primary-subtle" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-            
+            <div class="nav justify-content-center justify-content-lg-end" id="footer-nav">
+                
+                    <a class="nav-link link-primary-subtle" href="/11ty-playground/privacy-policy/" aria-label="11ty-playground - Privacy Policy">
+                        Privacy Policy
+                    </a>
+                
+                    <a class="nav-link link-primary-subtle" href="/11ty-playground/legal-notice/" aria-label="11ty-playground - Legal Notice">
+                        Legal Notice
+                    </a>
+                
+                    <a class="nav-link link-primary-subtle" href="/11ty-playground/contact/" aria-label="11ty-playground - Contact">
+                        Contact
+                    </a>
+                
+            </div>
         </div>
-
-        <div class="nav justify-content-center justify-content-lg-end" id="footer-nav">
-            
-                <a class="nav-link link-primary-subtle" href="/11ty-playground/privacy-policy/" aria-label="11ty-playground - Privacy Policy">
-                    Privacy Policy
-                </a>
-            
-                <a class="nav-link link-primary-subtle" href="/11ty-playground/legal-notice/" aria-label="11ty-playground - Legal Notice">
-                    Legal Notice
-                </a>
-            
-                <a class="nav-link link-primary-subtle" href="/11ty-playground/contact/" aria-label="11ty-playground - Contact">
-                    Contact
-                </a>
-            
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <!-- scripts -->
     <script src="/11ty-playground/js/bootstrap.bundle.min.js"></script>
