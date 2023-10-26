@@ -1,14 +1,19 @@
 ---
-title: "Reusable Coffee Cup Sleeve"
-subtitle: "A 3D printed sleeve for the reusable coffee cup (from a very known American brand). Very easy to print, no supports needed."
+title: "Lorem Ipsum"
+subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit assumenda alias soluta consequuntur beatae officiis sit aspernatur nihil nobis, maxime perferendis numquam exercitationem sed."
 showImage: true
-image: "/images/1280x853_placeholder_pic.jpg"
+images: 
+    - "/images/projects/coffee-beans.jpg"
+    - "/images/projects/recup.jpg"
 imageAlt: "Image Placeholder Pic"
 date: 2023-10-03
 tags: 
     - 3D-printing
+    - raspberry-pico
+    - circuitpython
 ---
 
+## Exercitationem neque
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit assumenda alias soluta consequuntur beatae officiis sit aspernatur nihil nobis, maxime perferendis numquam exercitationem sed. Exercitationem neque eum est praesentium doloribus.
 
 ## Lorem ipsum dolor sit amet

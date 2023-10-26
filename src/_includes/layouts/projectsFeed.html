@@ -28,13 +28,13 @@
             <!-- POSTLIST -->
             <div class="col-lg-10 order-1 order-lg-0 zindex-1">
                 <div>
-                    {% include "partials/feed.html" %}
+                    {% include "partials/feed_cards.html" %}
                 </div>
                 
                 {% if not tag %}
-                    <div>
-                        {% include "partials/pagination.html" %}
-                    </div>
+                <div>
+                    {% include "partials/pagination.html" %}
+                </div>
                 {% endif %}
             </div>
 
@@ -45,7 +45,5 @@
         </div>
 
     </div>
-
-    {{ content | safe }}
 
 {% endblock %}

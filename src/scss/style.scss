@@ -11,6 +11,11 @@ $navbar-height: 50px;
     z-index: 100;
 }
 
+.card-image-top {
+    height: 25vh;
+    object-fit: cover;
+    }
+
 // used to give the text in the footer the same color as the nav links
 .footer-link-color {
     color: var(--bs-link-color);
