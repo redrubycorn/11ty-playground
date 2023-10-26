@@ -9,6 +9,11 @@
   z-index: 100;
 }
 
+.card-image-top {
+  height: 25vh;
+  object-fit: cover;
+}
+
 .footer-link-color {
   color: var(--bs-link-color);
 }
