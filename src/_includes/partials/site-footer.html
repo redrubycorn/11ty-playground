@@ -1,0 +1,38 @@
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-2 mt-auto border-top" id="site-footer">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- copyright -->
+            <div class="col-lg-4 d-flex justify-content-center justify-content-lg-start">
+                <p class="pb-0 mb-0">
+                    <!-- shows just the current year if the year in sitedata matches -->
+                    <!-- otherwise shows sitedata.year - current year, like 2022 - 2023 -->
+                    &copy; 2024 - {{ sitedata.author }}
+                </p>
+            </div>
+
+
+            <!-- social nav -->
+            <div class="col-lg-4 d-flex justify-content-center">
+                <div class="d-flex gap-3">
+                    {% for item in social %}
+                        <a class="link-secondary link-opacity-50-hover" href="{{ item.url }}" target="_blank"><i class="fab fa-{{ item.name }}"></i></i></a>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- footer nav -->
+            <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end">
+                <div class="d-flex gap-3 footer-nav" aria-label="footer navigation">
+                    {% for item in navigation.footerNav %}
+                        <a class="link-secondary link-underline-opacity-25 link-opacity-50-hover" 
+                            href="{{ item.url }}"
+                            aria-label="{{ sitedata.name }} - {{ item.text }}"
+                        >
+                            {{ item.text }}
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

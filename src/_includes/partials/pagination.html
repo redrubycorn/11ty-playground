@@ -1,0 +1,41 @@
+
+<nav>
+    <ul class="pagination">
+        <!-- previous pagination page if there is one -->
+        {% if pagination.href.previous %}
+        <li class="page-item">
+            <a href="{{ pagination.hrefs[ 0 ] }}" class="page-link">
+                <i class="fa-solid fa-angles-left"></i>
+            </a>
+        </li>
+        <li class="page-item">
+            <a href="{{ pagination.href.previous }}" class="page-link">
+                <i class="fa-solid fa-angle-left"></i>
+            </a>
+        </li>
+        {% endif %}
+        
+        <!-- numbers for each pagination page -->
+        {%- for pageEntry in pagination.pages %}
+        <li class="page-item">
+            <a href="{{ pagination.hrefs[ loop.index0 ] }}" class="page-link"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>
+                {{ loop.index }}
+            </a>
+        </li>
+        {%- endfor %}
+
+        <!-- next pagination page if there is one -->
+        {% if pagination.href.next %}
+        <li class="page-item">
+            <a href="{{ pagination.href.next }}" class="page-link">
+                <i class="fa-solid fa-angle-right"></i>
+            </a>
+        </li>
+        <li class="page-item">
+            <a href="{{ pagination.href.last }}" class="page-link">
+                <i class="fa-solid fa-angles-right"></i>
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>

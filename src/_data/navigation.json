@@ -1,0 +1,30 @@
+{
+    "mainNav": [
+      {
+        "text": "Home",
+        "url": "/"
+      },
+      {
+        "text": "About",
+        "url": "/pages/about/"
+      },
+      {
+        "text": "Blog",
+        "url": "/pages/blog/"
+      }
+    ],
+    "footerNav": [
+      {
+        "text": "Privacy Policy",
+        "url": "/pages/privacy-policy/"
+      },
+      {
+        "text": "Legal Notice",
+        "url": "/pages/legal-notice/"
+      },
+      {
+        "text": "Contact",
+        "url": "/pages/about/"
+      }
+    ]
+  }

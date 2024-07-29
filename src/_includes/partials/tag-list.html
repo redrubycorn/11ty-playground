@@ -1,0 +1,11 @@
+<h5 class="listing-category-title">Tags</h5>
+<div class="listing-category">
+    <div class="category">
+      <a href="/pages/blog/" class="link-secondary text-decoration-none">all</a>
+    </div>
+    {%- for tag, val in collections.tagList -%}
+    <div class="category">
+      <a href="/tags/{{ tag }}/" class="link-secondary text-decoration-none">{{ tag }}</a>
+    </div>
+    {%- endfor -%}
+</div>

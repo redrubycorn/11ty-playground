@@ -1,0 +1,1 @@
+# permalink: "{{ page.filePathStem | replace('/content/pages/', '/') }}{% if pagination.pageNumber > 0 %}/page/{{ pagination.pageNumber }}{% endif %}/"

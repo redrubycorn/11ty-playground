@@ -1,0 +1,2 @@
+# permalink: "{{ page.filePathStem | replace('/content/', '/') }}{% if pagination.pageNumber > 0 %}/page/{{ pagination.pageNumber }}{% endif %}/"
+layout: 'layouts/blog-post.html'

@@ -1,0 +1,38 @@
+{% extends "layouts/base.html" %}
+
+{% set postListItems = pagination.items %}
+
+<!-- if this is a tag, grab those items instead os one large collection -->
+{% if tag %}
+  {% set postListItems = collections.tagList[tag] %}
+{% endif %}
+
+{% block content %}
+{% include "partials/page-header.html" %}
+<div class="container">
+    <!-- row to hold the two columns, one for the post list, one for the sidebar -->
+    <div class="row">
+        <!-- col for the post list -->
+         <div class="col-md-10">
+            <!-- row for post list -->
+             <div class="row">
+                {% include "partials/post-list.html" %}
+             </div>
+
+            <!-- row for pagination, don't render that if it is a tag page -->
+            {% if not tag %}
+            <div class="row">
+                {% include "partials/pagination.html" %}
+            </div>
+            {% endif %}
+         </div>
+
+        <!-- col for the sidebar -->
+        <div class="col-md-2">
+            <!-- tags -->
+            {% include "partials/tag-list.html" %}
+        </div>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,1 @@
+{"mappings":";;AAAA,+BAA+B","sources":["src/js/main.js"],"sourcesContent":["// Import all of Bootstrap's JS\r\nvar bootstrap = require('bootstrap');"],"names":[],"version":3,"file":"index.js.map","sourceRoot":"/"}

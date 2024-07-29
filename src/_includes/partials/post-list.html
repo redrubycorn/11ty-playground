@@ -1,0 +1,44 @@
+<!-- creates a bootstrap card for each post, including -->
+{% for item in postListItems %}
+<div class="card mb-3">
+    <div class="row g-0">
+
+        <!-- column with post date and reading time -->
+        <div class="col-lg-2 order-2 order-lg-1">
+            <div class="card-body ps-0 post-list-padding">
+                <div class="row">
+                    <div class="col-6 col-lg-12">
+                        <p class="card-text m-0">DATE</p>
+                        <p class="card-text text-body-secondary">{{ item.data.date }}</p>
+                    </div>
+                    <div class="col-6 col-lg-12 post-list-padding">
+                        <p class="card-text m-0">READING TIME</p>
+                        <p class="card-text text-body-secondary">{{ item.content | readingTime }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- column with title, tags and summary -->
+        <div class="col-lg-7 order-1 order-lg-2">
+            <div class="card-body ps-0">
+                <h5 class="card-title">{{ item.data.title }}</h5>
+                <div class="pb-1">
+                    {% for tag in item.data.tags %}
+                        <a href="/tags/{{ tag }}/" class="btn btn-outline-secondary btn-sm py-0" role="button">{{ tag }}</a>
+                    {% endfor %}
+                </div>
+                <p class="card-text">{{ item.data.summary }}</p>
+            </div>
+        </div>
+
+        <!-- column with image -->
+        <div class="col-lg-3 d-flex align-items-center order-3 order-lg-3">
+            <a href="{{ item.url }}">
+                <img src="{{ item.url }}{{ item.data.postimg }}" class="img-fluid pb-2 pt-2" alt="...">
+            </a>
+        </div>
+
+    </div>
+</div>
+{% endfor %}
