@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tags page</title>
     <!-- custom CSS should come after Bootstrap CSS -->
-    <link rel="stylesheet" href="/eleventy-playground/css/fontawesome.css">
-    <link rel="stylesheet" href="/eleventy-playground/css/custom.css">
+    <link rel="stylesheet" href="/11ty-playground/css/fontawesome.css">
+    <link rel="stylesheet" href="/11ty-playground/css/custom.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary px-4 py-2">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/eleventy-playground/">
+    <a class="navbar-brand" href="/11ty-playground/">
       11ty-playground
     </a>
 
@@ -24,15 +24,15 @@
       <ul class="navbar-nav">
         
         <li class="nav-item ms-auto active">
-          <a class="nav-link" href="/eleventy-playground/">Home</a>
+          <a class="nav-link" href="/11ty-playground/">Home</a>
         </li>
         
         <li class="nav-item ms-auto active">
-          <a class="nav-link" href="/eleventy-playground/pages/about/">About</a>
+          <a class="nav-link" href="/11ty-playground/pages/about/">About</a>
         </li>
         
         <li class="nav-item ms-auto active">
-          <a class="nav-link" href="/eleventy-playground/pages/blog/">Blog</a>
+          <a class="nav-link" href="/11ty-playground/pages/blog/">Blog</a>
         </li>
         
       </ul>
@@ -67,6 +67,50 @@
                 <div class="row">
                     <div class="col-6 col-lg-12">
                         <p class="card-text m-0">DATE</p>
+                        <p class="card-text text-body-secondary">2020-04-15</p>
+                    </div>
+                    <div class="col-6 col-lg-12 post-list-padding">
+                        <p class="card-text m-0">READING TIME</p>
+                        <p class="card-text text-body-secondary">3 min</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- column with title, tags and summary -->
+        <div class="col-lg-7 order-1 order-lg-2">
+            <div class="card-body ps-0">
+                <h5 class="card-title">Another post</h5>
+                <div class="pb-1">
+                    
+                        <a href="/11ty-playground/tags/test/" class="btn btn-outline-secondary btn-sm py-0" role="button">test</a>
+                    
+                        <a href="/11ty-playground/tags/other/" class="btn btn-outline-secondary btn-sm py-0" role="button">other</a>
+                    
+                </div>
+                <p class="card-text">In in sapien quis mi tincidunt sodales. Suspendisse potenti. Donec commodo augue non libero auctor, a commodo augue bibendum. Suspendisse sed accumsan massa. In massa odio, pretium sed mi id, auctor blandit turpis.</p>
+            </div>
+        </div>
+
+        <!-- column with image -->
+        <div class="col-lg-3 d-flex align-items-center order-3 order-lg-3">
+            <a href="/11ty-playground/posts/another-post/">
+                <img src="/11ty-playground/posts/another-post/raspberry-pi.jpg" class="img-fluid pb-2 pt-2" alt="...">
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<div class="card mb-3">
+    <div class="row g-0">
+
+        <!-- column with post date and reading time -->
+        <div class="col-lg-2 order-2 order-lg-1">
+            <div class="card-body ps-0 post-list-padding">
+                <div class="row">
+                    <div class="col-6 col-lg-12">
+                        <p class="card-text m-0">DATE</p>
                         <p class="card-text text-body-secondary">2020-05-20</p>
                     </div>
                     <div class="col-6 col-lg-12 post-list-padding">
@@ -83,9 +127,9 @@
                 <h5 class="card-title">About Coding and Stuff</h5>
                 <div class="pb-1">
                     
-                        <a href="/eleventy-playground/tags/test/" class="btn btn-outline-secondary btn-sm py-0" role="button">test</a>
+                        <a href="/11ty-playground/tags/test/" class="btn btn-outline-secondary btn-sm py-0" role="button">test</a>
                     
-                        <a href="/eleventy-playground/tags/other/" class="btn btn-outline-secondary btn-sm py-0" role="button">other</a>
+                        <a href="/11ty-playground/tags/other/" class="btn btn-outline-secondary btn-sm py-0" role="button">other</a>
                     
                 </div>
                 <p class="card-text">Donec in magna vitae est interdum pellentesque. Sed blandit mollis blandit. Aliquam sollicitudin commodo lectus iaculis rutrum. Morbi eleifend urna quis ultricies feugiat. Maecenas euismod, odio ac condimentum cursus, ipsum turpis consectetur justo, at elementum nibh lacus eget lacus.</p>
@@ -94,8 +138,8 @@
 
         <!-- column with image -->
         <div class="col-lg-3 d-flex align-items-center order-3 order-lg-3">
-            <a href="/eleventy-playground/posts/coding/">
-                <img src="/eleventy-playground/posts/coding/code.jpg" class="img-fluid pb-2 pt-2" alt="...">
+            <a href="/11ty-playground/posts/coding/">
+                <img src="/11ty-playground/posts/coding/code.jpg" class="img-fluid pb-2 pt-2" alt="...">
             </a>
         </div>
 
@@ -127,9 +171,9 @@
                 <h5 class="card-title">Post 1</h5>
                 <div class="pb-1">
                     
-                        <a href="/eleventy-playground/tags/test/" class="btn btn-outline-secondary btn-sm py-0" role="button">test</a>
+                        <a href="/11ty-playground/tags/test/" class="btn btn-outline-secondary btn-sm py-0" role="button">test</a>
                     
-                        <a href="/eleventy-playground/tags/other/" class="btn btn-outline-secondary btn-sm py-0" role="button">other</a>
+                        <a href="/11ty-playground/tags/other/" class="btn btn-outline-secondary btn-sm py-0" role="button">other</a>
                     
                 </div>
                 <p class="card-text">Nulla tempor urna non imperdiet consequat. Vestibulum rutrum turpis leo, in laoreet risus viverra bibendum. Vestibulum dolor nibh, ullamcorper in consectetur.</p>
@@ -138,98 +182,8 @@
 
         <!-- column with image -->
         <div class="col-lg-3 d-flex align-items-center order-3 order-lg-3">
-            <a href="/eleventy-playground/posts/post1/">
-                <img src="/eleventy-playground/posts/post1/technology.jpg" class="img-fluid pb-2 pt-2" alt="...">
-            </a>
-        </div>
-
-    </div>
-</div>
-
-<div class="card mb-3">
-    <div class="row g-0">
-
-        <!-- column with post date and reading time -->
-        <div class="col-lg-2 order-2 order-lg-1">
-            <div class="card-body ps-0 post-list-padding">
-                <div class="row">
-                    <div class="col-6 col-lg-12">
-                        <p class="card-text m-0">DATE</p>
-                        <p class="card-text text-body-secondary">2020-04-15</p>
-                    </div>
-                    <div class="col-6 col-lg-12 post-list-padding">
-                        <p class="card-text m-0">READING TIME</p>
-                        <p class="card-text text-body-secondary">3 min</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- column with title, tags and summary -->
-        <div class="col-lg-7 order-1 order-lg-2">
-            <div class="card-body ps-0">
-                <h5 class="card-title">Another post</h5>
-                <div class="pb-1">
-                    
-                        <a href="/eleventy-playground/tags/test/" class="btn btn-outline-secondary btn-sm py-0" role="button">test</a>
-                    
-                        <a href="/eleventy-playground/tags/other/" class="btn btn-outline-secondary btn-sm py-0" role="button">other</a>
-                    
-                </div>
-                <p class="card-text">In in sapien quis mi tincidunt sodales. Suspendisse potenti. Donec commodo augue non libero auctor, a commodo augue bibendum. Suspendisse sed accumsan massa. In massa odio, pretium sed mi id, auctor blandit turpis.</p>
-            </div>
-        </div>
-
-        <!-- column with image -->
-        <div class="col-lg-3 d-flex align-items-center order-3 order-lg-3">
-            <a href="/eleventy-playground/posts/another-post/">
-                <img src="/eleventy-playground/posts/another-post/raspberry-pi.jpg" class="img-fluid pb-2 pt-2" alt="...">
-            </a>
-        </div>
-
-    </div>
-</div>
-
-<div class="card mb-3">
-    <div class="row g-0">
-
-        <!-- column with post date and reading time -->
-        <div class="col-lg-2 order-2 order-lg-1">
-            <div class="card-body ps-0 post-list-padding">
-                <div class="row">
-                    <div class="col-6 col-lg-12">
-                        <p class="card-text m-0">DATE</p>
-                        <p class="card-text text-body-secondary">2020-04-04</p>
-                    </div>
-                    <div class="col-6 col-lg-12 post-list-padding">
-                        <p class="card-text m-0">READING TIME</p>
-                        <p class="card-text text-body-secondary">3 min</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- column with title, tags and summary -->
-        <div class="col-lg-7 order-1 order-lg-2">
-            <div class="card-body ps-0">
-                <h5 class="card-title">Space, Space, Space</h5>
-                <div class="pb-1">
-                    
-                        <a href="/eleventy-playground/tags/news/" class="btn btn-outline-secondary btn-sm py-0" role="button">news</a>
-                    
-                        <a href="/eleventy-playground/tags/code/" class="btn btn-outline-secondary btn-sm py-0" role="button">code</a>
-                    
-                        <a href="/eleventy-playground/tags/other/" class="btn btn-outline-secondary btn-sm py-0" role="button">other</a>
-                    
-                </div>
-                <p class="card-text">This is a first Jupyter Notebook for testing. Vivamus eu nulla varius, tempus diam in, cursus nibh. Aenean quis massa eget nulla maximus accumsan.</p>
-            </div>
-        </div>
-
-        <!-- column with image -->
-        <div class="col-lg-3 d-flex align-items-center order-3 order-lg-3">
-            <a href="/eleventy-playground/posts/space/">
-                <img src="/eleventy-playground/posts/space/space.jpg" class="img-fluid pb-2 pt-2" alt="...">
+            <a href="/11ty-playground/posts/post1/">
+                <img src="/11ty-playground/posts/post1/technology.jpg" class="img-fluid pb-2 pt-2" alt="...">
             </a>
         </div>
 
@@ -261,9 +215,9 @@
                 <h5 class="card-title">In the Sky</h5>
                 <div class="pb-1">
                     
-                        <a href="/eleventy-playground/tags/news/" class="btn btn-outline-secondary btn-sm py-0" role="button">news</a>
+                        <a href="/11ty-playground/tags/news/" class="btn btn-outline-secondary btn-sm py-0" role="button">news</a>
                     
-                        <a href="/eleventy-playground/tags/other/" class="btn btn-outline-secondary btn-sm py-0" role="button">other</a>
+                        <a href="/11ty-playground/tags/other/" class="btn btn-outline-secondary btn-sm py-0" role="button">other</a>
                     
                 </div>
                 <p class="card-text">This is a first Jupyter Notebook for testing. Vivamus eu nulla varius, tempus diam in, cursus nibh. Aenean quis massa eget nulla maximus accumsan.</p>
@@ -272,8 +226,54 @@
 
         <!-- column with image -->
         <div class="col-lg-3 d-flex align-items-center order-3 order-lg-3">
-            <a href="/eleventy-playground/posts/sky/">
-                <img src="/eleventy-playground/posts/sky/sky.jpg" class="img-fluid pb-2 pt-2" alt="...">
+            <a href="/11ty-playground/posts/sky/">
+                <img src="/11ty-playground/posts/sky/sky.jpg" class="img-fluid pb-2 pt-2" alt="...">
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<div class="card mb-3">
+    <div class="row g-0">
+
+        <!-- column with post date and reading time -->
+        <div class="col-lg-2 order-2 order-lg-1">
+            <div class="card-body ps-0 post-list-padding">
+                <div class="row">
+                    <div class="col-6 col-lg-12">
+                        <p class="card-text m-0">DATE</p>
+                        <p class="card-text text-body-secondary">2020-04-04</p>
+                    </div>
+                    <div class="col-6 col-lg-12 post-list-padding">
+                        <p class="card-text m-0">READING TIME</p>
+                        <p class="card-text text-body-secondary">3 min</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- column with title, tags and summary -->
+        <div class="col-lg-7 order-1 order-lg-2">
+            <div class="card-body ps-0">
+                <h5 class="card-title">Space, Space, Space</h5>
+                <div class="pb-1">
+                    
+                        <a href="/11ty-playground/tags/news/" class="btn btn-outline-secondary btn-sm py-0" role="button">news</a>
+                    
+                        <a href="/11ty-playground/tags/code/" class="btn btn-outline-secondary btn-sm py-0" role="button">code</a>
+                    
+                        <a href="/11ty-playground/tags/other/" class="btn btn-outline-secondary btn-sm py-0" role="button">other</a>
+                    
+                </div>
+                <p class="card-text">This is a first Jupyter Notebook for testing. Vivamus eu nulla varius, tempus diam in, cursus nibh. Aenean quis massa eget nulla maximus accumsan.</p>
+            </div>
+        </div>
+
+        <!-- column with image -->
+        <div class="col-lg-3 d-flex align-items-center order-3 order-lg-3">
+            <a href="/11ty-playground/posts/space/">
+                <img src="/11ty-playground/posts/space/space.jpg" class="img-fluid pb-2 pt-2" alt="...">
             </a>
         </div>
 
@@ -292,17 +292,17 @@
             <h5 class="listing-category-title">Tags</h5>
 <div class="listing-category">
     <div class="category">
-      <a href="/eleventy-playground/pages/blog/" class="link-secondary text-decoration-none">all</a>
+      <a href="/11ty-playground/pages/blog/" class="link-secondary text-decoration-none">all</a>
     </div><div class="category">
-      <a href="/eleventy-playground/tags/test/" class="link-secondary text-decoration-none">test</a>
+      <a href="/11ty-playground/tags/test/" class="link-secondary text-decoration-none">test</a>
     </div><div class="category">
-      <a href="/eleventy-playground/tags/other/" class="link-secondary text-decoration-none">other</a>
+      <a href="/11ty-playground/tags/other/" class="link-secondary text-decoration-none">other</a>
     </div><div class="category">
-      <a href="/eleventy-playground/tags/news/" class="link-secondary text-decoration-none">news</a>
+      <a href="/11ty-playground/tags/news/" class="link-secondary text-decoration-none">news</a>
     </div><div class="category">
-      <a href="/eleventy-playground/tags/jupyter/" class="link-secondary text-decoration-none">jupyter</a>
+      <a href="/11ty-playground/tags/jupyter/" class="link-secondary text-decoration-none">jupyter</a>
     </div><div class="category">
-      <a href="/eleventy-playground/tags/code/" class="link-secondary text-decoration-none">code</a>
+      <a href="/11ty-playground/tags/code/" class="link-secondary text-decoration-none">code</a>
     </div></div>
         </div>
     </div>
@@ -343,15 +343,15 @@
             <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end">
                 <div class="d-flex gap-3 footer-nav" aria-label="footer navigation">
                     
-                        <a class="link-secondary link-underline-opacity-25 link-opacity-50-hover" href="/eleventy-playground/pages/privacy-policy/" aria-label=" - Privacy Policy">
+                        <a class="link-secondary link-underline-opacity-25 link-opacity-50-hover" href="/11ty-playground/pages/privacy-policy/" aria-label=" - Privacy Policy">
                             Privacy Policy
                         </a>
                     
-                        <a class="link-secondary link-underline-opacity-25 link-opacity-50-hover" href="/eleventy-playground/pages/legal-notice/" aria-label=" - Legal Notice">
+                        <a class="link-secondary link-underline-opacity-25 link-opacity-50-hover" href="/11ty-playground/pages/legal-notice/" aria-label=" - Legal Notice">
                             Legal Notice
                         </a>
                     
-                        <a class="link-secondary link-underline-opacity-25 link-opacity-50-hover" href="/eleventy-playground/pages/about/" aria-label=" - Contact">
+                        <a class="link-secondary link-underline-opacity-25 link-opacity-50-hover" href="/11ty-playground/pages/about/" aria-label=" - Contact">
                             Contact
                         </a>
                     
@@ -361,6 +361,6 @@
     </div>
 </footer>
 
-    <script src="/eleventy-playground/js/main.js"></script>
+    <script src="/11ty-playground/js/main.js"></script>
   </body>
 </html>
