@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jupyter</title>
+    <!-- custom CSS should come after Bootstrap CSS -->
+    <link rel="stylesheet" href="/eleventy-playground/css/fontawesome.css">
+    <link rel="stylesheet" href="/eleventy-playground/css/custom.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary px-4 py-2">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/eleventy-playground/">
+      11ty-playground
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item ms-auto active">
+          <a class="nav-link" href="/eleventy-playground/">Home</a>
+        </li>
+        
+        <li class="nav-item ms-auto active">
+          <a class="nav-link" href="/eleventy-playground/pages/about/">About</a>
+        </li>
+        
+        <li class="nav-item ms-auto active">
+          <a class="nav-link" href="/eleventy-playground/pages/blog/">Blog</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <div class="container-fluid p-0">
+      
+  <div class="bg-body-tertiary">
+    <div class="container pb-3">
+        <h2 class="title">Jupyter</h2>
+        <p>This is a first Jupyter Notebook for testing. Nulla tempor urna non imperdiet consequat.</p>
+        <div class="tag-list">
+            
+            <a href="/eleventy-playground/tags/test/" class="btn btn-outline-secondary btn-sm py-0" role="button">test</a>
+            
+            <a href="/eleventy-playground/tags/news/" class="btn btn-outline-secondary btn-sm py-0" role="button">news</a>
+            
+        </div>
+    </div>
+</div>
+
+<div class="container mt-2 mb-3">
+    <div>
+        <img class="img-fluid" src="raspberry.jpg" alt="Creative ">
+    </div>
+    <div class="row mt-2">
+        <div class="col-6">
+            <p class="my-0">PUBLISHED</p>
+            <p class="my-0">2020-04-28</p>
+        </div>
+        <div class="col-6">
+            <p class="my-0">READING TIME</p>
+            <p class="my-0">4 min</p>
+        </div>
+    </div>
+</div>
+
+  <div class="container pt-1 pb-3">
+    <article>
+      <h1>Another Jupyter</h1>
+<p>redrubycorn
+2024-05-22</p>
+<h1>First Neural Net Learning Notebook</h1>
+<p>This notebook uses the Iris dataset.</p>
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> tensorflow <span class="token keyword">as</span> tf
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>model_selection <span class="token keyword">import</span> train_test_split</code></pre>
+<pre><code>2024-05-20 14:53:10.738862: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-05-20 14:53:10.738997: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-05-20 14:53:10.902309: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># load the csv file</span>
+path <span class="token operator">=</span> <span class="token string">"../input/iris/Iris.csv"</span>
+data <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span>path<span class="token punctuation">,</span> delimiter<span class="token operator">=</span><span class="token string">','</span><span class="token punctuation">)</span></code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># return the first rows of the data, default is 5 or use n=x to get a personalized number of rows</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>head<span class="token punctuation">(</span>n<span class="token operator">=</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<pre><code>   Id  SepalLengthCm  SepalWidthCm  PetalLengthCm  PetalWidthCm      Species
+0   1            5.1           3.5            1.4           0.2  Iris-setosa
+1   2            4.9           3.0            1.4           0.2  Iris-setosa
+2   3            4.7           3.2            1.3           0.2  Iris-setosa
+3   4            4.6           3.1            1.5           0.2  Iris-setosa
+4   5            5.0           3.6            1.4           0.2  Iris-setosa
+5   6            5.4           3.9            1.7           0.4  Iris-setosa
+</code></pre>
+<p>We don’t need the Id column, so we can drop it. The column that the NN
+needs to predict is the Species column.</p>
+<pre class="language-python"><code class="language-python"><span class="token comment"># drop the Id column</span>
+data <span class="token operator">=</span> data<span class="token punctuation">.</span>drop<span class="token punctuation">(</span>columns<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'Id'</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+<pre class="language-python"><code class="language-python">col_name <span class="token operator">=</span> <span class="token string">'Species'</span></code></pre>
+<p>We can get some basic information about the dataframe not only with
+<code>.head()</code> but we can also look at the shape and some other statistical
+features using <code>.describe()</code>. With <code>print(data[col_name].unique())</code> we
+can get all unique values in the Species column, so the names of all 3
+species.</p>
+<pre class="language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"The shape of the dataframe is </span><span class="token interpolation"><span class="token punctuation">{</span>data<span class="token punctuation">.</span>shape<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"The species are: </span><span class="token interpolation"><span class="token punctuation">{</span>data<span class="token punctuation">[</span>col_name<span class="token punctuation">]</span><span class="token punctuation">.</span>unique<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"The first 3 rows are:"</span></span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>head<span class="token punctuation">(</span>n<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Some statics like count, mean and std: \n"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>describe<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<pre><code>The shape of the dataframe is (150, 5)
+
+
+The species are: ['Iris-setosa' 'Iris-versicolor' 'Iris-virginica']
+
+
+The first 3 rows are:
+   SepalLengthCm  SepalWidthCm  PetalLengthCm  PetalWidthCm      Species
+0            5.1           3.5            1.4           0.2  Iris-setosa
+1            4.9           3.0            1.4           0.2  Iris-setosa
+2            4.7           3.2            1.3           0.2  Iris-setosa
+
+
+Some statics like count, mean and std: 
+
+       SepalLengthCm  SepalWidthCm  PetalLengthCm  PetalWidthCm
+count     150.000000    150.000000     150.000000    150.000000
+mean        5.843333      3.054000       3.758667      1.198667
+std         0.828066      0.433594       1.764420      0.763161
+min         4.300000      2.000000       1.000000      0.100000
+25%         5.100000      2.800000       1.600000      0.300000
+50%         5.800000      3.000000       4.350000      1.300000
+75%         6.400000      3.300000       5.100000      1.800000
+max         7.900000      4.400000       6.900000      2.500000
+</code></pre>
+<p>Right now the column col_name has the names of the different species
+(setosa, versicolor and virginica). But the NN can’t work with strings,
+it needs a numerical representation of the different species. So we need
+to transform these column values.</p>
+<pre class="language-python"><code class="language-python"><span class="token comment"># transform the strings to numeric values</span>
+data<span class="token punctuation">[</span>col_name<span class="token punctuation">]</span> <span class="token operator">=</span> data<span class="token punctuation">[</span>col_name<span class="token punctuation">]</span><span class="token punctuation">.</span>astype<span class="token punctuation">(</span><span class="token string">'category'</span><span class="token punctuation">)</span>
+data<span class="token punctuation">[</span>col_name<span class="token punctuation">]</span> <span class="token operator">=</span> data<span class="token punctuation">[</span>col_name<span class="token punctuation">]</span><span class="token punctuation">.</span>cat<span class="token punctuation">.</span>codes</code></pre>
+<p>The first line of code converts the “species” column in your Pandas
+DataFrame into a categorical data type. This means that Pandas will
+treat the values in this column as categories rather than plain strings,
+which can save memory and speed up certain operations.</p>
+<p>The second line of code then converts these categorical values into
+numerical codes using the <code>.cat.codes</code>. Each unique category in the
+“species” column will be assigned a numerical code, which can be useful
+for various analytical tasks, especially when working with machine
+learning algorithms that require numerical inputs.</p>
+<pre class="language-python"><code class="language-python"><span class="token comment"># divide the table, the column with the species is now in the col variable, the rest of the table in data</span>
+<span class="token comment"># axis=1 says that a column is selected and not a row</span>
+col <span class="token operator">=</span> data<span class="token punctuation">[</span>col_name<span class="token punctuation">]</span>
+data <span class="token operator">=</span> data<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span>col_name<span class="token punctuation">]</span><span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span></code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># split the data into training data and testing data</span>
+train_data<span class="token punctuation">,</span> test_data<span class="token punctuation">,</span> train_col<span class="token punctuation">,</span> test_col <span class="token operator">=</span> train_test_split<span class="token punctuation">(</span>data<span class="token punctuation">,</span> col<span class="token punctuation">,</span> test_size<span class="token operator">=</span><span class="token number">0.2</span><span class="token punctuation">)</span></code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Training data"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>train_data<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"The shape is: </span><span class="token interpolation"><span class="token punctuation">{</span>train_data<span class="token punctuation">.</span>shape<span class="token punctuation">}</span></span><span class="token string">."</span></span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Testing data"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>test_data<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"The shape is: </span><span class="token interpolation"><span class="token punctuation">{</span>test_data<span class="token punctuation">.</span>shape<span class="token punctuation">}</span></span><span class="token string">."</span></span><span class="token punctuation">)</span></code></pre>
+<pre><code>Training data
+     SepalLengthCm  SepalWidthCm  PetalLengthCm  PetalWidthCm
+138            6.0           3.0            4.8           1.8
+96             5.7           2.9            4.2           1.3
+71             6.1           2.8            4.0           1.3
+21             5.1           3.7            1.5           0.4
+101            5.8           2.7            5.1           1.9
+The shape is: (120, 4).
+
+
+Testing data
+     SepalLengthCm  SepalWidthCm  PetalLengthCm  PetalWidthCm
+9              4.9           3.1            1.5           0.1
+60             5.0           2.0            3.5           1.0
+69             5.6           2.5            3.9           1.1
+108            6.7           2.5            5.8           1.8
+41             4.5           2.3            1.3           0.3
+The shape is: (30, 4).
+</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Training column"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>train_col<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"The shape is: </span><span class="token interpolation"><span class="token punctuation">{</span>train_col<span class="token punctuation">.</span>shape<span class="token punctuation">}</span></span><span class="token string">."</span></span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Testing column"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>test_col<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"The shape is: </span><span class="token interpolation"><span class="token punctuation">{</span>test_col<span class="token punctuation">.</span>shape<span class="token punctuation">}</span></span><span class="token string">."</span></span><span class="token punctuation">)</span></code></pre>
+<pre><code>Training column
+138    2
+96     1
+71     1
+21     0
+101    2
+Name: Species, dtype: int8
+The shape is: (120,).
+
+
+Testing column
+9      0
+60     1
+69     1
+108    2
+41     0
+Name: Species, dtype: int8
+The shape is: (30,).
+</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># build the NN</span>
+model <span class="token operator">=</span> tf<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>Sequential<span class="token punctuation">(</span><span class="token punctuation">[</span>
+    tf<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>layers<span class="token punctuation">.</span>Input<span class="token punctuation">(</span>shape<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token comment"># explicitly define the input layer</span>
+    tf<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>layers<span class="token punctuation">.</span>Dense<span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">,</span> activation<span class="token operator">=</span>tf<span class="token punctuation">.</span>nn<span class="token punctuation">.</span>sigmoid<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    tf<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>layers<span class="token punctuation">.</span>Dense<span class="token punctuation">(</span><span class="token number">64</span><span class="token punctuation">,</span> activation<span class="token operator">=</span>tf<span class="token punctuation">.</span>nn<span class="token punctuation">.</span>sigmoid<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    tf<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>layers<span class="token punctuation">.</span>Dense<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> activation<span class="token operator">=</span>tf<span class="token punctuation">.</span>nn<span class="token punctuation">.</span>softmax<span class="token punctuation">)</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+<p>Use the <code>tf.keras.layers.Input</code> layer to specify the input shape of the
+model.</p>
+<p>Softmax is the activation function of the output layer. This function
+ensures that the sum of all probabilities equals exactly 1.</p>
+<p>$$
+S_{y_i} = \frac{\mathrm{e}^{y_i}}{\sum_{j}^{n}\mathrm{e}^{y_j}}
+$$</p>
+<pre class="language-python"><code class="language-python">model<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span>optimizer<span class="token operator">=</span><span class="token string">'adam'</span><span class="token punctuation">,</span> loss<span class="token operator">=</span><span class="token string">'sparse_categorical_crossentropy'</span><span class="token punctuation">,</span> metrics<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'accuracy'</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+<pre class="language-python"><code class="language-python">model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>train_data<span class="token punctuation">,</span> train_col<span class="token punctuation">,</span> epochs<span class="token operator">=</span><span class="token number">30</span><span class="token punctuation">)</span></code></pre>
+<pre><code>Epoch 1/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 1s 5ms/step - accuracy: 0.3460 - loss: 1.1702
+Epoch 2/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.3679 - loss: 1.1110 
+Epoch 3/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.1844 - loss: 1.1088 
+Epoch 4/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.3587 - loss: 1.1024 
+Epoch 5/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.3421 - loss: 1.0995 
+Epoch 6/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.3202 - loss: 1.0989 
+Epoch 7/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.3400 - loss: 1.0818 
+Epoch 8/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.6377 - loss: 1.0769 
+Epoch 9/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.6308 - loss: 1.0759 
+Epoch 10/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.6954 - loss: 1.0604 
+Epoch 11/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.6871 - loss: 1.0542 
+Epoch 12/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.6642 - loss: 1.0512 
+Epoch 13/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.6725 - loss: 1.0436 
+Epoch 14/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.6735 - loss: 1.0343 
+Epoch 15/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.7048 - loss: 1.0213 
+Epoch 16/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.7256 - loss: 1.0057 
+Epoch 17/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.6902 - loss: 1.0052 
+Epoch 18/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.6777 - loss: 0.9996 
+Epoch 19/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.7277 - loss: 0.9786 
+Epoch 20/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.6798 - loss: 0.9793 
+Epoch 21/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.6913 - loss: 0.9655 
+Epoch 22/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.6850 - loss: 0.9539 
+Epoch 23/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.7194 - loss: 0.9330 
+Epoch 24/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.7017 - loss: 0.9251 
+Epoch 25/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 2ms/step - accuracy: 0.6756 - loss: 0.9227 
+Epoch 26/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.7110 - loss: 0.8984 
+Epoch 27/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.6652 - loss: 0.8951 
+Epoch 28/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.7006 - loss: 0.8723 
+Epoch 29/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.7308 - loss: 0.8518 
+Epoch 30/30
+4/4 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.7173 - loss: 0.8333 
+
+&lt;keras.src.callbacks.history.History at 0x79e18d03c9d0&gt;
+</code></pre>
+
+    </article>
+  </div>
+  
+
+
+<div class="container mb-4">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            
+            <div class="row">
+                <div class="col-auto pe-0">
+                    <a href="/eleventy-playground/posts/rocket-launch/">
+                        <img src="/eleventy-playground/posts/rocket-launch/rocket-launch.jpg" class="img-cover" style="height: 60px" alt="">
+                    </a>
+                </div>
+                <div class="col">
+                    <p class="m-0"><i class="fa-solid fa-angle-left"></i>PREVIOUS</p>
+                    <a href="/eleventy-playground/posts/rocket-launch/" class="text-decoration-none">
+                        Rocket Launch
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 align-items-right text-end">
+            
+            <div class="row">
+                <div class="col">
+                    <p class="m-0">NEXT<i class="fa-solid fa-angle-right"></i></p>
+                    <a href="/eleventy-playground/posts/stars/" class="text-decoration-none">
+                        The Stars are bright
+                    </a>
+                </div>
+                <div class="col-auto ps-0">
+                    <a href="/eleventy-playground/posts/stars/">
+                        <img src="/eleventy-playground/posts/stars/stars.jpg" class="img-cover" style="height: 60px" alt="">
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+    </div>
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-2 mt-auto border-top" id="site-footer">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- copyright -->
+            <div class="col-lg-4 d-flex justify-content-center justify-content-lg-start">
+                <p class="pb-0 mb-0">
+                    <!-- shows just the current year if the year in sitedata matches -->
+                    <!-- otherwise shows sitedata.year - current year, like 2022 - 2023 -->
+                    &copy; 2024 - redrubycorn
+                </p>
+            </div>
+
+
+            <!-- social nav -->
+            <div class="col-lg-4 d-flex justify-content-center">
+                <div class="d-flex gap-3">
+                    
+                        <a class="link-secondary link-opacity-50-hover" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                    
+                        <a class="link-secondary link-opacity-50-hover" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    
+                        <a class="link-secondary link-opacity-50-hover" href="https://mastodon.social/explore" target="_blank"><i class="fab fa-mastodon"></i></a>
+                    
+                        <a class="link-secondary link-opacity-50-hover" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    
+                </div>
+            </div>
+
+            <!-- footer nav -->
+            <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end">
+                <div class="d-flex gap-3 footer-nav" aria-label="footer navigation">
+                    
+                        <a class="link-secondary link-underline-opacity-25 link-opacity-50-hover" href="/eleventy-playground/pages/privacy-policy/" aria-label=" - Privacy Policy">
+                            Privacy Policy
+                        </a>
+                    
+                        <a class="link-secondary link-underline-opacity-25 link-opacity-50-hover" href="/eleventy-playground/pages/legal-notice/" aria-label=" - Legal Notice">
+                            Legal Notice
+                        </a>
+                    
+                        <a class="link-secondary link-underline-opacity-25 link-opacity-50-hover" href="/eleventy-playground/pages/about/" aria-label=" - Contact">
+                            Contact
+                        </a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="/eleventy-playground/js/main.js"></script>
+  </body>
+</html>
