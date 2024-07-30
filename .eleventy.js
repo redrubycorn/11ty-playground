@@ -45,7 +45,7 @@ module.exports = config => {
         markdownTemplateEngine: 'njk',
         dataTemplateEngine: 'njk',
         htmlTemplateEngine: 'njk',
-        pathPrefix: "/eleventy-playground/",
+        pathPrefix: "/11ty-playground/",
         dir: {
             input: 'src',
             output: '_site'
