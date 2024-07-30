@@ -21,8 +21,10 @@
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@fortawesome/fontawesome-free": "^6.6.0",
+    "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "eleventy-plugin-reading-time": "^0.0.1",
+    "jquery": "^3.7.1",
     "js-yaml": "^4.1.0",
     "parcel": "^2.12.0"
   },
