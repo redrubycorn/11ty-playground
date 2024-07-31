@@ -4,7 +4,6 @@
 <div class="container mb-4">
     <div class="row">
         <div class="col-12 col-md-6">
-            {% if previousPost %}
             <div class="row">
                 <div class="col-auto pe-0">
                     <a href="{{ previousPost.url }}">
@@ -16,7 +15,10 @@
                     </a>
                 </div>
                 <div class="col">
-                    <p class="m-0"><i class="fa-solid fa-angle-left"></i>PREVIOUS</p>
+                    {% if previousPost %}
+                    <a href="{{ previousPost.url }}" class="text-decoration-none">
+                        <p class="m-0"><i class="fa-solid fa-angle-left"></i>PREVIOUS</p>
+                    </a>
                     <a href="{{ previousPost.url }}" class="text-decoration-none">
                         {{ previousPost.data.title }}
                     </a>
@@ -25,13 +27,16 @@
             </div>
         </div>
         <div class="col-12 col-md-6 align-items-right text-end">
-            {% if nextPost %}
             <div class="row">
                 <div class="col">
-                    <p class="m-0">NEXT<i class="fa-solid fa-angle-right"></i></p>
+                    {% if nextPost %}
+                    <a href="{{ nextPost.url }}" class="text-decoration-none">
+                        <p class="m-0">NEXT<i class="fa-solid fa-angle-right"></i></p>
+                    </a>
                     <a href="{{ nextPost.url }}" class="text-decoration-none">
                         {{ nextPost.data.title }}
                     </a>
+                    {% endif %}
                 </div>
                 <div class="col-auto ps-0">
                     <a href="{{ nextPost.url}}">
@@ -43,7 +48,6 @@
                     </a>
                 </div>
             </div>
-            {% endif %}
         </div>
     </div>
 </div>
