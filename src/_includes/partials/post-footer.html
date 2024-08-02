@@ -1,8 +1,28 @@
 {% set previousPost = collections.blog | getPreviousCollectionItem %}
 {% set nextPost = collections.blog | getNextCollectionItem %}
 
-<div class="container mb-4">
+<div class="container mb-5">
+    <!-- social share links -->
     <div class="row">
+        <div class="col">
+            <p>SHARE THIS POST</p>
+        </div>
+        <div class="col">
+            <button type="button" class="btn mastodon-btn rounded-pill">
+                <i class="fa-brands fa-mastodon fa-xl" style="color: #ffffff;"></i>
+            </button>
+            <button type="button" class="btn twitter-btn rounded-pill">
+                <i class="fa-brands fa-x-twitter fa-xl" style="color: #ffffff;"></i>
+            </button>
+            <button type="button" class="btn reddit-btn rounded-pill">
+                <i class="fa-brands fa-mastodon fa-xl" style="color: #ffffff;"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- next and previous post -->
+    <div class="row">
+        <!-- previous post -->
         <div class="col-12 col-md-6">
             <div class="row">
                 <div class="col-auto pe-0">
@@ -26,6 +46,7 @@
                 </div>
             </div>
         </div>
+        <!-- next post -->
         <div class="col-12 col-md-6 align-items-right text-end">
             <div class="row">
                 <div class="col">
