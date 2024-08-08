@@ -1,0 +1,14 @@
+<!-- post info incl. postimage, publish date, reading time -->
+<div class="mt-4 mb-4">
+    <img class="img-fluid" src="{{ postimg }}" alt="Creative ">
+    <div class="row mt-4">
+        <div class="col-6">
+            <p class="my-0">PUBLISHED</p>
+            <p class="my-0">{{ date }}</p>
+        </div>
+        <div class="col-6">
+            <p class="my-0">READING TIME</p>
+            <p class="my-0">{{ content | readingTime }}</p>
+        </div>
+    </div>
+</div>

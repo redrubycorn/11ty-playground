@@ -1,11 +1,35 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-  {% include "partials/post-header.html" %}
-  <div class="container pt-1 pb-5">
-    <article>
-      {{ content | safe }}
-    </article>
-  </div>
-  {% include "partials/post-footer.html" %}
+    <div class="container-fluid">
+        <!-- include post header -->
+        <div class="row bg-body-tertiary justify-content-center">
+            <div class="col-8">
+                {% include "partials/post-header.html" %}
+            </div>
+        </div>
+
+        <!-- include post info -->
+        <div class="row justify-content-center">
+            <div class="col-8">
+                {% include "partials/post-info.html" %}
+            </div>
+        </div>
+
+        <!-- main -->
+        <div class="row">
+            <!-- left sidebar -->
+            <div class="col-2"></div>
+            <!-- post content -->
+            <div class="col-8">
+                <article>
+                {{ content | safe }}
+                </article>
+
+                {% include "partials/post-footer.html" %}
+            </div>
+            <!-- right sidebar -->
+            <div class="col-2"></div>
+         </div>
+    </div>
 {% endblock %}

@@ -1,73 +1,71 @@
 {% set previousPost = collections.blog | getPreviousCollectionItem %}
 {% set nextPost = collections.blog | getNextCollectionItem %}
 
-<div class="container mb-5">
-    <!-- social share links -->
-    <div class="row">
-        <div class="col">
-            <p>SHARE THIS POST</p>
-        </div>
-        <div class="col">
-            <button type="button" class="btn mastodon-btn rounded-pill">
-                <i class="fa-brands fa-mastodon fa-xl" style="color: #ffffff;"></i>
-            </button>
-            <button type="button" class="btn twitter-btn rounded-pill">
-                <i class="fa-brands fa-x-twitter fa-xl" style="color: #ffffff;"></i>
-            </button>
-            <button type="button" class="btn reddit-btn rounded-pill">
-                <i class="fa-brands fa-mastodon fa-xl" style="color: #ffffff;"></i>
-            </button>
-        </div>
+<!-- social share links -->
+<div class="row">
+    <div class="col">
+        <p>SHARE THIS POST</p>
     </div>
+    <div class="col">
+        <button type="button" class="btn mastodon-btn rounded-pill">
+            <i class="fa-brands fa-mastodon fa-xl" style="color: #ffffff;"></i>
+        </button>
+        <button type="button" class="btn twitter-btn rounded-pill">
+            <i class="fa-brands fa-x-twitter fa-xl" style="color: #ffffff;"></i>
+        </button>
+        <button type="button" class="btn reddit-btn rounded-pill">
+            <i class="fa-brands fa-mastodon fa-xl" style="color: #ffffff;"></i>
+        </button>
+    </div>
+</div>
 
-    <!-- next and previous post -->
-    <div class="row">
-        <!-- previous post -->
-        <div class="col-12 col-md-6">
-            <div class="row">
-                <div class="col-auto pe-0">
-                    <a href="{{ previousPost.url }}">
-                        <img src="{{ previousPost.url}}{{ previousPost.data.postimg }}" 
-                            class="img-cover"
-                            style="height: 60px"
-                            alt=""
-                        >
-                    </a>
-                </div>
-                <div class="col">
-                    {% if previousPost %}
-                    <a href="{{ previousPost.url }}" class="text-decoration-none">
-                        <p class="m-0"><i class="fa-solid fa-angle-left"></i>PREVIOUS</p>
-                    </a>
-                    <a href="{{ previousPost.url }}" class="text-decoration-none">
-                        {{ previousPost.data.title }}
-                    </a>
-                    {% endif %}
-                </div>
+<!-- next and previous post -->
+<div class="row">
+    <!-- previous post -->
+    <div class="col-12 col-md-6">
+        <div class="row">
+            <div class="col-auto pe-0">
+                <a href="{{ previousPost.url }}">
+                    <img src="{{ previousPost.url}}{{ previousPost.data.postimg }}" 
+                        class="img-cover"
+                        style="height: 60px"
+                        alt=""
+                    >
+                </a>
+            </div>
+            <div class="col">
+                {% if previousPost %}
+                <a href="{{ previousPost.url }}" class="text-decoration-none">
+                    <p class="m-0"><i class="fa-solid fa-angle-left"></i>PREVIOUS</p>
+                </a>
+                <a href="{{ previousPost.url }}" class="text-decoration-none">
+                    {{ previousPost.data.title }}
+                </a>
+                {% endif %}
             </div>
         </div>
-        <!-- next post -->
-        <div class="col-12 col-md-6 align-items-right text-end">
-            <div class="row">
-                <div class="col">
-                    {% if nextPost %}
-                    <a href="{{ nextPost.url }}" class="text-decoration-none">
-                        <p class="m-0">NEXT<i class="fa-solid fa-angle-right"></i></p>
-                    </a>
-                    <a href="{{ nextPost.url }}" class="text-decoration-none">
-                        {{ nextPost.data.title }}
-                    </a>
-                    {% endif %}
-                </div>
-                <div class="col-auto ps-0">
-                    <a href="{{ nextPost.url}}">
-                        <img src="{{ nextPost.url}}{{ nextPost.data.postimg }}" 
-                            class="img-cover" 
-                            style="height: 60px"
-                            alt=""
-                        >
-                    </a>
-                </div>
+    </div>
+    <!-- next post -->
+    <div class="col-12 col-md-6 align-items-right text-end">
+        <div class="row">
+            <div class="col">
+                {% if nextPost %}
+                <a href="{{ nextPost.url }}" class="text-decoration-none">
+                    <p class="m-0">NEXT<i class="fa-solid fa-angle-right"></i></p>
+                </a>
+                <a href="{{ nextPost.url }}" class="text-decoration-none">
+                    {{ nextPost.data.title }}
+                </a>
+                {% endif %}
+            </div>
+            <div class="col-auto ps-0">
+                <a href="{{ nextPost.url}}">
+                    <img src="{{ nextPost.url}}{{ nextPost.data.postimg }}" 
+                        class="img-cover" 
+                        style="height: 60px"
+                        alt=""
+                    >
+                </a>
             </div>
         </div>
     </div>

@@ -1,27 +1,5 @@
-<div class="bg-body-tertiary">
-    <div class="container pt-4 pb-4">
-        <h2 class="title">{{ title }}</h2>
-        <p>{{ summary }}</p>
-        <div class="tag-list">
-            {% for tag in tags %}
-            <a href="/tags/{{ tag }}/" class="btn btn-outline-secondary btn-sm py-0" role="button">{{ tag }}</a>
-            {% endfor %}
-        </div>
-    </div>
-</div>
-
-<div class="container mt-4 mb-4">
-    <div>
-        <img class="img-fluid" src="{{ postimg }}" alt="Creative ">
-    </div>
-    <div class="row mt-4">
-        <div class="col-6">
-            <p class="my-0">PUBLISHED</p>
-            <p class="my-0">{{ date }}</p>
-        </div>
-        <div class="col-6">
-            <p class="my-0">READING TIME</p>
-            <p class="my-0">{{ content | readingTime }}</p>
-        </div>
-    </div>
-</div>
+<h2>{{ title }}</h2>
+<p>{{ summary }}</p>
+{% for tag in tags %}
+<a href="/tags/{{ tag }}/" class="btn btn-outline-secondary btn-sm py-0" role="button">{{ tag }}</a>
+{% endfor %}
