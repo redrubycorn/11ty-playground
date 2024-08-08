@@ -43,24 +43,26 @@
 
     <div class="container-fluid p-0">
       
-  <div class="bg-body-tertiary">
-    <div class="container pt-4 pb-4">
-        <h2 class="title">Jupyter</h2>
-        <p>This is a first Jupyter Notebook for testing. Nulla tempor urna non imperdiet consequat.</p>
-        <div class="tag-list">
-            
-            <a href="/11ty-playground/tags/test/" class="btn btn-outline-secondary btn-sm py-0" role="button">test</a>
-            
-            <a href="/11ty-playground/tags/news/" class="btn btn-outline-secondary btn-sm py-0" role="button">news</a>
-            
-        </div>
-    </div>
-</div>
+    <div class="container-fluid">
+        <!-- include post header -->
+        <div class="row bg-body-tertiary justify-content-center">
+            <div class="col-8">
+                <h2>Jupyter</h2>
+<p>This is a first Jupyter Notebook for testing. Nulla tempor urna non imperdiet consequat.</p>
 
-<div class="container mt-4 mb-4">
-    <div>
-        <img class="img-fluid" src="raspberry.jpg" alt="Creative ">
-    </div>
+<a href="/11ty-playground/tags/test/" class="btn btn-outline-secondary btn-sm py-0" role="button">test</a>
+
+<a href="/11ty-playground/tags/news/" class="btn btn-outline-secondary btn-sm py-0" role="button">news</a>
+
+            </div>
+        </div>
+
+        <!-- include post info -->
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <!-- post info incl. postimage, publish date, reading time -->
+<div class="mt-4 mb-4">
+    <img class="img-fluid" src="raspberry.jpg" alt="Creative ">
     <div class="row mt-4">
         <div class="col-6">
             <p class="my-0">PUBLISHED</p>
@@ -73,9 +75,17 @@
     </div>
 </div>
 
-  <div class="container pt-1 pb-5">
-    <article>
-      <h1>Another Jupyter</h1>
+            </div>
+        </div>
+
+        <!-- main -->
+        <div class="row">
+            <!-- left sidebar -->
+            <div class="col-2"></div>
+            <!-- post content -->
+            <div class="col-8">
+                <article>
+                <h1>Another Jupyter</h1>
 <p>redrubycorn
 2024-05-22</p>
 <h1>First Neural Net Learning Notebook</h1>
@@ -300,75 +310,78 @@ Epoch 30/30
 &lt;keras.src.callbacks.history.History at 0x79e18d03c9d0&gt;
 </code></pre>
 
-    </article>
-  </div>
-  
+                </article>
+
+                
 
 
-<div class="container mb-5">
-    <!-- social share links -->
-    <div class="row">
-        <div class="col">
-            <p>SHARE THIS POST</p>
-        </div>
-        <div class="col">
-            <button type="button" class="btn mastodon-btn rounded-pill">
-                <i class="fa-brands fa-mastodon fa-xl" style="color: #ffffff;"></i>
-            </button>
-            <button type="button" class="btn twitter-btn rounded-pill">
-                <i class="fa-brands fa-x-twitter fa-xl" style="color: #ffffff;"></i>
-            </button>
-            <button type="button" class="btn reddit-btn rounded-pill">
-                <i class="fa-brands fa-mastodon fa-xl" style="color: #ffffff;"></i>
-            </button>
-        </div>
+<!-- social share links -->
+<div class="row">
+    <div class="col">
+        <p>SHARE THIS POST</p>
     </div>
+    <div class="col">
+        <button type="button" class="btn mastodon-btn rounded-pill">
+            <i class="fa-brands fa-mastodon fa-xl" style="color: #ffffff;"></i>
+        </button>
+        <button type="button" class="btn twitter-btn rounded-pill">
+            <i class="fa-brands fa-x-twitter fa-xl" style="color: #ffffff;"></i>
+        </button>
+        <button type="button" class="btn reddit-btn rounded-pill">
+            <i class="fa-brands fa-mastodon fa-xl" style="color: #ffffff;"></i>
+        </button>
+    </div>
+</div>
 
-    <!-- next and previous post -->
-    <div class="row">
-        <!-- previous post -->
-        <div class="col-12 col-md-6">
-            <div class="row">
-                <div class="col-auto pe-0">
-                    <a href="/11ty-playground/posts/rocket-launch/">
-                        <img src="/11ty-playground/posts/rocket-launch/rocket-launch.jpg" class="img-cover" style="height: 60px" alt="">
-                    </a>
-                </div>
-                <div class="col">
-                    
-                    <a href="/11ty-playground/posts/rocket-launch/" class="text-decoration-none">
-                        <p class="m-0"><i class="fa-solid fa-angle-left"></i>PREVIOUS</p>
-                    </a>
-                    <a href="/11ty-playground/posts/rocket-launch/" class="text-decoration-none">
-                        Rocket Launch
-                    </a>
-                    
-                </div>
+<!-- next and previous post -->
+<div class="row">
+    <!-- previous post -->
+    <div class="col-12 col-md-6">
+        <div class="row">
+            <div class="col-auto pe-0">
+                <a href="/11ty-playground/posts/rocket-launch/">
+                    <img src="/11ty-playground/posts/rocket-launch/rocket-launch.jpg" class="img-cover" style="height: 60px" alt="">
+                </a>
+            </div>
+            <div class="col">
+                
+                <a href="/11ty-playground/posts/rocket-launch/" class="text-decoration-none">
+                    <p class="m-0"><i class="fa-solid fa-angle-left"></i>PREVIOUS</p>
+                </a>
+                <a href="/11ty-playground/posts/rocket-launch/" class="text-decoration-none">
+                    Rocket Launch
+                </a>
+                
             </div>
         </div>
-        <!-- next post -->
-        <div class="col-12 col-md-6 align-items-right text-end">
-            <div class="row">
-                <div class="col">
-                    
-                    <a href="/11ty-playground/posts/stars/" class="text-decoration-none">
-                        <p class="m-0">NEXT<i class="fa-solid fa-angle-right"></i></p>
-                    </a>
-                    <a href="/11ty-playground/posts/stars/" class="text-decoration-none">
-                        The Stars are bright
-                    </a>
-                    
-                </div>
-                <div class="col-auto ps-0">
-                    <a href="/11ty-playground/posts/stars/">
-                        <img src="/11ty-playground/posts/stars/stars.jpg" class="img-cover" style="height: 60px" alt="">
-                    </a>
-                </div>
+    </div>
+    <!-- next post -->
+    <div class="col-12 col-md-6 align-items-right text-end">
+        <div class="row">
+            <div class="col">
+                
+                <a href="/11ty-playground/posts/stars/" class="text-decoration-none">
+                    <p class="m-0">NEXT<i class="fa-solid fa-angle-right"></i></p>
+                </a>
+                <a href="/11ty-playground/posts/stars/" class="text-decoration-none">
+                    The Stars are bright
+                </a>
+                
+            </div>
+            <div class="col-auto ps-0">
+                <a href="/11ty-playground/posts/stars/">
+                    <img src="/11ty-playground/posts/stars/stars.jpg" class="img-cover" style="height: 60px" alt="">
+                </a>
             </div>
         </div>
     </div>
 </div>
 
+            </div>
+            <!-- right sidebar -->
+            <div class="col-2"></div>
+         </div>
+    </div>
 
     </div>
 

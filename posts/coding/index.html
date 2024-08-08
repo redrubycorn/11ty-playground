@@ -43,24 +43,26 @@
 
     <div class="container-fluid p-0">
       
-  <div class="bg-body-tertiary">
-    <div class="container pt-4 pb-4">
-        <h2 class="title">About Coding and Stuff</h2>
-        <p>Donec in magna vitae est interdum pellentesque. Sed blandit mollis blandit. Aliquam sollicitudin commodo lectus iaculis rutrum. Morbi eleifend urna quis ultricies feugiat. Maecenas euismod, odio ac condimentum cursus, ipsum turpis consectetur justo, at elementum nibh lacus eget lacus.</p>
-        <div class="tag-list">
-            
-            <a href="/11ty-playground/tags/test/" class="btn btn-outline-secondary btn-sm py-0" role="button">test</a>
-            
-            <a href="/11ty-playground/tags/other/" class="btn btn-outline-secondary btn-sm py-0" role="button">other</a>
-            
-        </div>
-    </div>
-</div>
+    <div class="container-fluid">
+        <!-- include post header -->
+        <div class="row bg-body-tertiary justify-content-center">
+            <div class="col-8">
+                <h2>About Coding and Stuff</h2>
+<p>Donec in magna vitae est interdum pellentesque. Sed blandit mollis blandit. Aliquam sollicitudin commodo lectus iaculis rutrum. Morbi eleifend urna quis ultricies feugiat. Maecenas euismod, odio ac condimentum cursus, ipsum turpis consectetur justo, at elementum nibh lacus eget lacus.</p>
 
-<div class="container mt-4 mb-4">
-    <div>
-        <img class="img-fluid" src="code.jpg" alt="Creative ">
-    </div>
+<a href="/11ty-playground/tags/test/" class="btn btn-outline-secondary btn-sm py-0" role="button">test</a>
+
+<a href="/11ty-playground/tags/other/" class="btn btn-outline-secondary btn-sm py-0" role="button">other</a>
+
+            </div>
+        </div>
+
+        <!-- include post info -->
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <!-- post info incl. postimage, publish date, reading time -->
+<div class="mt-4 mb-4">
+    <img class="img-fluid" src="code.jpg" alt="Creative ">
     <div class="row mt-4">
         <div class="col-6">
             <p class="my-0">PUBLISHED</p>
@@ -73,9 +75,17 @@
     </div>
 </div>
 
-  <div class="container pt-1 pb-5">
-    <article>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu leo id nunc condimentum vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam faucibus pellentesque lacus at tincidunt. Nulla tempor urna non imperdiet consequat. Vestibulum rutrum turpis leo, in laoreet risus viverra bibendum. Vestibulum dolor nibh, ullamcorper in consectetur eget, tempor commodo orci. Etiam ullamcorper quam a malesuada vulputate. Nullam malesuada vel quam ut rutrum. In dignissim viverra mollis. In placerat, justo id condimentum aliquam, dolor mi pellentesque felis, eget tristique sem quam eu ipsum. Fusce congue, lorem in tincidunt condimentum, tortor turpis mollis nisi, id tempus turpis metus sit amet eros. Cras sed magna cursus, scelerisque enim eu, aliquam ante. Nulla id ante non quam dignissim sagittis vel vel libero. Sed viverra libero neque. Suspendisse vitae iaculis metus. Aliquam fringilla nulla lectus, sit amet condimentum ipsum efficitur eu.</p>
+            </div>
+        </div>
+
+        <!-- main -->
+        <div class="row">
+            <!-- left sidebar -->
+            <div class="col-2"></div>
+            <!-- post content -->
+            <div class="col-8">
+                <article>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu leo id nunc condimentum vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam faucibus pellentesque lacus at tincidunt. Nulla tempor urna non imperdiet consequat. Vestibulum rutrum turpis leo, in laoreet risus viverra bibendum. Vestibulum dolor nibh, ullamcorper in consectetur eget, tempor commodo orci. Etiam ullamcorper quam a malesuada vulputate. Nullam malesuada vel quam ut rutrum. In dignissim viverra mollis. In placerat, justo id condimentum aliquam, dolor mi pellentesque felis, eget tristique sem quam eu ipsum. Fusce congue, lorem in tincidunt condimentum, tortor turpis mollis nisi, id tempus turpis metus sit amet eros. Cras sed magna cursus, scelerisque enim eu, aliquam ante. Nulla id ante non quam dignissim sagittis vel vel libero. Sed viverra libero neque. Suspendisse vitae iaculis metus. Aliquam fringilla nulla lectus, sit amet condimentum ipsum efficitur eu.</p>
 <h2>Coding</h2>
 <p>Donec in magna vitae est interdum pellentesque. Sed blandit mollis blandit. Aliquam sollicitudin commodo lectus iaculis rutrum. Morbi eleifend urna quis ultricies feugiat. Maecenas euismod, odio ac condimentum cursus, ipsum turpis consectetur justo, at elementum nibh lacus eget lacus. Duis semper arcu non lorem rhoncus auctor. Vivamus pretium nisi sapien, sit amet semper sem auctor ac. Phasellus pretium purus lacinia faucibus rhoncus. Fusce vitae velit leo.</p>
 <p>Phasellus ultricies a leo vel imperdiet. Integer non tortor ornare, consequat mi consectetur, placerat quam. Quisque malesuada sodales mi, et fringilla libero dapibus ut. Duis porttitor neque vel aliquam egestas. Aliquam erat volutpat. Nullam scelerisque lacinia ornare. Praesent blandit ipsum non lectus convallis blandit. Phasellus justo nisl, commodo quis arcu eget, pharetra vestibulum eros. Nullam metus felis, pretium vel convallis ut, mollis ut odio. Nunc nec nunc risus. Donec mattis posuere orci eget vulputate. Pellentesque ut ullamcorper elit. Curabitur rutrum placerat metus, eu porta ante sollicitudin sed.</p>
@@ -87,75 +97,78 @@
 <p>Donec ac urna volutpat, pellentesque ante nec, porta erat. Fusce iaculis, elit laoreet mollis dapibus, ex justo tristique diam, at volutpat nunc mi ut elit. Vivamus vitae lectus bibendum, hendrerit nisl at, imperdiet dui. In blandit sed lacus eget iaculis. Pellentesque pretium purus nec mi pretium facilisis id feugiat nunc. Quisque convallis ex a ante tincidunt, a dapibus ex sodales. Duis sollicitudin elit sed purus elementum imperdiet sit amet sit amet magna. In ac orci pharetra velit rutrum molestie at lobortis ex.</p>
 <p>Nunc at orci et lacus lacinia hendrerit. Quisque sed massa sed risus rhoncus scelerisque. Phasellus maximus euismod cursus. Donec sit amet augue pulvinar, tincidunt diam at, euismod diam. Morbi condimentum ut enim in rutrum. Sed eu justo elementum, posuere sem ut, interdum ipsum. Aliquam ultricies mattis imperdiet.</p>
 
-    </article>
-  </div>
-  
+                </article>
+
+                
 
 
-<div class="container mb-5">
-    <!-- social share links -->
-    <div class="row">
-        <div class="col">
-            <p>SHARE THIS POST</p>
-        </div>
-        <div class="col">
-            <button type="button" class="btn mastodon-btn rounded-pill">
-                <i class="fa-brands fa-mastodon fa-xl" style="color: #ffffff;"></i>
-            </button>
-            <button type="button" class="btn twitter-btn rounded-pill">
-                <i class="fa-brands fa-x-twitter fa-xl" style="color: #ffffff;"></i>
-            </button>
-            <button type="button" class="btn reddit-btn rounded-pill">
-                <i class="fa-brands fa-mastodon fa-xl" style="color: #ffffff;"></i>
-            </button>
-        </div>
+<!-- social share links -->
+<div class="row">
+    <div class="col">
+        <p>SHARE THIS POST</p>
     </div>
+    <div class="col">
+        <button type="button" class="btn mastodon-btn rounded-pill">
+            <i class="fa-brands fa-mastodon fa-xl" style="color: #ffffff;"></i>
+        </button>
+        <button type="button" class="btn twitter-btn rounded-pill">
+            <i class="fa-brands fa-x-twitter fa-xl" style="color: #ffffff;"></i>
+        </button>
+        <button type="button" class="btn reddit-btn rounded-pill">
+            <i class="fa-brands fa-mastodon fa-xl" style="color: #ffffff;"></i>
+        </button>
+    </div>
+</div>
 
-    <!-- next and previous post -->
-    <div class="row">
-        <!-- previous post -->
-        <div class="col-12 col-md-6">
-            <div class="row">
-                <div class="col-auto pe-0">
-                    <a href="/11ty-playground/posts/post1/">
-                        <img src="/11ty-playground/posts/post1/technology.jpg" class="img-cover" style="height: 60px" alt="">
-                    </a>
-                </div>
-                <div class="col">
-                    
-                    <a href="/11ty-playground/posts/post1/" class="text-decoration-none">
-                        <p class="m-0"><i class="fa-solid fa-angle-left"></i>PREVIOUS</p>
-                    </a>
-                    <a href="/11ty-playground/posts/post1/" class="text-decoration-none">
-                        Post 1
-                    </a>
-                    
-                </div>
+<!-- next and previous post -->
+<div class="row">
+    <!-- previous post -->
+    <div class="col-12 col-md-6">
+        <div class="row">
+            <div class="col-auto pe-0">
+                <a href="/11ty-playground/posts/post1/">
+                    <img src="/11ty-playground/posts/post1/technology.jpg" class="img-cover" style="height: 60px" alt="">
+                </a>
+            </div>
+            <div class="col">
+                
+                <a href="/11ty-playground/posts/post1/" class="text-decoration-none">
+                    <p class="m-0"><i class="fa-solid fa-angle-left"></i>PREVIOUS</p>
+                </a>
+                <a href="/11ty-playground/posts/post1/" class="text-decoration-none">
+                    Post 1
+                </a>
+                
             </div>
         </div>
-        <!-- next post -->
-        <div class="col-12 col-md-6 align-items-right text-end">
-            <div class="row">
-                <div class="col">
-                    
-                    <a href="/11ty-playground/posts/satellite/" class="text-decoration-none">
-                        <p class="m-0">NEXT<i class="fa-solid fa-angle-right"></i></p>
-                    </a>
-                    <a href="/11ty-playground/posts/satellite/" class="text-decoration-none">
-                        Satellite in Space
-                    </a>
-                    
-                </div>
-                <div class="col-auto ps-0">
-                    <a href="/11ty-playground/posts/satellite/">
-                        <img src="/11ty-playground/posts/satellite/satellite.jpg" class="img-cover" style="height: 60px" alt="">
-                    </a>
-                </div>
+    </div>
+    <!-- next post -->
+    <div class="col-12 col-md-6 align-items-right text-end">
+        <div class="row">
+            <div class="col">
+                
+                <a href="/11ty-playground/posts/satellite/" class="text-decoration-none">
+                    <p class="m-0">NEXT<i class="fa-solid fa-angle-right"></i></p>
+                </a>
+                <a href="/11ty-playground/posts/satellite/" class="text-decoration-none">
+                    Satellite in Space
+                </a>
+                
+            </div>
+            <div class="col-auto ps-0">
+                <a href="/11ty-playground/posts/satellite/">
+                    <img src="/11ty-playground/posts/satellite/satellite.jpg" class="img-cover" style="height: 60px" alt="">
+                </a>
             </div>
         </div>
     </div>
 </div>
 
+            </div>
+            <!-- right sidebar -->
+            <div class="col-2"></div>
+         </div>
+    </div>
 
     </div>
 
