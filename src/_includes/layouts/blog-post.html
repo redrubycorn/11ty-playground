@@ -3,7 +3,7 @@
 {% block content %}
     <div class="container-fluid">
         <!-- include post header -->
-        <div class="row bg-body-tertiary justify-content-center">
+        <div class="row bg-body-tertiary justify-content-center pb-4">
             <div class="col col-lg-9 col-xl-6">
                 {% include "partials/post-header.html" %}
             </div>
@@ -22,7 +22,7 @@
             <div class="col-3 d-none d-xl-block"></div>
             <!-- post content -->
             <div class="col col-lg-9 col-xl-6">
-                <article>
+                <article class="mb-4">
                 {{ content | safe }}
                 </article>
 

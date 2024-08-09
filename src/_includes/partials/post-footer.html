@@ -2,25 +2,21 @@
 {% set nextPost = collections.blog | getNextCollectionItem %}
 
 <!-- social share links -->
-<div class="row">
-    <div class="col">
-        <p>SHARE THIS POST</p>
+<div class="row pt-2 mt-4 mb-4">
+    <div class="col text-end">
+        <span class="align-middle">SHARE THIS POST</span>
     </div>
     <div class="col">
-        <button type="button" class="btn mastodon-btn rounded-pill">
-            <i class="fa-brands fa-mastodon fa-xl" style="color: #ffffff;"></i>
-        </button>
-        <button type="button" class="btn twitter-btn rounded-pill">
-            <i class="fa-brands fa-x-twitter fa-xl" style="color: #ffffff;"></i>
-        </button>
-        <button type="button" class="btn reddit-btn rounded-pill">
-            <i class="fa-brands fa-mastodon fa-xl" style="color: #ffffff;"></i>
-        </button>
+        {% for item in social.sharesocial %}
+        <a class="btn rounded-pill" href="{{ item.url }}" style="background-color: {{ item.color}};">
+            <i class="fa-brands fa-{{ item.name }} fa-xl" style="color: #ffffff;"></i>
+        </a>
+        {% endfor %}
     </div>
 </div>
 
 <!-- next and previous post -->
-<div class="row">
+<div class="row pt-2 pb-2 mb-4">
     <!-- previous post -->
     <div class="col-12 col-md-6">
         <div class="row">

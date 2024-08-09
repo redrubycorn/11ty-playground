@@ -14,7 +14,7 @@
             <!-- social nav -->
             <div class="col-lg-4 d-flex justify-content-center">
                 <div class="d-flex gap-3">
-                    {% for item in social %}
+                    {% for item in social.mysocial %}
                         <a class="link-secondary link-opacity-50-hover" href="{{ item.url }}" target="_blank"><i class="fab fa-{{ item.name }}"></i></i></a>
                     {% endfor %}
                 </div>

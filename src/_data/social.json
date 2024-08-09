@@ -1,16 +1,37 @@
-[{
-    "name": "youtube",
-    "url": "https://www.youtube.com/"
-},
 {
-    "name": "linkedin",
-    "url": "https://www.linkedin.com"
-},
-{
-    "name": "mastodon",
-    "url": "https://mastodon.social/explore"
-},
-{
-    "name": "twitter",
-    "url": "https://twitter.com"
-}]
+    "mysocial": [
+        {
+            "name": "youtube",
+            "url": "https://www.youtube.com/"
+        },
+        {
+            "name": "linkedin",
+            "url": "https://www.linkedin.com"
+        },
+        {
+            "name": "mastodon",
+            "url": "https://mastodon.social/explore"
+        },
+        {
+            "name": "twitter",
+            "url": "https://twitter.com"
+        }
+    ],
+    "sharesocial": [
+        {
+            "name": "reddit",
+            "color": "#FF4500",
+            "url": "#"
+        },
+        {
+            "name": "mastodon",
+            "color": "#563ACC",
+            "url": "#"
+        },
+        {
+            "name": "twitter",
+            "color": "#000000",
+            "url": "#"
+        }
+    ]
+}
