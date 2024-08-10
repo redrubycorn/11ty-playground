@@ -8,7 +8,7 @@
     </div>
     <div class="col">
         {% for item in social.sharesocial %}
-        <a class="btn rounded-pill" href="{{ item.url }}" style="background-color: {{ item.color}};">
+        <a class="btn rounded-pill" href="{{ item.url }}" style="background-color: {{ item.color }};">
             <i class="fa-brands fa-{{ item.name }} fa-xl" style="color: #ffffff;"></i>
         </a>
         {% endfor %}
@@ -19,50 +19,33 @@
 <div class="row pt-2 pb-2 mb-4">
     <!-- previous post -->
     <div class="col-12 col-md-6">
-        <div class="row">
+        {% if previousPost %}
+        <div class="row position-relative">
             <div class="col-auto pe-0">
-                <a href="{{ previousPost.url }}">
-                    <img src="{{ previousPost.url}}{{ previousPost.data.postimg }}" 
-                        class="img-cover"
-                        style="height: 60px"
-                        alt=""
-                    >
-                </a>
+                <img src="{{ previousPost.url}}{{ previousPost.data.postimg }}" class="img-cover" style="height: 60px" alt="">
             </div>
             <div class="col">
-                {% if previousPost %}
-                <a href="{{ previousPost.url }}" class="text-decoration-none">
-                    <p class="m-0"><i class="fa-solid fa-angle-left"></i>PREVIOUS</p>
-                </a>
-                <a href="{{ previousPost.url }}" class="text-decoration-none">
-                    {{ previousPost.data.title }}
-                </a>
-                {% endif %}
+                <p class="m-0"><i class="fa-solid fa-angle-left"></i>PREVIOUS</p>
+                <p>{{ previousPost.data.title }}</p>
+                <a href="{{ previousPost.url }}" class="stretched-link"></a>
             </div>
         </div>
+        {% endif %}
     </div>
+    
     <!-- next post -->
     <div class="col-12 col-md-6 align-items-right text-end">
-        <div class="row">
+        {% if nextPost %}
+        <div class="row position-relative">
             <div class="col">
-                {% if nextPost %}
-                <a href="{{ nextPost.url }}" class="text-decoration-none">
-                    <p class="m-0">NEXT<i class="fa-solid fa-angle-right"></i></p>
-                </a>
-                <a href="{{ nextPost.url }}" class="text-decoration-none">
-                    {{ nextPost.data.title }}
-                </a>
-                {% endif %}
+                <p class="m-0">NEXT<i class="fa-solid fa-angle-right"></i></p>
+                <p>{{ nextPost.data.title }}</p>
+                <a href="{{ nextPost.url }}" class="stretched-link"></a>
             </div>
             <div class="col-auto ps-0">
-                <a href="{{ nextPost.url}}">
-                    <img src="{{ nextPost.url}}{{ nextPost.data.postimg }}" 
-                        class="img-cover" 
-                        style="height: 60px"
-                        alt=""
-                    >
-                </a>
+                <img src="{{ nextPost.url}}{{ nextPost.data.postimg }}" class="img-cover" style="height: 60px" alt="">
             </div>
         </div>
+        {% endif %}
     </div>
 </div>
