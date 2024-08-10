@@ -3,12 +3,12 @@
 
 <!-- social share links -->
 <div class="row pt-2 mt-4 mb-4">
-    <div class="col text-end">
+    <div class="col-12 col-sm-6 text-center text-sm-end">
         <span class="align-middle">SHARE THIS POST</span>
     </div>
-    <div class="col">
+    <div class="col-12 col-sm-6 text-center text-sm-start">
         {% for item in social.sharesocial %}
-        <a class="btn rounded-pill" href="{{ item.url }}" style="background-color: {{ item.color }};">
+        <a class="btn btn-link rounded-pill" href="{{ item.url }}" style="background-color: {{ item.color }};">
             <i class="fa-brands fa-{{ item.name }} fa-xl" style="color: #ffffff;"></i>
         </a>
         {% endfor %}
@@ -34,7 +34,7 @@
     </div>
     
     <!-- next post -->
-    <div class="col-12 col-md-6 align-items-right text-end">
+    <div class="col-12 col-md-6 align-items-right text-end order-first order-md-last">
         {% if nextPost %}
         <div class="row position-relative">
             <div class="col">

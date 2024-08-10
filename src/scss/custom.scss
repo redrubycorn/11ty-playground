@@ -30,3 +30,13 @@ body {
     padding-top: 1rem;
   }
 }
+
+
+// link hover opacity
+.btn-link:hover {
+    opacity: 0.5;
+    text-decoration: none;
+}
+.btn-link {
+    text-decoration: none;
+}
