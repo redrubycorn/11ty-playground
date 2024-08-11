@@ -40,3 +40,13 @@ body {
 .btn-link {
     text-decoration: none;
 }
+
+
+// styling the toc
+nav.toc ol {
+    list-style: none; // get rid of the list bullet points
+}
+nav.toc a {
+    text-decoration: none; // get rid of default link styling
+    color: $body-color; // set the color of the links to bootstrap body color
+}
