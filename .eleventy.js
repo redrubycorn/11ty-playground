@@ -2,9 +2,14 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const readingTime = require('eleventy-plugin-reading-time');
 const yaml = require("js-yaml");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+const markdownit = require("markdown-it");
+const anchor = require("markdown-it-anchor");
 
 module.exports = config => {
     config.amendLibrary("md", (mdLib) => mdLib.enable("code"));
+
+    // add markdown-it to generate toc
+    config.setLibrary("md", markdownit().use(anchor));
 
     // added yaml support
     config.addDataExtension("yaml, yml", contents => yaml.load(contents));
