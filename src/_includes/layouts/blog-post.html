@@ -20,11 +20,11 @@
         <div class="row justify-content-center">
             <!-- left sidebar -->
             <div class="col-3 d-none d-xl-block">
-                <aside>
-                    {% if content | toc %}
-                        <p>On this page</p>
-                        {{ content | toc | safe }}
-                    {% endif %}
+                <aside class="sticky-top">
+                        {% if content | toc %}
+                            <p>On this page</p>
+                            {{ content | toc | safe }}
+                        {% endif %}
                 </aside>
             </div>
 
@@ -39,7 +39,9 @@
             
             <!-- right sidebar -->
             <div class="col-3 d-none d-xl-block">
-                {% include "partials/tag-list.html" %}
+                <div class="sticky-top">
+                    {% include "partials/tag-list.html" %}
+                </div>
             </div>
          </div>
     </div>
