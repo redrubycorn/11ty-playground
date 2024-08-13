@@ -50,3 +50,12 @@ nav.toc a {
     text-decoration: none; // get rid of default link styling
     color: $body-color; // set the color of the links to bootstrap body color
 }
+
+nav.toc a.toc-active {
+    font-weight: bold;
+    color: #007bff;
+  }
+
+html {
+    scroll-behavior: smooth;
+  }
