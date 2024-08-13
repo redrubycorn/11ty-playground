@@ -57,8 +57,16 @@
             </div>
         </div>
 
-        <!-- include post info -->
+        <!-- main -->
         <div class="row justify-content-center">
+            <!-- left sidebar -->
+            <div class="col-3 d-none d-xl-block">
+                <aside class="sticky-top">
+                        
+                </aside>
+            </div>
+
+            <!-- post content -->
             <div class="col col-lg-9 col-xl-6">
                 <!-- post info incl. postimage, publish date, reading time -->
 <div class="mt-4 mb-4">
@@ -75,20 +83,7 @@
     </div>
 </div>
 
-            </div>
-        </div>
 
-        <!-- main -->
-        <div class="row justify-content-center">
-            <!-- left sidebar -->
-            <div class="col-3 d-none d-xl-block">
-                <aside>
-                    
-                </aside>
-            </div>
-
-            <!-- post content -->
-            <div class="col col-lg-9 col-xl-6">
                 <article class="mb-4">
                 <h1 id="another-jupyter" tabindex="-1">Another Jupyter</h1>
 <p>redrubycorn
@@ -389,7 +384,8 @@ Epoch 30/30
             
             <!-- right sidebar -->
             <div class="col-3 d-none d-xl-block">
-                <h5 class="listing-category-title">Tags</h5>
+                <div class="sticky-top">
+                    <h5 class="listing-category-title">Tags</h5>
 <div class="listing-category">
     <div class="category">
       <a href="/11ty-playground/pages/blog/" class="link-secondary text-decoration-none">all</a>
@@ -404,6 +400,7 @@ Epoch 30/30
     </div><div class="category">
       <a href="/11ty-playground/tags/code/" class="link-secondary text-decoration-none">code</a>
     </div></div>
+                </div>
             </div>
          </div>
     </div>
