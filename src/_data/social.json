@@ -16,22 +16,5 @@
             "name": "twitter",
             "url": "https://twitter.com"
         }
-    ],
-    "sharesocial": [
-        {
-            "name": "reddit",
-            "color": "#FF4500",
-            "url": "#"
-        },
-        {
-            "name": "mastodon",
-            "color": "#563ACC",
-            "url": "#"
-        },
-        {
-            "name": "twitter",
-            "color": "#000000",
-            "url": "#"
-        }
     ]
 }

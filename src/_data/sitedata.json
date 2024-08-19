@@ -1,4 +1,6 @@
 {
     "sitename": "11ty-playground",
-    "author": "redrubycorn"
+    "author": "redrubycorn",
+    "url": "http://localhost:8080",
+    "produrl": "https://redrubycorn.github.io/11ty-playground/"
 }

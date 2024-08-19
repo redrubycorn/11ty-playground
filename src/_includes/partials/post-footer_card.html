@@ -2,21 +2,31 @@
 {% set nextPost = collections.blog | getNextCollectionItem %}
 
 <!-- social share links -->
-<div class="row pt-2 mt-4 mb-4">
-    <div class="col-12 col-sm-6 text-center text-sm-end">
-        <span class="align-middle">SHARE THIS POST</span>
+<div class="row my-4 align-items-center">
+    <div class="col-12 col-sm-6 text-center text-sm-end p-0">
+        <p class="my-0 mx-2">SHARE THIS POST</p>
     </div>
-    <div class="col-12 col-sm-6 text-center text-sm-start">
-        {% for item in social.sharesocial %}
-        <a class="btn btn-link rounded-pill" href="{{ item.url }}" style="background-color: {{ item.color }};">
-            <i class="fa-brands fa-{{ item.name }} fa-xl" style="color: #ffffff;"></i>
+    <div class="col-12 col-sm-6 text-center text-sm-start p-0">
+        <a class="btn btn-link rounded-pill" 
+            href="https://twitter.com/intent/tweet?text={{ title | urlencode }}&url={{ url | urlencode }}" 
+            style="background-color: #000000;">
+            <i class="fa-brands fa-twitter fa-xl" style="color: #ffffff;"></i>
         </a>
-        {% endfor %}
+        <a class="btn btn-link rounded-pill" 
+            href="#" 
+            style="background-color: #563ACC;">
+            <i class="fa-brands fa-mastodon fa-xl" style="color: #ffffff;"></i>
+        </a>
+        <a class="btn btn-link rounded-pill" 
+            href="https://reddit.com/submit?url={{pageUrl}}&title={{stitle}}" 
+            style="background-color: #FF4500;">
+            <i class="fa-brands fa-reddit fa-xl" style="color: #ffffff;"></i>
+        </a>
     </div>
 </div>
 
 <!-- next and previous post -->
-<div class="row pt-2 pb-2 mb-4">
+<div class="row py-2 mb-4">
     <!-- previous post -->
     <div class="col-12 col-md-6">
         {% if previousPost %}

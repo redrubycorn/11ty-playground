@@ -45,7 +45,21 @@ body {
 // styling the toc
 nav.toc ol {
     list-style: none; // get rid of the list bullet points
+    list-style-type: none;
+    padding-left: 4px;
+    margin: 0;
 }
+
+nav.toc ol li {
+    border-left: 1px solid rgba($body-color, 0.3);
+    padding-left: ($spacer * 0.5);
+}
+
+nav.toc li:has(a.toc-active) {
+    border-left: 1px solid $body-color;
+    padding-left: ($spacer * 0.5);
+}
+
 nav.toc a {
     text-decoration: none; // get rid of default link styling
     color: $body-color; // set the color of the links to bootstrap body color
@@ -53,9 +67,9 @@ nav.toc a {
 
 nav.toc a.toc-active {
     font-weight: bold;
-    color: #007bff;
-  }
+    color: $primary;
+}
 
 html {
     scroll-behavior: smooth;
-  }
+}
