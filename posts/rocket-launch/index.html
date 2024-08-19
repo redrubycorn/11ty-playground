@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- social share metadata via open graph -->
+    <meta property="og:title" content="Rocket Launch">
+    <meta property="og:description" content="This is a first Jupyter Notebook for testing. Vivamus eu nulla varius, tempus diam in, cursus nibh. Aenean quis massa eget nulla maximus accumsan.">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="http://localhost:8080/posts/rocket-launch/">
+    <meta property="og:image" content="http://localhost:8080/posts/rocket-launch/rocket-launch.jpg">
+    <meta property="og:site_name" content="11ty-playground">
+
     <title>Rocket Launch</title>
     <!-- custom CSS should come after Bootstrap CSS -->
     <link rel="stylesheet" href="/11ty-playground/css/fontawesome.css">
@@ -63,7 +72,7 @@
         <div class="row justify-content-center">
             <!-- left sidebar -->
             <div class="col-3 d-none d-xl-block">
-                <aside class="sticky-top">
+                <aside class="sticky-top d-flex justify-content-center">
                         
                 </aside>
             </div>
@@ -103,29 +112,25 @@
 
 
 <!-- social share links -->
-<div class="row pt-2 mt-4 mb-4">
-    <div class="col-12 col-sm-6 text-center text-sm-end">
-        <span class="align-middle">SHARE THIS POST</span>
+<div class="row my-4 align-items-center">
+    <div class="col-12 col-sm-6 text-center text-sm-end p-0">
+        <p class="my-0 mx-2">SHARE THIS POST</p>
     </div>
-    <div class="col-12 col-sm-6 text-center text-sm-start">
-        
-        <a class="btn btn-link rounded-pill" href="#" style="background-color: #FF4500;">
-            <i class="fa-brands fa-reddit fa-xl" style="color: #ffffff;"></i>
+    <div class="col-12 col-sm-6 text-center text-sm-start p-0">
+        <a class="btn btn-link rounded-pill" href="https://twitter.com/intent/tweet?text=Rocket%20Launch&url=" style="background-color: #000000;">
+            <i class="fa-brands fa-twitter fa-xl" style="color: #ffffff;"></i>
         </a>
-        
         <a class="btn btn-link rounded-pill" href="#" style="background-color: #563ACC;">
             <i class="fa-brands fa-mastodon fa-xl" style="color: #ffffff;"></i>
         </a>
-        
-        <a class="btn btn-link rounded-pill" href="#" style="background-color: #000000;">
-            <i class="fa-brands fa-twitter fa-xl" style="color: #ffffff;"></i>
+        <a class="btn btn-link rounded-pill" href="https://reddit.com/submit?url=&title=" style="background-color: #FF4500;">
+            <i class="fa-brands fa-reddit fa-xl" style="color: #ffffff;"></i>
         </a>
-        
     </div>
 </div>
 
 <!-- next and previous post -->
-<div class="row pt-2 pb-2 mb-4">
+<div class="row py-2 mb-4">
     <!-- previous post -->
     <div class="col-12 col-md-6">
         
@@ -171,7 +176,7 @@
             
             <!-- right sidebar -->
             <div class="col-3 d-none d-xl-block">
-                <div class="sticky-top">
+                <div class="sticky-top mt-2 pt-2">
                     <h5 class="listing-category-title">Tags</h5>
 <div class="listing-category">
     <div class="category">
