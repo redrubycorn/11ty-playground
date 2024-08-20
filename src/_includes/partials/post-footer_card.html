@@ -8,20 +8,11 @@
     </div>
     <div class="col-12 col-sm-6 text-center text-sm-start p-0">
         <a class="btn btn-link rounded-pill" 
-            href="https://twitter.com/intent/tweet?text={{ title | urlencode }}&url={{ url | urlencode }}" 
+            href="https://twitter.com/intent/tweet?url={{ url | urlencode }}&text={{ title | urlencode }}"
+            target="_blank"
+            rel="noopener noreferrer"  
             style="background-color: #000000;">
             <i class="fa-brands fa-twitter fa-xl" style="color: #ffffff;"></i>
-        </a>
-        <a class="btn btn-link rounded-pill" 
-            href="#" 
-            style="background-color: #563ACC;">
-            <i class="fa-brands fa-mastodon fa-xl" style="color: #ffffff;"></i>
-        </a>
-        <a class="btn btn-link rounded-pill" 
-            href="https://reddit.com/submit?url={{pageUrl}}&title={{stitle}}" 
-            style="background-color: #FF4500;">
-            <i class="fa-brands fa-reddit fa-xl" style="color: #ffffff;"></i>
-        </a>
     </div>
 </div>
 

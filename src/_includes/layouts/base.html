@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- social share metadata via open graph -->
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content="{{ title }}" />
+    <meta name="twitter:description" content="{{ summary | truncate(100, true) }}">
+
+    <meta property="og:url" content="{{ sitedata.produrl }}{{ page.url }}" />
     <meta property="og:title" content="{{ title }}" />
-    <meta property="og:description" content="{{ summary }}" />
-    <meta property="og:type" content="{{ article }}" />
-    <meta property="og:url" content="{{ sitedata.url }}{{ page.url }}" />
-    <meta property="og:image" content="{{ sitedata.url }}{{ page.url }}{{ postimg }}" />
-    <meta property="og:site_name" content="{{ sitedata.sitename }}" />
+    <meta property="og:description" content="{{ summary | truncate(100, true) }}" />
 
     <title>{{ title }}</title>
     <!-- custom CSS should come after Bootstrap CSS -->
