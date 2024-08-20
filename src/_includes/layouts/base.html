@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- twitter meta tags -->
-    <meta name="twitter:card" content="summary" />
-    <meta property="twitter:title" content="{{ title }}" />
-    <meta name="twitter:description" content="{{ summary | truncate(100, true) }}">
-
+    <!-- Primary Meta Tags -->
+    <title>{{ title }}</title>
+    <meta name="title" content="{{ title }}" />
+    <meta name="description" content="{{ summary }}" />
+    
     <!-- open graph meta tags -->
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ sitedata.produrl }}{{ page.url }}" />
     <meta property="og:title" content="{{ title }}" />
     <meta property="og:description" content="{{ summary | truncate(100, true) }}" />
+    <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
 
-    <title>{{ title }}</title>
+    <!-- twitter meta tags -->
+    <meta property="twitter:url" content="{{ sitedata.produrl }}{{ page.url }}" />
+    <meta property="twitter:title" content="{{ title }}" />
+    <meta property="twitter:description" content="{{ summary | truncate(100, true) }}" />
+    <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+
     <!-- custom CSS should come after Bootstrap CSS -->
     <link rel="stylesheet" href="{{ '/css/fontawesome.css' }}">
     <link rel="stylesheet" href="{{ '/css/custom.css' }}">
