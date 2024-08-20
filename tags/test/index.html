@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- social share metadata via open graph -->
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary">
+    <meta property="twitter:title" content="Tags page">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:url" content="https://redrubycorn.github.io/11ty-playground//tags/test/">
     <meta property="og:title" content="Tags page">
     <meta property="og:description" content="">
-    <meta property="og:type" content="">
-    <meta property="og:url" content="http://localhost:8080/tags/test/">
-    <meta property="og:image" content="http://localhost:8080/tags/test/">
-    <meta property="og:site_name" content="11ty-playground">
 
     <title>Tags page</title>
     <!-- custom CSS should come after Bootstrap CSS -->
@@ -66,6 +67,94 @@
             <!-- row for post list -->
              <div class="row">
                 <!-- creates a bootstrap card for each post, including -->
+
+<div class="card rounded-0 border-0 border-bottom pb-4 mb-4">
+    <div class="row g-0">
+
+        <!-- column with post date and reading time -->
+        <div class="col-lg-2 order-2 order-lg-1">
+            <div class="card-body post-list-padding p-0">
+                <div class="row">
+                    <div class="col-6 col-lg-12">
+                        <p class="card-text mb-0">DATE</p>
+                        <p class="card-text text-body-secondary">2020-04-28</p>
+                    </div>
+                    <div class="col-6 col-lg-12 post-list-padding">
+                        <p class="card-text mb-0">READING TIME</p>
+                        <p class="card-text text-body-secondary">4 min</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- column with title, tags and summary -->
+        <div class="col-lg-7 order-1 order-lg-2">
+            <div class="card-body p-0">
+                <h5 class="card-title">Jupyter</h5>
+                <div class="mb-2">
+                    
+                        <a href="/11ty-playground/tags/test/" class="btn btn-outline-secondary btn-sm py-0" role="button">test</a>
+                    
+                        <a href="/11ty-playground/tags/news/" class="btn btn-outline-secondary btn-sm py-0" role="button">news</a>
+                    
+                </div>
+                <p class="card-text">This is a first Jupyter Notebook for testing. Nulla tempor urna non imperdiet consequat.</p>
+            </div>
+        </div>
+
+        <!-- column with image -->
+        <div class="col-lg-3 d-flex align-items-center order-3 order-lg-3">
+            <a href="/11ty-playground/posts/jupyter/">
+                <img src="/11ty-playground/posts/jupyter/raspberry.jpg" class="img-fluid" alt="...">
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<div class="card rounded-0 border-0 border-bottom pb-4 mb-4">
+    <div class="row g-0">
+
+        <!-- column with post date and reading time -->
+        <div class="col-lg-2 order-2 order-lg-1">
+            <div class="card-body post-list-padding p-0">
+                <div class="row">
+                    <div class="col-6 col-lg-12">
+                        <p class="card-text mb-0">DATE</p>
+                        <p class="card-text text-body-secondary">2020-05-20</p>
+                    </div>
+                    <div class="col-6 col-lg-12 post-list-padding">
+                        <p class="card-text mb-0">READING TIME</p>
+                        <p class="card-text text-body-secondary">7 min</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- column with title, tags and summary -->
+        <div class="col-lg-7 order-1 order-lg-2">
+            <div class="card-body p-0">
+                <h5 class="card-title">About Coding and Stuff</h5>
+                <div class="mb-2">
+                    
+                        <a href="/11ty-playground/tags/test/" class="btn btn-outline-secondary btn-sm py-0" role="button">test</a>
+                    
+                        <a href="/11ty-playground/tags/other/" class="btn btn-outline-secondary btn-sm py-0" role="button">other</a>
+                    
+                </div>
+                <p class="card-text">Donec in magna vitae est interdum pellentesque. Sed blandit mollis blandit. Aliquam sollicitudin commodo lectus iaculis rutrum. Morbi eleifend urna quis ultricies feugiat. Maecenas euismod, odio ac condimentum cursus, ipsum turpis consectetur justo, at elementum nibh lacus eget lacus.</p>
+            </div>
+        </div>
+
+        <!-- column with image -->
+        <div class="col-lg-3 d-flex align-items-center order-3 order-lg-3">
+            <a href="/11ty-playground/posts/coding/">
+                <img src="/11ty-playground/posts/coding/code.jpg" class="img-fluid" alt="...">
+            </a>
+        </div>
+
+    </div>
+</div>
 
 <div class="card rounded-0 border-0 border-bottom pb-4 mb-4">
     <div class="row g-0">
@@ -164,50 +253,6 @@
                 <div class="row">
                     <div class="col-6 col-lg-12">
                         <p class="card-text mb-0">DATE</p>
-                        <p class="card-text text-body-secondary">2020-04-28</p>
-                    </div>
-                    <div class="col-6 col-lg-12 post-list-padding">
-                        <p class="card-text mb-0">READING TIME</p>
-                        <p class="card-text text-body-secondary">4 min</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- column with title, tags and summary -->
-        <div class="col-lg-7 order-1 order-lg-2">
-            <div class="card-body p-0">
-                <h5 class="card-title">Jupyter</h5>
-                <div class="mb-2">
-                    
-                        <a href="/11ty-playground/tags/test/" class="btn btn-outline-secondary btn-sm py-0" role="button">test</a>
-                    
-                        <a href="/11ty-playground/tags/news/" class="btn btn-outline-secondary btn-sm py-0" role="button">news</a>
-                    
-                </div>
-                <p class="card-text">This is a first Jupyter Notebook for testing. Nulla tempor urna non imperdiet consequat.</p>
-            </div>
-        </div>
-
-        <!-- column with image -->
-        <div class="col-lg-3 d-flex align-items-center order-3 order-lg-3">
-            <a href="/11ty-playground/posts/jupyter/">
-                <img src="/11ty-playground/posts/jupyter/raspberry.jpg" class="img-fluid" alt="...">
-            </a>
-        </div>
-
-    </div>
-</div>
-
-<div class="card rounded-0 border-0 border-bottom pb-4 mb-4">
-    <div class="row g-0">
-
-        <!-- column with post date and reading time -->
-        <div class="col-lg-2 order-2 order-lg-1">
-            <div class="card-body post-list-padding p-0">
-                <div class="row">
-                    <div class="col-6 col-lg-12">
-                        <p class="card-text mb-0">DATE</p>
                         <p class="card-text text-body-secondary">2020-04-12</p>
                     </div>
                     <div class="col-6 col-lg-12 post-list-padding">
@@ -239,50 +284,6 @@
         <div class="col-lg-3 d-flex align-items-center order-3 order-lg-3">
             <a href="/11ty-playground/posts/post2/">
                 <img src="/11ty-playground/posts/post2/cyborg.png" class="img-fluid" alt="...">
-            </a>
-        </div>
-
-    </div>
-</div>
-
-<div class="card rounded-0 border-0 border-bottom pb-4 mb-4">
-    <div class="row g-0">
-
-        <!-- column with post date and reading time -->
-        <div class="col-lg-2 order-2 order-lg-1">
-            <div class="card-body post-list-padding p-0">
-                <div class="row">
-                    <div class="col-6 col-lg-12">
-                        <p class="card-text mb-0">DATE</p>
-                        <p class="card-text text-body-secondary">2020-05-20</p>
-                    </div>
-                    <div class="col-6 col-lg-12 post-list-padding">
-                        <p class="card-text mb-0">READING TIME</p>
-                        <p class="card-text text-body-secondary">7 min</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- column with title, tags and summary -->
-        <div class="col-lg-7 order-1 order-lg-2">
-            <div class="card-body p-0">
-                <h5 class="card-title">About Coding and Stuff</h5>
-                <div class="mb-2">
-                    
-                        <a href="/11ty-playground/tags/test/" class="btn btn-outline-secondary btn-sm py-0" role="button">test</a>
-                    
-                        <a href="/11ty-playground/tags/other/" class="btn btn-outline-secondary btn-sm py-0" role="button">other</a>
-                    
-                </div>
-                <p class="card-text">Donec in magna vitae est interdum pellentesque. Sed blandit mollis blandit. Aliquam sollicitudin commodo lectus iaculis rutrum. Morbi eleifend urna quis ultricies feugiat. Maecenas euismod, odio ac condimentum cursus, ipsum turpis consectetur justo, at elementum nibh lacus eget lacus.</p>
-            </div>
-        </div>
-
-        <!-- column with image -->
-        <div class="col-lg-3 d-flex align-items-center order-3 order-lg-3">
-            <a href="/11ty-playground/posts/coding/">
-                <img src="/11ty-playground/posts/coding/code.jpg" class="img-fluid" alt="...">
             </a>
         </div>
 
@@ -395,9 +396,9 @@
     </div><div class="category">
       <a href="/11ty-playground/tags/test/" class="link-secondary text-decoration-none">test</a>
     </div><div class="category">
-      <a href="/11ty-playground/tags/other/" class="link-secondary text-decoration-none">other</a>
-    </div><div class="category">
       <a href="/11ty-playground/tags/news/" class="link-secondary text-decoration-none">news</a>
+    </div><div class="category">
+      <a href="/11ty-playground/tags/other/" class="link-secondary text-decoration-none">other</a>
     </div><div class="category">
       <a href="/11ty-playground/tags/jupyter/" class="link-secondary text-decoration-none">jupyter</a>
     </div><div class="category">
