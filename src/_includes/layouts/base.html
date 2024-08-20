@@ -15,13 +15,13 @@
     <meta property="og:url" content="{{ sitedata.produrl }}{{ page.url }}" />
     <meta property="og:title" content="{{ title }}" />
     <meta property="og:description" content="{{ summary | truncate(100, true) }}" />
-    <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+    <meta property="og:image" content="{{ sitedata.url }}{{ page.url }}{{ postimg }}" />
 
     <!-- twitter meta tags -->
     <meta property="twitter:url" content="{{ sitedata.produrl }}{{ page.url }}" />
     <meta property="twitter:title" content="{{ title }}" />
     <meta property="twitter:description" content="{{ summary | truncate(100, true) }}" />
-    <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+    <meta property="twitter:image" content="{{ sitedata.url }}{{ page.url }}{{ postimg }}" />
 
     <!-- custom CSS should come after Bootstrap CSS -->
     <link rel="stylesheet" href="{{ '/css/fontawesome.css' }}">
