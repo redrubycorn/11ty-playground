@@ -6,6 +6,9 @@ postimg: "raspberry-pi.jpg"
 tags:
     - "test"
     - "other"
+    - "coding"
+    - "news"
+    - "raspberry"
 ---
 
 ## Heading

@@ -2,6 +2,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const readingTime = require('eleventy-plugin-reading-time');
 const yaml = require("js-yaml");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+const { DateTime } = require("luxon");
 
 // add markdown-it and toc plugin for table of content
 const markdownit = require("markdown-it");
@@ -27,6 +28,11 @@ module.exports = config => {
     config.addPassthroughCopy("src/posts/**/*.jpg");
     config.addPassthroughCopy("src/posts/**/*.png");
     config.addPassthroughCopy("src/assets");
+
+    // date filter
+    config.addFilter("luxonDate", (dateObj, format = "LLL d, yyyy") => {
+        return DateTime.fromJSDate(new Date(dateObj), { zone: 'utc' }).toFormat(format);
+    });
 
     // blog post collection
     // Returns work items, sorted by display order

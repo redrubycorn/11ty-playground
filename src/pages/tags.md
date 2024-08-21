@@ -1,5 +1,5 @@
 ---
-layout: "layouts/feed.html"
+layout: "layouts/blog-feed.html"
 pagination:
   data: collections.tagList
   size: 1

@@ -1,5 +1,4 @@
 {% set latest_posts = collections.blog | reverse %} 
+{% set postListItems = latest_posts.slice(0,8) %}
 
-{% for post in latest_posts.slice(0,3) %}
-  <p>{{ post.data.title }}</p>
-{% endfor %}
+{% include "partials/post-listings/grid-listing.html" %}
