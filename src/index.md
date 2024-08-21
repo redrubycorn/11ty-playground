@@ -1,7 +1,10 @@
 ---
-title: 'Hello, world'
+title: 'Homepage'
 layout: 'layouts/home.html'
 ---
 
-# Homepage
-This is pretty _rad_, right?
+This is just a test.
+
+{% block test1 %}
+    Test 1
+{% endblock %}

@@ -1,0 +1,5 @@
+{% set latest_posts = collections.blog | reverse %} 
+
+{% for post in latest_posts.slice(0,3) %}
+  <p>{{ post.data.title }}</p>
+{% endfor %}
