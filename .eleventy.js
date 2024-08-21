@@ -26,6 +26,7 @@ module.exports = config => {
     // passthrough copy
     config.addPassthroughCopy("src/posts/**/*.jpg");
     config.addPassthroughCopy("src/posts/**/*.png");
+    config.addPassthroughCopy("src/assets");
 
     // blog post collection
     // Returns work items, sorted by display order
