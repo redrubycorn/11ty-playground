@@ -11,8 +11,17 @@
             href="https://twitter.com/intent/tweet?url={{ sitedata.produrl }}{{ page.url }}"
             target="_blank"
             rel="noopener noreferrer"  
-            style="background-color: #000000;">
+            style="background-color: #000000;"
+        >
             <i class="fa-brands fa-twitter fa-xl" style="color: #ffffff;"></i>
+        </a>
+        <a class="btn btn-link rounded-pill" 
+            id="copy-link-btn"  
+            style="background-color: var(--bs-primary);"
+        >
+            <i class="fa-regular fa-copy fa-xl" style="color: #ffffff;"></i>
+        </a>
+        <span id="copy-message" style="display:none;">Link copied to clipboard!</span>
     </div>
 </div>
 

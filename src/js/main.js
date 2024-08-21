@@ -38,3 +38,21 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initialize on load to highlight the correct link if the page is loaded with a section in view
     onScroll();
   });
+
+
+  // copy the page link when btn is clicked
+  document.getElementById('copy-link-btn').addEventListener('click', function() {
+    const pageUrl = window.location.href;
+    navigator.clipboard.writeText(pageUrl).then(function() {
+        // Show confirmation message
+        const message = document.getElementById('copy-message');
+        message.style.display = 'inline';
+        
+        // Hide the confirmation message after 2 seconds
+        setTimeout(() => {
+            message.style.display = 'none';
+        }, 500);
+    }).catch(function(error) {
+        console.error('Could not copy text: ', error);
+    });
+});
