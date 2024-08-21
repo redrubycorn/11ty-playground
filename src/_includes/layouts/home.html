@@ -1,10 +1,14 @@
 {% extends "layouts/base.html" %}
 
+{% block content %}
 <div class="container">
-  {% block content %}
-    <article>
-      <h1>{{ title }}</h1>
-      {{ content | safe }}
-    </article>
-  {% endblock %}
+
+  <h1>Recent posts</h1>
+  {% include "partials/home-elements/recent-posts.html" %}
+
+  {{ content | safe }}
+
+  {% block test1 %}{% endblock %}
+
 </div>
+{% endblock %}

@@ -30,9 +30,7 @@
   <body>
     {% include "partials/main-navbar.html" %}
 
-    <div class="container-fluid p-0">
-      {% block content %}{% endblock %}
-    </div>
+    {% block content %}{% endblock %}
 
     {% include "partials/site-footer.html" %}
 
