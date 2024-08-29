@@ -26,8 +26,9 @@
                     <h5 class="card-title">{{ item.data.title }}</h5>
                     <div class="mb-2">
                         {% for tag in item.data.tags %}
-                            <a href="/tags/{{ tag }}/" class="btn btn-outline-secondary btn-sm py-0" role="button">{{ tag }}</a>
+                            <a href="/tags/{{ tag }}/" class="btn btn-outline-secondary btn-sm px-2 mb-1" role="button">{{ tag }}</a>
                         {% endfor %}
+                        <a href="{{ item.url }}" class="stretched-link"></a>
                     </div>
                     <p class="card-text">{{ item.data.summary }}</p>
                 </div>
@@ -35,9 +36,7 @@
 
             <!-- column with image -->
             <div class="col-lg-3 d-flex align-items-center order-3 order-lg-3">
-                <a href="{{ item.url }}">
-                    <img src="{{ item.url }}{{ item.data.postimg }}" class="img-fluid" alt="...">
-                </a>
+                <img src="{{ item.url }}{{ item.data.postimg }}" class="img-fluid" alt="...">
             </div>
 
         </div>

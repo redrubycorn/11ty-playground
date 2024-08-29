@@ -1,4 +1,4 @@
-{% set latest_posts = collections.blog | reverse %} 
-{% set postListItems = latest_posts.slice(0,8) %}
+{% set latest_posts = collections.blog %} 
+{% set postListItems = latest_posts.slice(0,3) %}
 
-{% include "partials/post-listings/grid-listing.html" %}
+{% include "partials/listings/grid-listing.html" %}

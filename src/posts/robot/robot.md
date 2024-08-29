@@ -1,7 +1,7 @@
 ---
 title: "The Robot"
 summary: "Vivamus vehicula massa rutrum porta fermentum. Aenean ac nisi sodales."
-date: "2020-04-02"
+date: "2022-04-02"
 postimg: "robot.jpg"
 tags:
     - "jupyter"

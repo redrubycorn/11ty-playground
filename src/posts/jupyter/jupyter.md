@@ -1,7 +1,7 @@
 ---
 title: "Jupyter"
 summary: "This is a first Jupyter Notebook for testing. Nulla tempor urna non imperdiet consequat."
-date: "2020-04-28"
+date: "2024-04-28"
 postimg: "raspberry.jpg"
 tags:
     - "test"

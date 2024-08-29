@@ -1,7 +1,7 @@
 ---
 title: "Post 2"
 summary: "This is a first Jupyter Notebook for testing. Vivamus eu nulla varius, tempus diam in, cursus nibh. Aenean quis massa eget nulla maximus accumsan."
-date: "2020-04-12"
+date: "2024-04-12"
 postimg: "cyborg.png"
 tags:
     - "jupyter"
