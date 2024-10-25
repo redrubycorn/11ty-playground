@@ -2,6 +2,17 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/bootstrap/scss/variables";
 
+@font-face {
+  font-family: 'CustomFont';
+  src: url('../fonts/redruby_reg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.custom-font {
+  font-family: 'CustomFont', sans-serif;
+}
+
 // put footer at the bottom of the page
 body {
   min-height: 100vh;

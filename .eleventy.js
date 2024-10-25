@@ -28,6 +28,8 @@ module.exports = config => {
     config.addPassthroughCopy("src/posts/**/*.jpg");
     config.addPassthroughCopy("src/posts/**/*.png");
     config.addPassthroughCopy("src/assets");
+    config.addPassthroughCopy("src/fonts");
+
 
     // date filter
     config.addFilter("luxonDate", (dateObj, format = "LLL d, yyyy") => {
